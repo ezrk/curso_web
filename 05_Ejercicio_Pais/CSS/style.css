@@ -1,8 +1,34 @@
-body {
+ /* 
+ Selector img, body, etc.
+ Conjunto de propiedades: display, background-color, etc.
+ */
+
+ body {
     background-color:#FFD4AD;
 }
+
  img {
     display: block;
     margin-left: auto;
     margin-right: auto;
  }
+
+ /* Es una mala práctica usar #id-s en css 
+ #p001 {
+    font-size: 1.5em;
+ }
+ */
+
+ .destacado {
+     color: blueviolet;
+     font-size: 1.5em;   
+ }
+
+ /* CENTRAR TEXTO text-align: center */
+ .centrado {
+    text-align: center;
+ }
+
+pre {
+    font-family: inherit;
+}
