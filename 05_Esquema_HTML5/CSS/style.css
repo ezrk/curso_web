@@ -1,0 +1,22 @@
+.main_header {
+    background-color: lavenderblush;
+    color: darkblue;
+    text-align: center;
+    padding: 1rem,0rem,2rem,0rem;
+}
+
+.main_header p {
+    font-size: 1.33rem;
+    font-weight: bold;
+}
+
+.main_footer {
+    background-color: lavenderblush;
+    color: darkblue;
+    text-align: center;
+    padding: 1rem;
+}
+
+.destacado {
+    font-weight: bold;
+}
