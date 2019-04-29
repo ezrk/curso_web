@@ -1,11 +1,3 @@
-h1, p {
-   /* display: inline; */
-}
-
-strong {
-    font-weight: normal;
-    /* display: block */
-}
 body {
     background-color:#FF99FF;
 }
