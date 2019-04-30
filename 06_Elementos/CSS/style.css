@@ -1,12 +1,14 @@
+body {
+    margin: 0;
+}
 .main_header {
     background-color: lavenderblush;
     color: darkblue;
     text-align: center;
-    padding: 1rem,0rem,2rem,0rem;
+    padding: 1rem;
 }
 
 .main_header p {
-    font-size: 1.33rem;
     font-weight: bold;
 }
 
@@ -17,14 +19,23 @@
     padding: 1rem;
 }
 
-.destacado {
-    font-weight: bold;
+.content_wrapper {
+    margin: 1rem 2rem;
 }
 
-.section_footer {
-    border: 1px solid blue;
+.image_wrapper {
+    text-align: center;
 }
 
-.section_header {
-    border: 1px solid blue;
+ /* Se adapta la imagen al ancho máximo de la pantalla */
+img {
+    max-width: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+figure {
+    margin: 0;
 }
