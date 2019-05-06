@@ -33,25 +33,55 @@
             </header>
             <p>Esto se trata de elementos seccionado, que son los que se reflejan en el <strong>esquema</strong> (outline) de la página</p>
             <p>Inicialmente estos elementos incluian body y los encabezados (h1-h6)</p>
-            <p>En HTML5 se añaden los nuevos elementos semánticos: header, nav, footer, section, article, aside</p>
+            <p>En HTML5 se añaden los nuevos elementos semánticos: 
+                <!-- <ul> nunca va dentro de un párrafo. -->
+                <ul>
+                    <li>header</li>
+                    <li>nav</li>
+                    <li>footer</li>
+                    <li>section</li>
+                    <li>article</li>
+                    <li>aside</li>
+                </ul> 
             <section id="etiqueta_section">
                 <h3>Etiqueta Section</h3>
                 <!-- Código de escape &lt; &gt; &copy; -->
-                <p>El elemento de HTML section (&lt;section&gt;) representa una sección genérica de un documento. Sirve para determinar qué contenido corresponde a qué parte de un <strong>esquema</strong>. Piensa en el esquema como en el índice de contenido de un libro; un tema común y subsecciones relacionadas. Es, por lo tanto, una etiquéta semántica.</p>
-                <p> Su funcionalidad principal es estructurar semánticamente un documento a la hora de ser representado por parte de un agente usuario. Por ejemplo, un agente de usuario que represente el documento en voz, podría exponer al usuario el índice de contenido por niveles para navegar rápidamente por las distintas partes.</p>
+                <blockquote title="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section">
+                    <p>El elemento de HTML section (&lt;section&gt;) representa una sección genérica de un documento. Sirve para determinar qué contenido corresponde a qué parte de un <strong>esquema</strong>. Piensa en el esquema como en el índice de contenido de un libro; un tema común y subsecciones relacionadas. Es, por lo tanto, una etiquéta semántica.</p>
+                    <p> Su funcionalidad principal es estructurar semánticamente un documento a la hora de ser representado por parte de un agente usuario. Por ejemplo, un agente de usuario que represente el documento en voz, podría exponer al usuario el índice de contenido por niveles para navegar rápidamente por las distintas partes.</p>
+                    <footer>
+                        <!-- Es muy recomendable usar la etiqueta <cite> para poner la fuente, o el autor de un texto citado -->
+                        <cite><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section">MDN</a></cite>
+                    </footer>
+                </blockquote>
             </section>
             <section id="etiqueta_header">
                 <h3>Etiqueta Header</h3>
-                <p>El elemento de HTML Header (&lt;header&gt;) representa un grupo de ayudas introductorias o de navegación . Puede contener algunos elementos de encabezado, pero también otros elementos como un logo, una sección que aglutine secciones de encabezados, una formulario de búsqueda o cosas parecidas.</p>
+                <blockquote title="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/header">
+                El elemento de HTML Header (&lt;header&gt;) representa un grupo de ayudas introductorias o de navegación . Puede contener algunos elementos de encabezado, pero también otros elementos como un logo, una sección que aglutine secciones de encabezados, una formulario de búsqueda o cosas parecidas.
+                    <footer>
+                        <cite><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/header">MDN</a></cite>
+                    </footer>
+                </blockquote>
             </section>
             <section id="etiqueta_footer">
                 <h3>Etiqueta Footer</h3>
-                <p>El Elemento HTML Footer (&lt;footer&gt;) representa un pie de página para el contenido de sección más cercano o el elemento raíz de sección (p.e, su ancestro mas cercano article, aside, nav, section, blockquote, body, details, fieldset, figure, td). Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.</p>
+                <blockquote title="https://www.w3schools.com/tags/tag_footer.asp">
+                    El Elemento HTML Footer (&lt;footer&gt;) representa un pie de página para el contenido de sección más cercano o el elemento raíz de sección (p.e, su ancestro mas cercano article, aside, nav, section, blockquote, body, details, fieldset, figure, td). Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.
+                        <footer>
+                            <cite><a href="https://www.w3schools.com/tags/tag_footer.asp">MDN</a></cite>
+                        </footer>
+                    </blockquote>
             </section>
             <section id="etiqueta_nav">
                 <h3>Nav</h3>
-                <p>La MDN indica que esta etiqueta crea un menú de navegación (https://developer.mozilla.org).</p>
-                <p>El elemento HTML &lt;nav&gt; representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.</p>
+                <blockquote title="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/nav">
+                    <p>La MDN indica que esta etiqueta crea un menú de navegación (https://developer.mozilla.org).</p>
+                    <p>El elemento HTML &lt;nav&gt; representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.</p>
+                    <footer>
+                     <cite><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/nav">MDN</a></cite>
+                    </footer>
+                    </blockquote>
             </section>
             <section id="etiqueta_article">
                 <h3>Etiqueta Article</h3>
@@ -80,17 +110,31 @@
             <header>
                 <h2>Grouping content</h2>
             </header>
+            <p>Son etiquetas que por defecto tienen un display bloque, pero no contribuyen al esquema de la página.</p>
             <section id="parrafos">
                 <h3>Párrafos</h3>
                 <p>p, pre, blockquote</p>
+                <pre>Ejemplo de un párrafo preformateado. 
+                    Se puede usar para fragmento de código.
+                    let x = 25
+                    let y = 24
+                    let z = x * y 
+                </pre>
+                <!-- La etiqueta blockquote sirve para citas literales -->
+                <blockquote title="https://www.briantracy.com/blog/personal-success/26-motivational-quotes-for-success/">“The Way Get Started Is To Quit Talking And Begin Doing.” – Walt Disney
+                    <footer>
+                        <!-- Es muy recomendable usar la etiqueta <cite> para poner la fuente, o el autor de un texto citado -->
+                        <cite> <a href="https://www.briantracy.com/blog/personal-success/26-motivational-quotes-for-success/">Walt Disney</a></cite>
+                    </footer>
+                </blockquote>
             </section>
             <section id="listas">
                 <h3>Listas</h3>
-                     <ul>
-                        <li>desordenadas : ul</li>
-                        <li>ordenadas : o</li>
-                        <li>de definiciones: dl</li>
-                    </ul>
+                <ul>
+                    <li>desordenadas : ul</li>
+                    <li>ordenadas : ol</li>
+                    <li>de definiciones: dl</li>
+                </ul>
                 <p>Ejemplo de lista ordenada</p>
                 <ol>
                     <li>Lunes</li>
@@ -101,6 +145,17 @@
                     <li>Sábado</li>
                     <li>Domingo</li>
                 </ol>
+                <p>Listas de definiciones</p>
+                <dl>
+                    <dt>Término</dt>
+                    <dd>Su definición</dd>
+                </dl>
+                <p>Ejemplo de lista con definiciones largas</p>
+                <dl>
+                    <dt>Bolígrafo BIC</dt><dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem ex atque unde ipsa ratione nihil sint repellat? Blanditiis temporibus autem eos perspiciatis maiores sed aperiam corrupti nam, maxime odit accusamus!</dd>
+                    <dt>Pilots</dt><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptates labore adipisci nisi quas provident sunt earum nobis, corporis hic neque sed, praesentium quod quam recusandae aut ipsa laudantium consectetur?</dd>
+                </dl>
+                
             </section>
             <section id="bloques_neutros">
                 <h3> Bloques neutros</h3>
@@ -127,6 +182,14 @@
                     sup
                     sub
                     </p>
+            </section>
+            <section id="elementos_con_valor_semantico_nuevo">
+                 <h3> Elementos con valor semantico nuevo</h3>
+                <p>b (bold)
+                    i (italics)
+                    u (underline)
+                    s (strike)
+                </p>
             </section>
 
 
