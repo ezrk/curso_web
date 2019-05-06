@@ -1,6 +1,9 @@
 # Created by https://www.gitignore.io/api/node,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,visualstudiocode
 
+## Package -lock (package-lock-json) ##
+*-lock*
+
 ### Node ###
 # Logs
 logs
@@ -43,6 +46,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+
 
 # TypeScript v1 declaration files
 typings/

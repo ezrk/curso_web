@@ -1,0 +1,27 @@
+{
+  "name": "curso_web",
+  "version": "1.0.0",
+  "description": "ejercicios del curso web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezrk/curso_web.git"
+  },
+  "keywords": [
+    "html",
+    "web",
+    "CSS"
+  ],
+  "author": "EZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezrk/curso_web/issues"
+  },
+  "homepage": "https://github.com/ezrk/curso_web#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
