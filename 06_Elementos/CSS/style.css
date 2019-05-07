@@ -73,3 +73,21 @@ li {
  dt, dd {
      display: inline-block;
  }
+
+
+ /* 7 MAYO */
+
+ footer a  {
+     color: inherit;
+ }
+
+ footer p{
+     text-align: center;
+ }
+ .verde {
+     color: lime;
+ }
+
+ strong {
+     font-weight: normal;
+ }
