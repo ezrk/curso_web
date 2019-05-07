@@ -85,7 +85,7 @@
             </section>
             <section id="etiqueta_article">
                 <h3>Etiqueta Article</h3>
-                <p>El Elemento article de HTML (&lt;article&gt;) representa una composición auto-contenida en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la sindicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido.</p>
+                <p>El Elemento article de HTML (&lt;article&gt;) representa una composición <em>auto-contenida</em>  en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma <em>independiente o reutilizable</em>, por ejemplo, en la sindicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido.</p>
             </section>
             <section id="etiqueta_aside">
                 <h3>Etiqueta  Aside</h3>
@@ -155,15 +155,57 @@
                     <dt>Bolígrafo BIC</dt><dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem ex atque unde ipsa ratione nihil sint repellat? Blanditiis temporibus autem eos perspiciatis maiores sed aperiam corrupti nam, maxime odit accusamus!</dd>
                     <dt>Pilots</dt><dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptates labore adipisci nisi quas provident sunt earum nobis, corporis hic neque sed, praesentium quod quam recusandae aut ipsa laudantium consectetur?</dd>
                 </dl>
-                
+                <!-- START 7 mayo -->
+                <p>Hay algunos atributos específicos de las listas.</p>
+                <!-- El atributo start="x" > Empieza a enumerar desde el número que pongamos -->
+                <ol start="5">
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+                <!-- Reversed > Inverir orden de la lista -->
+                <ol reversed>
+                    <li>item1</li>
+                    <li>item2</li>
+                    <li>item3</li>
+                    <li>item4</li>
+                    <li>item5</li>
+                </ol>
+                <!-- FIN 7 mayo -->
             </section>
             <section id="bloques_neutros">
                 <h3> Bloques neutros</h3>
-                <p>div</p>
+                <p>La etiqueta div no tiene ningún valor semántico. Unir al uso de las clases CSS es el principal elemento de diseño en la web.</p>
+                <p>Sirven para los layouts, para la distribución de los bloques de la página web.</p>
             </section>
+            <!-- 7 MAYO -->
             <section id="bloques_nuevos">
                 <h3> Bloques nuevos en HTML5</h3>
-                <p>address, main</p>
+                <ul>
+                    <li>address</li>
+                    <li>main</li>
+                    <li>figure</li>
+                </ul>
+                <p>El elemento HTML &lt;address&gt; <!-- Código de escape --> aporta información de contacto para su &lt;article&gt; más cercano o ancestro &lt;body&gt; en el último caso lo aplica a todo el documento.</li></p>
+                <!-- Introducimos un elemento citado dentro de una frase, en línea, no como lo hicimos con blockquote-->
+                <p>Según aparece en la web de MDN,
+                    <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/address">el elemento HTML &lt;address&gt; padre aporta información de contacto.</q>
+                    Normalmente puede ser dentro del elemento &lt;footer&gt; de la sección.
+                </p>
+                <!-- cite="" es un metadato dirigido a las máquinas; mejor es hacer abajo en el footer (ver)
+                    title="" es lo que se ve cuando pasamos el ratón, encima de la citación -->
+                <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main" title="Fuente">
+                    El elemento HTML &lt;main&gt; representa el contenido principal del &lt;body&gt; de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).
+                    <!-- 
+                    <footer>
+                        <cite>
+                            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main"></a>
+                        </cite>
+                    </footer>
+                     -->
+                </blockquote>
+                <p>El elemento &lt;figure&gt; es un contenedor de imágenes, de lo que hablaremos al referirnos a éstas.</p>
+                <p>La etiqueta &lt;hr&gt; crea una línea horizontal, no se usa.</p>
+                <p>El elemento &lt;br&gt; hace un salto de línea</p>
             </section>
         </section>
         <section id="text_level_semantics">
@@ -172,34 +214,93 @@
             </header>
             <section id="elementos_en_linea_neutros">
                 <h3> Elementos en linea neutros</h3>
-                <p>span</p>
-                <p>Ejemplo del uso en una palabra.</p>
+                <p>La etiqueta &lt;span&gt; no tiene ningún valor semántico.</p>
+                <p>Ejemplo del uso en una palabra:</p>
+                <p>Quiero que la palabra <span class="verde">verde</span> salga de su color.</p>
             </section>
             <section id="elementos_claramente_semanticos">
                 <h3> Elementos claramente semánticos</h3>
-                <p>strong
-                    em (emphasis)
-                    sup
-                    sub
-                    </p>
+                <ul>
+                    <li>strong</li>
+                    <li>em (emphasis)</li>
+                    <li>sup</li>
+                    <li>sub</li>
+                    <li>small</li>
+                </ul>
+                <!-- <strong> Es muy importante para SEO! -->
+                <p>&lt;strong&gt; marca palabras <strong>clave o importantes</strong>.</p>
+                <!-- <em> USO: Ver línea 88 (Article), tiene importancia para el uso las máquinas lectoras de voz. -->
+                <p>&lt;em&gt; Sirve para crear <em>énfasis</em> en alguna palabra.</p> 
+                <p>Superindices &lt;sup&gt; y subindices &lt;sub&gt; tienen que ser de uso generalizado y reconocible.</p>
+                <p>H<sub>2</sub>O</p> 
+                <p>m<sup>2</sup></p> 
+                <p>&lt;small&gt; es la "letra pequeña" usada por ejemplo para <small>copyrights, información legal</small>.</p>
+
             </section>
             <section id="elementos_con_valor_semantico_nuevo">
-                 <h3> Elementos con valor semantico nuevo</h3>
-                <p>b (bold)
-                    i (italics)
-                    u (underline)
-                    s (strike)
-                </p>
+                 <h3> Elementos con valor semántico nuevo</h3>
+                 <ul>
+                    <li>b (bold): destacado con fines utilitarios.</li>
+                    <li>i (italics): indica calidad diferente de texto, incluyendo cambio de tono y ánimo. Es lo mismo que el énfasis</li>
+                    <li>u (underline):subrayado, nombres propios chinos se puede subrayar para saber cuál es el nombre y el apellido.</li>
+                    <li>s (strike):tachado, se usa por ejemplo para precios.</li>
+                </ul>
             </section>
-
+            <section id="elementos_tipo_tecnico">
+                <h3>Elementos de tipo técnico</h3>
+                <ul>
+                    <!-- El más importante es <abbr> -->
+                    <li>samp (sample)</li>
+                    <li>code (code): para poner trozos de código.</li>
+                    <li>kbd (keyboard): para indicar comandos de teclado</li>
+                    <li>var (variables)</li>
+                    <li>dfn (definition)</li>
+                    <li>abbr (abbr): Nos permite la presencia de abreviatura y acrónimos. <abbr title="Naciones Unidas">ONU</abbr> </li>
+                    <!-- Mejoro el SEO, porque asi apareceré en las búsquedas de ONU y por Naciones Unidas; mejoro también la accesibilidad. -->
+                </ul>
+           </section>
+           <section id="referencias_citas">
+                <h3>Uso de referencias y citas</h3>
+                <ul>
+                    <li>q (quote): cita. </li>
+                    <li>cite (cite o referencia): referencia, autor. Su uso: A pie de una referencia, o cuando hago referencia a alguna obra sin poner la referencia el autor/origen (libros,películas, pintura etc.). </li>
+                </ul>
+            </section>
+            <section id="otras_etiquetas_semanticas_HTML5">
+                <h3>Otras etiquetas semánticas de HTML5</h3>
+                <p>Novedad en HTML5, son poco utilizadas.</p>
+                    <ul>
+                        <!-- Indicar la fecha con standard ISO, de mayor a menor 2019-12-06 -->
+                        <li> &lt;time&gt; e.g. <time datetime="2019-12-06">día de la constitución</time> de este año</li>
+                        <li> &lt;mark&gt; marcado interactivo, SEO el backend de google capta los &lt;mark&gt; para recalcar la importancia de forma interactiva en las búsquedas de Google. </li>
+                    </ul>
+            </section>
+            <section id="edits">
+                <h3>Edits</h3>
+                <ul>
+                    <li>ins:referencias a cambios en la edición en la página web</li>
+                    <li>del:deleted</li>
+                </ul>
+                <p>Muestran el contenido que se ha insertado (Instead)en lugar de otro, que por tanto se elimina (Deleted).</p>
+            </section>
+        </section>
+        <!-- FIN 7 mayo -->
+        <section>
+            <header>
+                <h2>Elementos embebidos y multimedia</h2>
+            </header>
+            <p>Veremos como utilizar:</p> 
 
         </section>
 
     </div>
     <footer class="main_footer">
-        <p>Designed by EZ©</p>
-        <!-- Enlace de correo -->
-        <a href="mailto://evelin.zarka@tajamar365.com">Contáctame</a>
+        <address>
+            <p>Designed by EZ©</p>
+            <!-- Enlace de correo -->
+            <a href="mailto://evelin.zarka@tajamar365.com">Contáctame</a>
+         </address>
+         <small>Tajamar</small>
     </footer>
 </body>
 
