@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Por accesibilidad mejor especificar el apartado de las subpáginas, no poner la misma de la home.  -->
+    <title>Curso de HTML- Multimedia</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body id="inicio">
+    <header class="main_header">
+        <!-- Desde el punto de vista de la arquitectura de la información es importante elegir buenas etiquetas para el menu. -->
+        <nav>
+            <ul>
+                <!-- En rel="" se pone qué relación tiene el documento actual con el hiperenlace 
+                    Podemos poner diferentes valores: https://www.w3schools.com/TAGS/att_a_rel.asp
+                            tag: A tag (keyword) for the current document
+                            external
+                -->
+                <li><a href="./index.html#sections" rel="tag">Sections</a></li>
+                <li><a href="./index.html#grouping" rel="tag">Grouping</a></li>
+                <li><a href="./index.html#text_level_semantics" rel="tag">Text-level</a></li>
+                <!-- relativa al origen, es peligroso, no funciona si cambiamos la origen.
+                    href="/06_Elementos/" -->
+                <li><a href="./multimedia.html">Multimedia</a></li> <!-- Así se usa, Relativa al document -->
+            </ul>
+        </nav>
+    </header>
+    <div class="content_wrapper">
+        <main>
+            <h1>Multimedia</h1>
+            <section id="multimedia">
+                <header>
+                    <h2>Elementos embebidos y multimedia</h2>
+                </header>
+                <p>Veremos como utilizar:</p>
+                <ul>
+                    <li>Imágenes
+                        <ul>
+                            <li>jpg</li>
+                            <li>gif</li>
+                            <li>png</li>
+                            <li>svg</li>
+                        </ul>
+                    </li>
+                    <li>Video y audio
+                        <ul>
+                            <li>mp4</li>
+                            <li>ogg</li>
+                            <li>webm: impulsado por Google, no lo soporta iOS</li>
+                        </ul>
+                    </li>
+                    <li>Elementos de navegación gráficos</li>
+                </ul>
+            </section>
+        </main>
+        <aside>
+            <h2>Publicidad</h2>
+            <p>Aquí iría la publicidad.</p>
+        </aside>
+    </div>
+    <footer class="main_footer">
+        <address>
+            <p>Designed by EZ©</p>
+            <!-- Enlace de correo -->
+            <a href="mailto://evelin.zarka@tajamar365.com">Contáctame</a>
+        </address>
+        <small>Tajamar</small>
+    </footer>
+</body>
+
+</html>
