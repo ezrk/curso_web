@@ -53,10 +53,11 @@ body {
     text-align: center;
 }
 
- /* Se adapta la imagen al ancho máximo de la pantalla */
+ /* Se adapta la imagen al ancho máximo de la pantalla*/   
 img {
     max-width: 100%;
-}
+}  
+
 
 p {
     text-align: justify;
@@ -117,3 +118,22 @@ li {
  strong {
      font-weight: normal;
  }
+
+  /*
+ img {
+     Comportamiento por defecto de las imágenes 
+     display: inline-block;
+ }*/
+
+ .imagenes img {
+     max-width: 25%;
+     /* margin-left: -4px;  o por flotación*/
+     display: block;
+     float: left;
+ }
+
+ .clearfix {
+     clear: both;
+ }
+
+

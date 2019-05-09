@@ -56,6 +56,47 @@
                     </li>
                     <li>Elementos de navegación gráficos</li>
                 </ul>
+                <section class="imagenes" id="imagenes">
+                    <h3>Imágenes</h3>
+                    <!-- Rellenar alt="" por usabilidad, accesibilidad, SEO, validación 
+                    Por los saltos de linea entre las etiquetas <img> hay un espacio mostrando las imgs, si ponemos todos en un línea, se quita el espacio
+                -->
+                    <!-- <img src="./assets/komodo.jpg" alt="Dragón de Komodo mostrando su lengua"> -->
+                    <img src="./assets/varanocrocodilo1.png" alt="">
+                    <img src="./assets/ardilla.gif" alt="">
+                    <!-- Formato nuevo  -->
+                    <img src="./assets/3boats.jpg" srcset="./assets/3boats.webp 320w" alt="">
+                </section>
+                <div class="clearfix"></div>
+
+                <div class="seccion_images">
+                    <p>Uso de imágenes responsive en HTML</p>
+                    <img class="fija_300" 
+                        srcset="
+                        ./assets/komodo.300.jpg 300w,
+                        ./assets/komodo.400.jpg 400w,
+                        ./assets/komodo.500.jpg 500w,
+                        ./assets/komodo.jpg 600w" 
+                        sizes="(max-width: 300px),
+                        (max-width: 400px),
+                        (max-width: 500px)" 
+                        src="./assets/komodo.jpg" 
+                        alt="Dragón de Komodo mostrando su lengua">
+                </div>
+                <picture>  
+                    <source media="(min-width: 600px)" srcset="./assets/loro_600.jpg" type="image/jpg">
+                    <source media="(min-width: 500px)" srcset="./assets/loro_500.jpg" type="image/jpg">
+                    <source media="(min-width: 400px)" srcset="./assets/loro_400.jpg" type="image/jpg">
+                    <source media="(min-width: 10px)" srcset="./assets/loro_300.jpg" type="image/jpg">
+                   <img src="assets/loro.jpg" alt="loro" style="width:auto">
+                </picture>
+                
+                <section class="video_y_audio" id="video_y_audio">
+                    <h3>Video y audio</h3>
+                </section>
+                <section class="elementos_navegacion_graficos" id="elementos_navegacion_graficos">
+                    <h3>Elementos de navegación gráficos</h3>
+                </section>
             </section>
         </main>
         <aside>
