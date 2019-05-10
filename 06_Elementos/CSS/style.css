@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: cornsilk;
 }
 .main_header {
     background-color: lavenderblush;
@@ -55,7 +56,7 @@ body {
 
  /* Se adapta la imagen al ancho máximo de la pantalla*/   
 img {
-    max-width: 100%;
+    max-width: 50%;
 }  
 
 
@@ -63,9 +64,6 @@ p {
     text-align: justify;
 }
 
-figure {
-    margin: 0;
-}
 
 pre {
     font-family: inherit;
@@ -123,17 +121,47 @@ li {
  img {
      Comportamiento por defecto de las imágenes 
      display: inline-block;
- }*/
+ }
+ */
 
  .imagenes img {
-     max-width: 25%;
+     max-width: 15%;
      /* margin-left: -4px;  o por flotación*/
      display: block;
      float: left;
+     padding: 10px;
  }
 
  .clearfix {
      clear: both;
  }
 
+ figure {
+    margin: 0;
+}
 
+.web_external {
+    width: 100%;
+    height: 60vh;
+}
+
+/* viewport height vh */
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+video {
+    max-width: 100%;
+}

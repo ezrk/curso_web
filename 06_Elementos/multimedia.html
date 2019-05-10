@@ -64,38 +64,80 @@
                     <!-- <img src="./assets/komodo.jpg" alt="Dragón de Komodo mostrando su lengua"> -->
                     <img src="./assets/varanocrocodilo1.png" alt="">
                     <img src="./assets/ardilla.gif" alt="">
-                    <!-- Formato nuevo  -->
+                    <!-- Formato nuevo: webp -->
                     <img src="./assets/3boats.jpg" srcset="./assets/3boats.webp 320w" alt="">
+                    <img src="./assets/WoodElf.png" alt="">
+                    <img src="./assets/005.gif" alt="GIF animado abstracto">
+                    <!-- Así se ve ya en Explorer 8 tmb -->
+                    <img srcset="./assets/logo.svg" src="./assets/logo.gif" alt="logotipo">
                 </section>
                 <div class="clearfix"></div>
-
-                <div class="seccion_images">
+                <div>
                     <p>Uso de imágenes responsive en HTML</p>
-                    <img class="fija_300" 
-                        srcset="
+                    <img class="fija_300" srcset="
                         ./assets/komodo.300.jpg 300w,
                         ./assets/komodo.400.jpg 400w,
                         ./assets/komodo.500.jpg 500w,
-                        ./assets/komodo.jpg 600w" 
-                        sizes="(max-width: 300px),
+                        ./assets/komodo.jpg 600w" sizes="(max-width: 300px),
                         (max-width: 400px),
-                        (max-width: 500px)" 
-                        src="./assets/komodo.jpg" 
-                        alt="Dragón de Komodo mostrando su lengua">
+                        (max-width: 500px)" src="./assets/komodo.jpg" alt="Dragón de Komodo mostrando su lengua">
                 </div>
-                <picture>  
-                    <source media="(min-width: 600px)" srcset="./assets/loro_600.jpg" type="image/jpg">
-                    <source media="(min-width: 500px)" srcset="./assets/loro_500.jpg" type="image/jpg">
-                    <source media="(min-width: 400px)" srcset="./assets/loro_400.jpg" type="image/jpg">
-                    <source media="(min-width: 10px)" srcset="./assets/loro_300.jpg" type="image/jpg">
-                   <img src="assets/loro.jpg" alt="loro" style="width:auto">
+                <p>La etiqueta picture y las imágenes responsivas en HTML.</p>
+                <picture>
+                    <source media="(min-width: 600px)" srcset="./assets/loro_600.jpg" type="image/jpg">
+                    <source media="(min-width: 500px)" srcset="./assets/loro_500.jpg" type="image/jpg">
+                    <source media="(min-width: 400px)" srcset="./assets/loro_400.jpg" type="image/jpg">
+                    <source srcset="./assets/loro_300.jpg" type="image/jpg">
+                    <img src="assets/loro.jpg" alt="loro">
                 </picture>
-                
+                <p>La etiqueta picture y los formatos alternativos de imágenes.</p>
+                <picture>
+                    <source srcset="./assets/tropical-sunrise.webp" type="image/webp">
+                    <img src="./assets/tropical-sunrise.jpg" alt="tropical sunrise">
+                </picture>
+                <div class="clearfix"></div>
+                <picture>
+                    <source srcset="./assets/logo.svg" type="image/svg+xml">
+                    <img src="./assets/logo.gif" alt="logotipo">
+                </picture>
+                <p>Etiqueta figure</p>
+                <!-- Un div con valor semántico específico para elementos gráficos:img, video
+                Dentro del figure solo puede haber una imagen,
+                se puede dejar el alt vacío porque el figcaption seria lo mismo.
+                -->
+                <figure>
+                    <img src="./assets/loro_600.jpg" alt="lorito">
+                    <figcaption>Título de una imagen</figcaption>
+                    <p>Loros en la jungla.</p>
+                </figure>
                 <section class="video_y_audio" id="video_y_audio">
                     <h3>Video y audio</h3>
+                    <p>Es posible incluir un video desde una fuente externo.</p>
+                    <!-- Hacer iframe responsive: https://blog.theodo.com/2018/01/responsive-iframes-css-trick/ -->
+                    <div class="resp-container">
+                        <iframe  class="resp-iframe" width="560" height="315" src="https://www.youtube.com/embed/KgG4gJdK1oA"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p>Otra opción es reproducir videos de nuestro servidor.</p>
+                    <video controls>
+                        <source src="./assets/Ghost_in_the_Shell_Opening.webm" type="video/webm">
+                            <!-- Para explorer antiguo -->
+                        <source src="./assets/Ghost_in_the_Shell_Opening.mp4" type="video/mp4">
+                    </video>
+                    <div class="clearfix"></div>
+                    <audio src="./assets/SampleAudio_0.4mb.mp3" controls></audio>
                 </section>
                 <section class="elementos_navegacion_graficos" id="elementos_navegacion_graficos">
                     <h3>Elementos de navegación gráficos</h3>
+                </section>
+                <section id="elementos_embebidos_no_multimedia">
+                    <h3>Elementos embebidos no multimedia</h3>
+                    <p>La etiqueta iframe permite acceder a otra web desde la nuestra.</p>
+                    <!-- frameborder es un atributo frameborder="0" es anticuado mejor quitarlo -->
+                    <div class="resp-container">
+                        <iframe src="https://madridfree.org/" class="web_external resp-iframe"></iframe>
+                    </div>
                 </section>
             </section>
         </main>
