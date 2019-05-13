@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Por accesibilidad mejor especificar el apartado de las subpáginas, no poner la misma de la home.  -->
+    <title>Curso de HTML- Multimedia</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body id="inicio">
+    <header class="main_header">
+        <!-- Desde el punto de vista de la arquitectura de la información es importante elegir buenas etiquetas para el menu. -->
+        <nav>
+            <ul>
+                <!-- En rel="" se pone qué relación tiene el documento actual con el hiperenlace 
+                            Podemos poner diferentes valores: https://www.w3schools.com/TAGS/att_a_rel.asp
+                                    tag: A tag (keyword) for the current document
+                                    external
+                        -->
+                <li><a href="./index.html#sections" rel="tag">Sections</a></li>
+                <li><a href="./index.html#grouping" rel="tag">Grouping</a></li>
+                <li><a href="./index.html#text_level_semantics" rel="tag">Text-level</a></li>
+                <!-- relativa al origen, es peligroso, no funciona si cambiamos la origen.
+                            href="/06_Elementos/" -->
+                <li><a href="./multimedia.html">Multimedia</a></li> <!-- Así se usa, Relativa al document -->
+                <li><a href="./datos.html#tablas">Tablas</a></li>
+                <li><a href="./datos.html#formularios">Formularios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content_wrapper">
+        <main>
+            <section id="tablas">
+                <header>
+                    <h2>Tablas</h2>
+                </header>
+                <p>Ejemplo de tabla del uso de los navegadores</p>
+                <!-- 8 filas x 4 columnas -->
+                <table border="1">
+                    <tr>
+                        <th>vacío</th>
+                        <td>2017</td>
+                        <td>2018</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <th>Google Chrome</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Safari</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>UC Browser</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Mozilla Firefox</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Internet Explorer</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Opera</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Otros</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                2016
+                2017
+                2018
+
+                2017
+                Google Chrome (61,55 %)
+                Safari (15,13 %)
+                UC Browser (4,41 %)
+                Mozilla Firefox (5,02 %)
+                Internet Explorer (2,88 %)
+                Opera (3,16 %)
+                Otros (7,85 %)
+                
+2018
+                1. Chrome 67 - 32,59%
+2. Safari 11 - 10,79%
+3. UC Browser 12 - 6,16%
+4. Firefox 61 - 2,65%
+5. IE 11 - 2,44%
+6. Chrome 66 - 2,44%
+7. Chrome 59 - 2,30%
+8. Chrome 49 - 2,18%
+9. Chrome 64 - 1,91%
+Safari 10 - 1,74%
+            </section>
+            <section id="formularios">
+                <header>
+                    <h2>Formularios</h2>
+                </header>
+            </section>
+        </main>
+    </div>
+    <aside>
+        <h2>Publicidad</h2>
+        <p>Aquí iría la publicidad.</p>
+    </aside>
+    <iframe src="./_footer.html" class="iframe_footer"></iframe>
+</body>
+
+</html>

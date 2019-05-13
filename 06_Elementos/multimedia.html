@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Por accesibilidad mejor especificar el apartado de las subpáginas, no poner la misma de la home.  -->
     <title>Curso de HTML- Multimedia</title>
-    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
 <body id="inicio">
@@ -17,16 +21,18 @@
         <nav>
             <ul>
                 <!-- En rel="" se pone qué relación tiene el documento actual con el hiperenlace 
-                    Podemos poner diferentes valores: https://www.w3schools.com/TAGS/att_a_rel.asp
-                            tag: A tag (keyword) for the current document
-                            external
-                -->
+                                Podemos poner diferentes valores: https://www.w3schools.com/TAGS/att_a_rel.asp
+                                        tag: A tag (keyword) for the current document
+                                        external
+                            -->
                 <li><a href="./index.html#sections" rel="tag">Sections</a></li>
                 <li><a href="./index.html#grouping" rel="tag">Grouping</a></li>
                 <li><a href="./index.html#text_level_semantics" rel="tag">Text-level</a></li>
                 <!-- relativa al origen, es peligroso, no funciona si cambiamos la origen.
-                    href="/06_Elementos/" -->
+                                href="/06_Elementos/" -->
                 <li><a href="./multimedia.html">Multimedia</a></li> <!-- Así se usa, Relativa al document -->
+                <li><a href="./datos.html#tablas">Tablas</a></li>
+                <li><a href="./datos.html#formularios">Formularios</a></li>
             </ul>
         </nav>
     </header>
@@ -65,7 +71,8 @@
                     <img src="./assets/varanocrocodilo1.png" alt="">
                     <img src="./assets/ardilla.gif" alt="">
                     <!-- Formato nuevo: webp -->
-                    <img src="./assets/3boats.jpg" srcset="./assets/3boats.webp 320w" alt="">
+                    <img src="./assets/3boats.jpg" srcset="./assets/3boats.webp 320w" alt=""
+                        sizes="(max-width: 320px) 320px">
                     <img src="./assets/WoodElf.png" alt="">
                     <img src="./assets/005.gif" alt="GIF animado abstracto">
                     <!-- Así se ve ya en Explorer 8 tmb -->
@@ -78,9 +85,9 @@
                         ./assets/komodo.300.jpg 300w,
                         ./assets/komodo.400.jpg 400w,
                         ./assets/komodo.500.jpg 500w,
-                        ./assets/komodo.jpg 600w" sizes="(max-width: 300px),
-                        (max-width: 400px),
-                        (max-width: 500px)" src="./assets/komodo.jpg" alt="Dragón de Komodo mostrando su lengua">
+                        ./assets/komodo.jpg 600w" sizes="(max-width: 300px) 300px,
+                        (max-width: 400px) 400px,
+                        (max-width: 500px) 500px" src="./assets/komodo.jpg" alt="Dragón de Komodo mostrando su lengua">
                 </div>
                 <p>La etiqueta picture y las imágenes responsivas en HTML.</p>
                 <picture>
@@ -108,21 +115,21 @@
                 <figure>
                     <img src="./assets/loro_600.jpg" alt="lorito">
                     <figcaption>Título de una imagen</figcaption>
-                    <p>Loros en la jungla.</p>
                 </figure>
                 <section class="video_y_audio" id="video_y_audio">
                     <h3>Video y audio</h3>
                     <p>Es posible incluir un video desde una fuente externo.</p>
                     <!-- Hacer iframe responsive: https://blog.theodo.com/2018/01/responsive-iframes-css-trick/ -->
                     <div class="resp-container">
-                        <iframe  class="resp-iframe" width="560" height="315" src="https://www.youtube.com/embed/KgG4gJdK1oA"
+                        <iframe class="resp-iframe" width="560" height="315"
+                            src="https://www.youtube.com/embed/KgG4gJdK1oA"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
                     <p>Otra opción es reproducir videos de nuestro servidor.</p>
-                    <video controls>
+                    <video controls poster="./assets/komodo.jpg">
                         <source src="./assets/Ghost_in_the_Shell_Opening.webm" type="video/webm">
-                            <!-- Para explorer antiguo -->
+                        <!-- Para explorer antiguo -->
                         <source src="./assets/Ghost_in_the_Shell_Opening.mp4" type="video/mp4">
                     </video>
                     <div class="clearfix"></div>
@@ -130,7 +137,12 @@
                 </section>
                 <section class="elementos_navegacion_graficos" id="elementos_navegacion_graficos">
                     <h3>Elementos de navegación gráficos</h3>
+                    <p>En HTML antiguo se usaba la etiqueta map para definir un hotspot(imagen interactiva, clickable).
+                        En HTML5 se puede conseguir este efecto usando svg.</p>
+                    <embed src="./assets/logo.svg" type="image/svg+xml">
+                    <p>También relacionado con la navegación gráfica estaría el uso de iconos en HTML.</p>
                 </section>
+                <!-- Podria ser un aside -->
                 <section id="elementos_embebidos_no_multimedia">
                     <h3>Elementos embebidos no multimedia</h3>
                     <p>La etiqueta iframe permite acceder a otra web desde la nuestra.</p>
@@ -139,6 +151,11 @@
                         <iframe src="https://madridfree.org/" class="web_external resp-iframe"></iframe>
                     </div>
                 </section>
+                <aside>
+                    <!-- Insertar cualquier cosa,  -->
+                    <object data="https://www.tajamar.es/" type="text/html"></object>
+                    <embed src="https://www.tajamar.es/" type="text/html">
+                </aside>
             </section>
         </main>
         <aside>
@@ -146,14 +163,7 @@
             <p>Aquí iría la publicidad.</p>
         </aside>
     </div>
-    <footer class="main_footer">
-        <address>
-            <p>Designed by EZ©</p>
-            <!-- Enlace de correo -->
-            <a href="mailto://evelin.zarka@tajamar365.com">Contáctame</a>
-        </address>
-        <small>Tajamar</small>
-    </footer>
+    <iframe src="./_footer.html" class="iframe_footer"></iframe>
 </body>
 
 </html>

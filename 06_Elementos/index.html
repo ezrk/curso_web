@@ -11,8 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Curso de HTML</title>
-    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- último tenemos que poner nuestro CSS, es de mayor importancia -->
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <!-- En HTML5 aparecen nuevas etiquetas con valor semántico relacionadas con las secciones del documento 
     Estas etiquetas son: section, header, footer, nav, article y aside.
@@ -21,22 +26,24 @@
 
 <body id="inicio">
     <header class="main_header">
-        <h1>Etiquetas de HTML</h1>
+        <h1>Etiquetas de HTML<i class="fab fa-html5"></i></h1>
         <p>Clasificación de las etiquetas según el estándar HTML5.2</p>
         <!-- Desde el punto de vista de la arquitectura de la información es importante elegir buenas etiquetas para el menu. -->
         <nav>
             <ul>
                 <!-- En rel="" se pone qué relación tiene el documento actual con el hiperenlace 
-                Podemos poner diferentes valores: https://www.w3schools.com/TAGS/att_a_rel.asp
-                        tag: A tag (keyword) for the current document
-                        external
-            -->
-                <li><a href="#sections" rel="tag">Sections</a></li>
-                <li><a href="#grouping" rel="tag">Grouping</a></li>
-                <li><a href="#text_level_semantics" rel="tag">Text-level</a></li>
+                                Podemos poner diferentes valores: https://www.w3schools.com/TAGS/att_a_rel.asp
+                                        tag: A tag (keyword) for the current document
+                                        external
+                            -->
+                <li><a href="./index.html#sections" rel="tag">Sections</a></li>
+                <li><a href="./index.html#grouping" rel="tag">Grouping</a></li>
+                <li><a href="./index.html#text_level_semantics" rel="tag">Text-level</a></li>
                 <!-- relativa al origen, es peligroso, no funciona si cambiamos la origen.
-                href="/06_Elementos/" -->
+                                href="/06_Elementos/" -->
                 <li><a href="./multimedia.html">Multimedia</a></li> <!-- Así se usa, Relativa al document -->
+                <li><a href="./datos.html#tablas">Tablas</a></li>
+                <li><a href="./datos.html#formularios">Formularios</a></li>
             </ul>
         </nav>
     </header>
@@ -168,8 +175,8 @@
                                 target="_blank" rel="external">CodePen</a></footer>
                     </figcaption>
                 </figure>
-                <footer>
-                    <a href="#inicio" rel="tag">Inicio</a>
+                <footer class="footer_subir">
+                    <a href="#inicio" title="Inicio" rel="tag"><i class="fas fa-angle-up"></i></a>
                 </footer>
             </section>
             <section id="grouping">
@@ -306,8 +313,8 @@
                     <p>La etiqueta &lt;hr&gt; crea una línea horizontal, no se usa.</p>
                     <p>El elemento &lt;br&gt; hace un salto de línea</p>
                 </section>
-                <footer>
-                    <a href="#inicio" rel="tag">Inicio</a>
+                <footer class="footer_subir">
+                    <a href="#inicio" title="Inicio" rel="tag"><i class="fas fa-angle-up"></i></a>
                 </footer>
             </section>
             <section id="text_level_semantics">
@@ -422,8 +429,8 @@
                     <!-- Ficheros externos colocados dentro de la página web (videos, audios, imágenes) -->
                 </header>
                 <p>Veremos como utilizar:</p>
-                <footer>
-                    <a href="#inicio" rel="tag">Inicio</a>
+                <footer class="footer_subir">
+                    <a href="#inicio" title="Inicio" rel="tag"><i class="fas fa-angle-up"></i></a>
                 </footer>
             </section>
         </main>
@@ -432,14 +439,7 @@
             <p>Aquí iría la publicidad.</p>
         </aside>
     </div>
-    <footer class="main_footer">
-        <address>
-            <p>Designed by EZ©</p>
-            <!-- Enlace de correo -->
-            <a href="mailto://evelin.zarka@tajamar365.com">Contáctame</a>
-        </address>
-        <small>Tajamar</small>
-    </footer>
+    <iframe src="./_footer.html" class="iframe_footer"></iframe>
 </body>
 
 </html>
