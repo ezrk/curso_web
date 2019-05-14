@@ -5,7 +5,7 @@ html, body {
 }
 
 .main_header {
-    background-color:  slategrey;
+    background-color: slategrey;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -196,6 +196,41 @@ footer aside a {
     color: lightslategray;
     font-size: 1.5rem;
 }
+
+.main_table {
+    width: 50%;
+    text-align: left;
+    
+}
+
+/* Filas impares - odd */
+.main_table>tbody>tr:nth-of-type(odd) {
+    background-color: rgb(240, 240, 240);
+}
+
+/* Filas pares - even */
+.main_table>tbody>tr:nth-of-type(even) {
+    background-color: rgb(183, 183, 253);
+}
+
+.main_table>tbody>tr {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+.centrar, td {
+    text-align: center;
+}
+
+th {
+    background-color: rgb(183, 183, 253);
+}
+
+.claro {
+    background-color: rgb(240, 240, 240) ; 
+}
+
 
 
 
