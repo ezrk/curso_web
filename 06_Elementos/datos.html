@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Por accesibilidad mejor especificar el apartado de las subpáginas, no poner la misma de la home.  -->
     <title>Curso de HTML- Multimedia</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -43,86 +43,122 @@
                     <h2>Tablas</h2>
                 </header>
                 <p>Ejemplo de tabla del uso de los navegadores</p>
-                <!-- 8 filas x 4 columnas -->
-                <table border="1">
-                    <tr>
-                        <th>vacío</th>
-                        <td>2017</td>
-                        <td>2018</td>
-                        <td>2019</td>
+                <!-- 8 filas x 4 columnas: table>tr*8>td*4 y luego modificamos encabezados con th-->
+                <table class="main_table">
+                    <caption>Porcentaje de uso de los navegadores web</caption>
+                    <tr class="centrar">
+                        <th></th>
+                        <th>2017</th>
+                        <th>2018</th>
+                        <th>2019</th>
                     </tr>
                     <tr>
                         <th>Google Chrome</th>
                         <td>61,55 %</td>
                         <td>32,59%</td>
-                        <td></td>
+                        <td>30,96%</td>
                     </tr>
                     <tr>
                         <th>Safari</th>
                         <td>15,13 %</td>
                         <td>10,79%</td>
-                        <td></td>
+                        <td>12,33%</td>
                     </tr>
                     <tr>
                         <th>UC Browser</th>
                         <td>4,41 %</td>
                         <td>6,16%</td>
-                        <td></td>
+                        <td>5,78%</td>
                     </tr>
                     <tr>
                         <th>Mozilla Firefox</th>
                         <td>5,02 %</td>
                         <td>2,65%</td>
-                        <td></td>
+                        <td>3,56%</td>
                     </tr>
                     <tr>
                         <th>Internet Explorer</th>
                         <td>2,88 %</td>
                         <td>2,44%</td>
-                        <td></td>
+                        <td>2,5%</td>
                     </tr>
                     <tr>
                         <th>Opera</th>
                         <td>3,16 %</td>
-                        <td></td>
-                        <td></td>
+                        <td>3,09%</td>
+                        <td>2,15%</td>
                     </tr>
                     <tr>
                         <th>Otros</th>
                         <td>7,85 %</td>
-                        <td></td>
-                        <td></td>
+                        <td>7,24%</td>
+                        <td>6,99%</td>
                     </tr>
                 </table>
-                2016
-                2017
-                2018
 
-                2017
-                Google Chrome (61,55 %)
-                Safari (15,13 %)
-                UC Browser (4,41 %)
-                Mozilla Firefox (5,02 %)
-                Internet Explorer (2,88 %)
-                Opera (3,16 %)
-                Otros (7,85 %)
-                
-2018
-                1. Chrome 67 - 32,59%
-2. Safari 11 - 10,79%
-3. UC Browser 12 - 6,16%
-4. Firefox 61 - 2,65%
-5. IE 11 - 2,44%
-6. Chrome 66 - 2,44%
-7. Chrome 59 - 2,30%
-8. Chrome 49 - 2,18%
-9. Chrome 64 - 1,91%
-Safari 10 - 1,74%
+                <p>Ejemplo de tabla con celdas combinadas.</p>
+
+                <table class="main_table">
+                    <!-- El atributo de scope ayuda en la accesibilidad. -->
+                    
+                    <tr>
+                        <th class="" colspan="2" rowspan="2">Preferencias de viaje</th>
+                        <th class="centrar" colspan="3" scope="colgroup">Destinos</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="centrar">Caribe</th>
+                        <th scope="col" class="centrar">Europa</th>
+                        <th scope="col" class="centrar">Asia</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Rangos de edad</td>
+                        <td scope="row" >Menores de 18</td>
+                        <td>38%</td>
+                        <td>25%</td>
+                        <td>37%</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" class="claro">Entre 18 y 30</td>
+                        <td class="claro">32%</td>
+                        <td class="claro">37%</td>
+                        <td class="claro">31%</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" >Mayores de 30</td>
+                        <td>30%</td>
+                        <td>38%</td>
+                        <td>32%</td>
+                    </tr>
+                </table>
+
+
             </section>
             <section id="formularios">
                 <header>
                     <h2>Formularios</h2>
                 </header>
+                <p>Los formularios se incluyen dentro de la etiqueta form.</p>
+                <p>En ellos se utilizan los siguientes controles:</p>
+                <ul>
+                    <li>input - text</li>
+                    <li>text area</li>
+                    <li>checkbox</li>
+                    <li>radio buttons</li>
+                    <li>select / options</li>
+                    <li>botones</li>
+                </ul>
+                <p>La etiqueta form tiene 2 atributos importantes:</p>
+                <ul>
+                    <li>action</li>
+                    <li>method</li>
+                </ul>
+                <form action="https://jsonplaceholder.typicode.com/users" method="POST">
+                    <!-- name= poner name/nombre/userName...te lo tiene q decir back -->
+                    <input type="text" name="userName" placeholder="Nombre y Apellidos">
+                    <input type="password" name="password" placeholder="Password">
+                    <div class="clearfix"></div>
+                    <button type="submit">Enviar</button>
+                </form>
             </section>
         </main>
     </div>
