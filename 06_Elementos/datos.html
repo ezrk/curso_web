@@ -100,7 +100,7 @@
 
                 <table class="main_table">
                     <!-- El atributo de scope ayuda en la accesibilidad. -->
-                    
+
                     <tr>
                         <th class="" colspan="2" rowspan="2">Preferencias de viaje</th>
                         <th class="centrar" colspan="3" scope="colgroup">Destinos</th>
@@ -112,7 +112,7 @@
                     </tr>
                     <tr>
                         <th rowspan="3">Rangos de edad</td>
-                        <td scope="row" >Menores de 18</td>
+                        <td scope="row">Menores de 18</td>
                         <td>38%</td>
                         <td>25%</td>
                         <td>37%</td>
@@ -124,7 +124,7 @@
                         <td class="claro">31%</td>
                     </tr>
                     <tr>
-                        <td scope="row" >Mayores de 30</td>
+                        <td scope="row">Mayores de 30</td>
                         <td>30%</td>
                         <td>38%</td>
                         <td>32%</td>
@@ -152,13 +152,154 @@
                     <li>action</li>
                     <li>method</li>
                 </ul>
-                <form action="https://jsonplaceholder.typicode.com/users" method="POST">
+                <h3>Formulario Mínimo</h3>
+                <p>Ejemplo de los elementos mínimos de un formulario y uso de los distintos métodos: GET y POST.</p>
+                <h4>Uso de POST</h4>
+                <!-- name="basic-get" este atributo -->
+                <form name="basic-post" action="https://jsonplaceholder.typicode.com/users" method="POST">
                     <!-- name= poner name/nombre/userName...te lo tiene q decir back -->
-                    <input type="text" name="userName" placeholder="Nombre y Apellidos">
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="text" name="userName" placeholder="Nombre y Apellidos" required>
+                    <input type="password" name="password" placeholder="Password" minlength="8" maxlength="16">
                     <div class="clearfix"></div>
                     <button type="submit">Enviar</button>
                 </form>
+                <h4>Uso de GET</h4>
+                <form name="basic-get" method="GET">
+                    <!-- name= poner name/nombre/userName...te lo tiene q decir back -->
+                    <input type="text" name="userName" placeholder="Nombre y Apellidos" required >
+                    <input type="password" name="password" placeholder="Password" required minlength="8" maxlength="16">
+                    <div class="clearfix"></div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <h3>Formulario más completo</h3>
+                <p>Usamos en un mismo formulario los principales controles</p>
+                <form name="complete-post" action="https://jsonplaceholder.typicode.com/users" method="POST">
+                    <!-- Comportamiento inline de los formularios -->
+                    <fieldset id="datos_personales">
+                        <legend>Datos personales</legend>
+                        <!-- Para agrandar el campo clickable, hay q asociar el for="" del label con el id="" del input-->
+                        <label for="userName" class="form_label">Nombre</label>
+                        <!-- name= poner name/nombre/userName...te lo tiene q decir back -->
+                        <!-- Input tiene q llevar id -->
+                        <!-- Atributo required -->
+                        <input type="text" name="userName" id="userName" placeholder="Nombre y Apellidos"
+                            class="form_control" required>
+                        <!-- No es necesario siempre label, porque podemos ponerlo en el placeholder tmb. -->
+                        <label for="password" class="form_label">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="Password"
+                            class="form_control" required pattern="var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");>
+                        <label for="email" class="form_label">E-mail</label>
+                        <input type="email" name="email" id="email" class="form_control"
+                            placeholder="Escribe tu correo" required>
+
+                        <label for="cv" class="form_label">Formación</label>
+                        <input type="text" name="cv" id="cv" placeholder="Selecciona o indica tus estudios"
+                            list="formacion" class="form_control">
+                        <datalist id="formacion">
+                            <option>Graduado</option>
+                            <option>Licenciado</option>
+                            <option>Doctor</option>
+                        </datalist>
+
+                        <label for="birthDate" class="form_label">Fecha de nacimiento</label>
+                        <input type="date" name="birthDate" id="birthDate" class="form_control">
+
+                        <!-- Más genero -->
+                        <label for="info" class="form_label">Dejanos tu mensaje</label>
+                        <textarea name="info" id="info" rows="5" class="form_control"
+                            placeholder="Más información"></textarea>
+                    </fieldset>
+                    <fieldset id="condiciones">
+                        <legend>Condiciones</legend>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, facere possimus eos vero
+                            veniam aut voluptas quod incidunt! Exercitationem ipsa accusamus soluta unde ratione,
+                            ducimus dicta necessitatibus numquam officia aliquid?</p>
+                        <input type="checkbox" name="isOk" id="isOk" required>
+                        <label for="isOk">Estoy de acuerdo.</label>
+                    </fieldset>
+                    <fieldset id="cursos">
+                        <legend>Datos del curso</legend>
+                        <label for="curso" class="form_label">Curso</label>
+                        <!-- Combo-box , desplegable -->
+                        <!-- Size sirve para tener una lista, sin desplegar -->
+                        <select name="curso" id="curso" class="form_control">
+                            <!-- Internamente en value podemos asignar un valor al elemento -->
+                            <option value="" class="placeholder" selected>Elige un valor</option>
+                            <option value="HTML01">Curso HTML5</option>
+                            <option value="CSS02">Curso CSS3</option>
+                            <option value="JS03">Curso JavaScript</option>
+                        </select>
+                        <select name="curso" id="curso" class="form_control" size="8">
+                            <!-- Internamente en value podemos asignar un valor al elemento -->
+                            <option value="" class="placeholder" selected>Elige un valor</option>
+                            <optgroup label="Cursos Front-End">
+                                <option value="HTML01">Curso HTML5</option>
+                                <option value="CSS02">Curso CSS3</option>
+                                <option value="JS03">Curso JavaScript</option>
+                            </optgroup>
+                            <optgroup label="Cursos Back-End">
+                                <option value="Node04">Curso Node JS</option>
+                                <option value="PHP05">Curso PHP</option>
+                            </optgroup>
+                        </select>
+                        <!-- Select de selección multiple -->
+                        <select name="curso" id="curso" class="form_control" size="8" multiple>
+                            <!-- Internamente en value podemos asignar un valor al elemento -->
+                            <option value="" class="placeholder" selected>Elige un valor</option>
+                            <optgroup label="Cursos Front-End">
+                                <option value="HTML01">Curso HTML5</option>
+                                <option value="CSS02">Curso CSS3</option>
+                                <option value="JS03">Curso JavaScript</option>
+                            </optgroup>
+                            <optgroup label="Cursos Back-End">
+                                <option value="Node04">Curso Node JS</option>
+                                <option value="PHP05">Curso PHP</option>
+                            </optgroup>
+                        </select>
+                        <label class="form_label">Ubicaciones</label>
+                        <!-- Radio buttons -->
+                        <!-- input:radio debería incluir la propiedad value -->
+                        <div class="radio_wrapper">
+                            <input value="MD" type="radio" name="sitio" id="madrid">
+                            <label for="madrid">Madrid</label>
+                            <input value="SEV" type="radio" name="sitio" id="sevilla">
+                            <label for="sevilla">Sevilla</label>
+                        </div>
+                    </fieldset>
+                    <div class="clearfix"></div>
+                    <!-- Hay dos tipos de botones de enviar: button, input -->
+                    <button type="submit">Enviar</button>
+                    <button type="submit"><i class="far fa-paper-plane"></i>Enviar</button>
+                    <input type="submit" value="Enviar">
+                    <button type="reset"><i class="far fa-trash-alt"></i></i>Borrar</button>
+                    <!-- Cuando veamos JS podemos configurar las acciones de los botones -->
+                    <button type="button">button JS</button>
+                </form>
+                <i class="fas fa-dizzy"></i>
+                <p>Existen otros controles de formularios</p>
+                <dl>
+                    <dt class="dt">Input color</dt>
+                    <dd class="dd"><input type="color"></dd>
+                    <div class="clearfix"></div>
+                    <dt class="dt">Input file</dt>
+                    <dd class="dd"><input type="file"></dd>
+                    <div class="clearfix"></div>
+                    <dt class="dt">Input number</dt>
+                    <dd class="dd" ><input type="number" min="0" max="8" step="2"></dd>
+                    <div class="clearfix"></div>
+                    <dt class="dt">Input range</dt>
+                    <dd class="dd"><input type="range" min="0" max="10"></dd>
+                    <div class="clearfix"></div>
+                    <dt class="dt">Input <i class="fas fa-search"></i></dt>
+                    <dd class="dd"><input type="search"></dd>
+                    <div class="clearfix"></div>
+                    <dt class="dt">Input tel</i></dt>
+                    <dd class="dd"><input type="tel"></dd>
+                </dl>
+                <div class="clearfix"></div>
+                <p>Mecanismos de validación</p>
+                
+
             </section>
         </main>
     </div>

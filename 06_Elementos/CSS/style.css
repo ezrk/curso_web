@@ -231,6 +231,48 @@ th {
     background-color: rgb(240, 240, 240) ; 
 }
 
+/* formularios */
+
+.form_control {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgray; 
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    background-color: transparent;
+    margin-bottom: 0.2rem; 
+    font-family: inherit;
+}
+
+fieldset {
+margin-bottom: 1rem;
+border: none;
+}
+
+.form_label, dt, dd{
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Los margenes bottom y top del elemento siguiente se colapsan y se quedan con el valor mas grande */
+
+textarea {
+    font-family: inherit;
+}
+
+.placeholder {
+    color: ;
+    font-family: inherit
+}
+
+.placeholder:hover {
+    color: red;
+}
+.radio_wrapper {
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+}
 
 
 
