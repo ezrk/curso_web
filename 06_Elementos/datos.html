@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/style.css">
+    
+    <script src="./JS/app.js" type="module"></script>
 </head>
 
 <body id="inicio">
@@ -111,7 +113,7 @@
                         <th scope="col" class="centrar">Asia</th>
                     </tr>
                     <tr>
-                        <th rowspan="3">Rangos de edad</td>
+                        <th rowspan="3">Rangos de edad</th>
                         <td scope="row">Menores de 18</td>
                         <td>38%</td>
                         <td>25%</td>
@@ -166,7 +168,7 @@
                 <h4>Uso de GET</h4>
                 <form name="basic-get" method="GET">
                     <!-- name= poner name/nombre/userName...te lo tiene q decir back -->
-                    <input type="text" name="userName" placeholder="Nombre y Apellidos" required >
+                    <input type="text" name="userName" placeholder="Nombre y Apellidos" required>
                     <input type="password" name="password" placeholder="Password" required minlength="8" maxlength="16">
                     <div class="clearfix"></div>
                     <button type="submit">Enviar</button>
@@ -186,11 +188,15 @@
                             class="form_control" required>
                         <!-- No es necesario siempre label, porque podemos ponerlo en el placeholder tmb. -->
                         <label for="password" class="form_label">Contraseña</label>
-                        <input type="password" name="password" id="password" placeholder="Password"
-                            class="form_control" required pattern="var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");>
+                        <input type="password" name="password" id="password" placeholder="Password" class="form_control"
+                            required
+                            pattern="var strongRegex = new RegExp(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*>">
+                        <p>THE Complex Password Filter Matching 3 of 4 Character catagories: 1.) at least 1 upper
+                            case character 2.) at least 1 lower case character 3.) at least 1 numerical character 4.) at
+                            least 1 special character It also enforces a min and max length and works for</p>
                         <label for="email" class="form_label">E-mail</label>
-                        <input type="email" name="email" id="email" class="form_control"
-                            placeholder="Escribe tu correo" required>
+                        <input type="email" name="email" id="email" class="form_control" placeholder="Escribe tu correo"
+                            required>
 
                         <label for="cv" class="form_label">Formación</label>
                         <input type="text" name="cv" id="cv" placeholder="Selecciona o indica tus estudios"
@@ -229,7 +235,7 @@
                             <option value="CSS02">Curso CSS3</option>
                             <option value="JS03">Curso JavaScript</option>
                         </select>
-                        <select name="curso" id="curso" class="form_control" size="8">
+                        <select name="curso" id="curso1" class="form_control" size="8">
                             <!-- Internamente en value podemos asignar un valor al elemento -->
                             <option value="" class="placeholder" selected>Elige un valor</option>
                             <optgroup label="Cursos Front-End">
@@ -243,7 +249,7 @@
                             </optgroup>
                         </select>
                         <!-- Select de selección multiple -->
-                        <select name="curso" id="curso" class="form_control" size="8" multiple>
+                        <select name="curso" id="curso2" class="form_control" size="8" multiple>
                             <!-- Internamente en value podemos asignar un valor al elemento -->
                             <option value="" class="placeholder" selected>Elige un valor</option>
                             <optgroup label="Cursos Front-End">
@@ -271,7 +277,7 @@
                     <button type="submit">Enviar</button>
                     <button type="submit"><i class="far fa-paper-plane"></i>Enviar</button>
                     <input type="submit" value="Enviar">
-                    <button type="reset"><i class="far fa-trash-alt"></i></i>Borrar</button>
+                    <button type="reset"><i class="far fa-trash-alt"></i>Borrar</button>
                     <!-- Cuando veamos JS podemos configurar las acciones de los botones -->
                     <button type="button">button JS</button>
                 </form>
@@ -285,7 +291,7 @@
                     <dd class="dd"><input type="file"></dd>
                     <div class="clearfix"></div>
                     <dt class="dt">Input number</dt>
-                    <dd class="dd" ><input type="number" min="0" max="8" step="2"></dd>
+                    <dd class="dd"><input type="number" min="0" max="8" step="2"></dd>
                     <div class="clearfix"></div>
                     <dt class="dt">Input range</dt>
                     <dd class="dd"><input type="range" min="0" max="10"></dd>
@@ -293,19 +299,108 @@
                     <dt class="dt">Input <i class="fas fa-search"></i></dt>
                     <dd class="dd"><input type="search"></dd>
                     <div class="clearfix"></div>
-                    <dt class="dt">Input tel</i></dt>
+                    <dt class="dt">Input tel</dt>
                     <dd class="dd"><input type="tel"></dd>
                 </dl>
                 <div class="clearfix"></div>
                 <p>Mecanismos de validación</p>
-                
-
+            </section>
+            <section id="elementos_interactivos">
+                <header>
+                    <h2>Elementos interactivos</h2>
+                </header>
+                <p>Son elementos novedosos incluidos en las modificaciones de HTML5</p>
+                <ul>
+                    <li>Details - HTML5.1</li>
+                    <li>Dialog - HTML5.2</li>
+                </ul>
+                <h3>Etiqueta details</h3>
+                <p>Permite crear bloque con información extra que se muestra opcionalmente.</p>
+                <details>
+                    <summary>Cuáles son las novedades de HTML5.1</summary>
+                    <h4>Novedades en HTML5.1</h4>
+                </details>
+                <!-- https://www.imaginanet.com/html5-novedades.html -->
+                <details>
+                    <summary>Definir múltiples imágenes para el diseño responsive</summary>
+                    <p>Esta versión nos ofrece la posibilidad de utilizar el tag picture, junto con el atributo srcset
+                        para poder definir múltiples imágenes para el diseño responsivo. Podríamos definir este tag como
+                        un contenedor de imágenes donde los diseñadores podrán declarar varias, que se utilizarán
+                        dependiendo del tamaño de pantalla, píxeles u otros parámetros. Por sí solo este tag no muestra
+                        nada, y para que funcione deberíamos establecer una imagen por defecto utilizando la etiqueta
+                        img habitual. Las imágenes alternativas se ubicarían
+                        dentro de los atributos srcset de los elementos img y source. Este código nos mostrará
+                        la imagen por defecto mientras que el tamaño de la pantalla sea superior a los 960 px. Cuando
+                        sea menor, se mostrará large.jpg, y si es inferior a 360 px se verá "mobile.jpg".</p>
+                </details>
+                <details>
+                    <summary>Mostrar o esconder información extra </summary>
+                    <p>En este caso utilizaremos las nuevas etiquetas details y summary. Mediante su uso podemos añadir
+                        información extra a cualquier contenido. Su principal característica es que la información no se
+                        muestra por defecto, pero si el usuario está interesado tendrá la opción de consultarla. Para
+                        utilizarla debes colocar el tag summary dentro de details. En el interior de summary será donde
+                        pondremos la información visible, que tendrá un icono a su izquierda para mostrar la información
+                        oculta.</p>
+                </details>
+                <details>
+                    <summary>Añadir funciones al menú contextual del navegador </summary>
+                    <p>Esta versión de HTML 5 permite añadir nuevas funciones al menú contextual del navegador. Para
+                        ello hay que utilizar el tag menuitem y su atributo type=context. Para
+                        su uso hay que asignar esa etiqueta como elemento hijo del tag menu, al que habrá que definir el
+                        atributo id, que tendrá así el mismo valor que el atributo contextmenu del elemento que queremos
+                        añadir al menú contextual. El tag menuitem puede ser de tres tipos diferentes: checkbox, command
+                        y radio. Si se ejecuta el código anterior, aparecerá un botón. Si sobre él se pulsa con el botón
+                        derecho, aparece la nueva opción en el menú.</p>
+                </details>
+                <details>
+                    <summary>Anidar headers y footers </summary>
+                    <p>HTML 5.1 ofrece la posibilidad de anidar varios headers y footers, siempre y cuando cada nivel
+                        esté dentro del contenido de la sección. Útil para crear cabeceras elaboradas.</p>
+                </details>
+                <details>
+                    <summary>Utilizar imágenes con un ancho de 0 píxeles </summary>
+                    <p>Otra de las novedades que incluye esta nueva versión es la posibilidad de utilizar imágenes que
+                        tengan un valor de 0 píxeles de ancho. Esto es muy útil a la hora de incluir fotografías que no
+                        queremos que sean vistas por los usuarios, como pueden ser archivos de trackeo. Lo que sí se
+                        recomienda es que se utilice el atributo alt vacío.</p>
+                </details>
+                <details>
+                    <summary>Crear opciones vacías </summary>
+                    <p>Otra de las cosas que no se podía utilizar hasta la fecha era crear un elemento option vacío.
+                        Este elemento suele ser utilizado conjuntamente con otras etiquetas como select, optgroup o
+                        datalist. Puede ser útil en aquellos casos en los que no queremos sugerir qué opción deben
+                        seleccionar los usuarios.</p>
+                </details>
+                <footer>
+                    <cite>
+                        <a href="https://www.imaginanet.com/html5-novedades.html" target="_blank"
+                            rel="external">Imaginanet</a>
+                    </cite>
+                </footer>
+                <h3>Etiqueta dialog</h3>
+                <p>El elemento HTML dialog representa una caja de diálogo u otro componente interactivo, como
+                    inspector o ventana.</p>
+                <p>Dos estados posibles: open - indica que el diálogo está activo y disponible para interactuar. Cuando
+                    el atributo open no está asignado, no debe mostrarse al usuario.</p>
+                <dialog open id="dlg-sample">
+                    <p> Información que se mostrará cuando aparezca el modal </p>
+                    <button type="button" id="btn-cerrar">Cerrar</button>
+                </dialog>
+                <button type="button" id="btn-info">Mostrar información</button>
             </section>
         </main>
     </div>
     <aside>
         <h2>Publicidad</h2>
         <p>Aquí iría la publicidad.</p>
+        <!-- Es como un div, pero no se muestra en el navegador, se usa para interactuar con JS
+        Webcomponents: pequeños fragmentos de js que utiliza estos templates. -->
+        <template id="publi-extra">
+            <p>Aquí podemos incluir cualquier etiqueta HTML</p>
+        </template>
+        <p>Ejemplo canvas</p>
+        <!-- se usa en Js, para hacer un lienzo? -->
+        <canvas id="cnv-sample" class="canvas"></canvas>
     </aside>
     <iframe src="./footer.html" class="iframe_footer"></iframe>
 </body>
