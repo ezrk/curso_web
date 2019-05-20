@@ -77,7 +77,7 @@ footer p {
 /* Selectores de atributo [] */
 
 [title] {
-    color: blueviolet;
+    color: blueviolet !important; 
 }
 
 [title="extra"] {
