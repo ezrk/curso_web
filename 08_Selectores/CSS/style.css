@@ -1,0 +1,105 @@
+/* Selectores combinados/contextuales: 
+- Selector de descendientes - usando el espacio
+- Selector de hijo - se usa el ">"
+- Selector de hermanos (sibling) - se usa ~
+- Selector de hermanos adyacentes - se usa +, seria el hermano siguiente
+*/
+
+/*********************
+Estilos .combinadores
+**********************/
+
+/* Selector de descendientes : Los 6 p serían descendientes */
+.combinadores p {
+    background-color: chocolate;
+}
+
+
+/* Selector de hijo : quiero afectar los elementos inmediatos, se usan en tablas y menus */
+.combinadores>p {
+    background-color: cyan;
+}
+
+/* Selector de hermanos (sibling) siguientes */
+.combinadores div~p {
+    background-color: blue;
+}
+
+/* Selector de hermanos adyacentes */
+.combinadores div+p {
+    background-color: coral;
+}
+
+
+/******************
+Estilos del HEADER 
+******************/
+
+header {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+}
+
+header h1 {
+ font-size: 2rem;
+}
+
+header p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+/******************
+Estilos del FOOTER
+******************/
+
+footer {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Selectores de atributo [] */
+
+[title] {
+    color: blueviolet;
+}
+
+[title="extra"] {
+    color: gold;
+}
+
+/* ^ hace que coja lo que empieza por párrafo */
+[title^="parrafo"]  {
+    color: aqua;
+}
+
+/* *contiene */
+[title*="rafo"]  {
+    color:brown;
+}
+
+/* $termina */
+[title$="1"]  {
+    color: lawngreen;
+}
+
+
+
+
+

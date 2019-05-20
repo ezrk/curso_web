@@ -1,0 +1,51 @@
+
+/* Directivas con @, se usa mucho en SASS. Hay que ponerlo al ppio del la hoja de estilo, 
+import asociado a una media-query>
+
+@import url("./footer.css") screen and (max-device-width: 500px);
+@import url("./header.css")
+*/
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+/* Forma más habitual de usar media-queries */
+
+@media (max-width: 500px) {
+    body {
+        background-color: rgb(251, 255, 212);
+    }
+}
+
+/* Otras directivas:  
+@font-face; fuente
+@keyframes; para animación
+@namespace; 
+@page; modificar paramentros al imprimir
+@supports;
+@document; experimental aun no se ha implementado
+*/
+
+/*  
+Selectores: 
+- etiqueta
+- .clase
+- #id (no se usa por buenas prácticas!)
+*/
+
+.azul  {
+    color: blue;
+}
+
+#verde {
+    color: rgb(4, 230, 4);
+}
+
+/* Selectores agrupados */
+p, blockquote {
+    font-size: 1.1rem;
+}
+
+
+
