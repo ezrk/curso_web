@@ -1,9 +1,55 @@
+
+
+
 /* Selectores combinados/contextuales: 
 - Selector de descendientes - usando el espacio
 - Selector de hijo - se usa el ">"
 - Selector de hermanos (sibling) - se usa ~
 - Selector de hermanos adyacentes - se usa +, seria el hermano siguiente
 */
+
+/******************
+Estilos del HEADER 
+******************/
+
+header {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+}
+
+h1 {
+ font-size: 2rem;
+}
+
+header p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+/******************
+Estilos del FOOTER
+******************/
+footer {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 /*********************
 Estilos .combinadores
@@ -30,49 +76,9 @@ Estilos .combinadores
     background-color: coral;
 }
 
-
-/******************
-Estilos del HEADER 
-******************/
-
-header {
-    background-color: rgb(80, 80, 80);
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    padding-left: 5rem;
-}
-
-header h1 {
- font-size: 2rem;
-}
-
-header p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.5rem;
-}
-
-/******************
-Estilos del FOOTER
-******************/
-
-footer {
-    background-color: rgb(80, 80, 80);
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-}
-
-footer address {
-    font-style: normal;
-}
-
-footer p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
+/*********************
+Estilos .atributos
+**********************/
 
 /* Selectores de atributo [] */
 
@@ -102,4 +108,205 @@ footer p {
 
 
 
+/* 21 MAYO */
 
+/* Ejemplo de border inherit */
+
+body {
+    margin: 1px solid black;
+    padding: 0.5rem;
+}
+
+* {
+    border: inherit;
+}
+
+
+
+/****************************
+Estilos de la sección .pseudo-elementos
+*****************************/
+
+/* 
+tiene preferencia */
+
+.pseudo-elementos p::first-letter {
+    font-size: 2rem;
+    font-family: Impact;
+    color: aqua;
+}
+
+.pseudo-elementos p::first-line {
+    font-weight: bold;
+}
+
+.pseudo-elementos .medio::first-letter {
+ color: blue;
+ font-size: 2rem;
+ font-family: Impact;
+}
+
+/* Única forma de crear contenido desde CSS:after y before*/
+.pseudo-elementos .medio::before {
+    content: "";
+    display: block;
+    background-color: coral;
+    padding: 1rem;
+}
+
+.pseudo-elementos .medio::after {
+    content: "";
+    background-image: url(/08_Selectores/assets/flor.png);
+    background-size: 50px;
+    display: block;
+    background-color: coral;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+/****************************
+Estilos de la sección .numerados
+*****************************/
+
+/* Crear una enumeración para párrafos */
+body {
+    counter-reset: parrafos;
+}
+
+.numerados p::before {
+    counter-increment: parrafos;
+    content: counter(parrafos, upper-roman) " - ";
+    font-weight: bold;
+}
+
+
+/****************************
+Estilos de la sección .comillas
+*****************************/
+
+.comillas {
+    quotes: '\00AB' '\00BB';
+}
+
+
+.comillas p::before{
+    content: open-quote;
+    font-style: bold;
+    color: blue;
+}
+
+.comillas p::after{
+    content: close-quote;
+    color: blue;
+}
+
+/****************************
+Estilos de la sección .pseudo-clases
+*****************************/
+
+/* HOVER */
+.pseudo-clases header {
+    background-color: rgb(0, 38, 255);
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.pseudo-clases header:hover {
+    background-color: rgb(0, 120, 136);
+}
+
+.pseudo-clases header p {
+    display: none;
+    
+}
+.pseudo-clases header:hover p {
+    display: initial /* o inherit/block */;
+    font-size: 1rem;
+}
+
+/* VISITED */
+.pseudo-clases a:visited {
+    color: black;
+}
+
+/* LINK */
+.pseudo-clases a:link {
+    color: rgb(255, 102, 102);
+}
+
+/* falta FOCUS, */
+
+
+
+.pseudo-clases div {
+    text-align: center;
+}
+.pseudo-clases img {
+    width: 3%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/****************************
+Estilos de la sección .pseudo-clases-numéricas
+*****************************/
+
+.pseudo-numericas p {
+    /* text-decoration: underline; */
+    border-bottom: 10px solid rgb(255, 195, 139); 
+}
+
+.pseudo-numericas p:nth-child(2) {
+    color: blueviolet;
+}
+
+.pseudo-numericas>p:nth-of-type(2) {
+    font-style: italic;
+}
+
+.pseudo-numericas li:nth-of-type(2n) {
+    background-color: gold;
+}
+.pseudo-numericas li:nth-of-type(2n+1) {
+    background-color: rgb(255, 241, 159);
+}
+
+/* .pseudo-numericas li:nth-of-type(even) {
+    background-color: rgb(255, 241, 159);
+}
+
+.pseudo-numericas li:nth-of-type(odd) {
+    background-color: rgb(255, 241, 159);
+} */
+
+.pseudo-numericas li:nth-of-type(3n) {
+    background-color: rgb(141, 120, 0);
+}
+
+.pseudo-numericas li:nth-of-type(3n+2) {
+    background-color: rgb(164, 241, 255);
+}
+
+.pseudo-numericas li {
+    padding-right: 2rem;
+    width: fit-content;
+}
+
+.pseudo-numericas li:last-of-type {
+    padding-right: 1.5rem;
+}
+
+/* NOVEDADES  CSS3 */
+
+/* Selector universal */
+
+* {
+    font-variant: small-caps;
+}
+
+*:not(h1) {
+    font-variant: small-caps;
+}
