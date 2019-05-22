@@ -1,0 +1,120 @@
+/******************
+RESET
+******************/
+* {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/******************
+Variables de CSS
+******************/
+:root{
+    --color-letra: white;
+    --color-fondo: rgb(80, 80, 80);
+    --font-title:'Righteous', cursive;
+    --font-main: 'Montserrat', sans-serif;
+    --size-title: calc(var(--size-small) *3);
+    --size-subtitle: calc(var(--size-small) *2);
+    /* --size-subtitle: 1.5rem; */
+    --size-base: calc(14rem/16);
+    --size-small: calc(12rem/16);
+    --margin-vertical: 1.5rem;
+    --margin-lateral: 2rem;
+    --size-title-section: 1.2rem;
+    --margin-parrafo: 1rem;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--size-base);
+}
+
+/******************
+Estilos del HEADER 
+******************/
+.header {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+    font-family: var(--font-title);
+    font-weight: bold;
+}
+
+.header-h1 {
+ font-size: var(--size-title);
+ letter-spacing: 3pt;
+}
+
+.header p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: var(--size-subtitle);
+}
+
+/******************
+Estilos del FOOTER
+******************/
+.footer {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    margin-top: var(--margin-vertical);
+    font-size: var(--size-small);
+}
+
+.footer address {
+    font-style: normal;
+}
+
+.footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer a {
+    color: inherit;
+}
+
+
+/******************
+Estilos del MAIN
+******************/
+main {
+    margin: var(--margin-vertical, --margin-lateral);
+}
+
+.main h2 {
+    font-size: var(--size-title-section);
+    margin-bottom: var(--margin-vertical) ;
+    margin-top: var(--margin-vertical) ;
+}
+
+.main p {
+    margin-bottom: var(--margin-parrafo) ;
+    margin-top: var(--margin-parrafo) ;
+
+}
+
+/*********************************
+Estilos de las secciones del MAIN 
+**********************************/
+
+section {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    /* background-color: darkkhaki; */
+    padding: 1rem;
+}
+
+
