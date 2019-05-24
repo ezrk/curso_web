@@ -25,13 +25,13 @@ undefined //tipo undefined
 //Las variables no tienen un tipo definido, se definen en el momento que cobran valor, dinámico significa que el tipo puede cambiar.
 
  //En TypeScript el tipado puede ser fuerte y estático
-let b: number //tipo number, sin valor
+{
+ let b: number //tipo number, sin valor
 b = 3
 /* b = 'pepe' //error de tipos, no se puede cambiar el tipo.  */
-
 let precio = 45.60
 let user = 'Pepe'
 let producto = 'gafas'
 /* precio = producto //error de tipos */
-
+}
 // los tipos asignados son tipos fuertes en TypeScript
