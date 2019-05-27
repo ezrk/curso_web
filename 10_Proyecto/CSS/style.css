@@ -1,3 +1,5 @@
+/* @import url(./variables.css); */
+
 /******************
 RESET
 ******************/
@@ -9,28 +11,6 @@ RESET
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
-
-/******************
-Variables de CSS
-******************/
-/* Guía de estilos */
-:root{
-    --color-letra: white;
-    --color-fondo: rgb(80, 80, 80);
-    --font-title:'Righteous', cursive;
-    --font-main: 'Montserrat', sans-serif;
-    --size-title: calc(var(--size-small) *3);
-    --size-subtitle: calc(var(--size-small) *2);
-    /* --size-subtitle: 1.5rem; */
-    --size-base: calc(14rem/16);
-    --size-small: calc(12rem/16);
-    --margin-vertical: 1.5rem;
-    --margin-lateral: 2rem;
-    --size-title-section: 1.2rem;
-    --margin-parrafo: 1rem;
-    --color-gris-fondo: lightgray;
-    --color-gris-borde: rgb(156, 156, 156);
 }
 
 body {
@@ -167,6 +147,17 @@ Estilos de las sección .flex >>> LA MEJOR OPCIÓN <<<
 
 section .flex {
     display: flex;
-    /* comportamiento normal: align-items: stretch; */
-    align-items: flex-start;  
+    flex-direction: column;
+    /* align-items: center */
+} 
+
+section .flex article {
+    width: 100%;
+}
+
+/* @media screen and (min-device-width: 600px) { */
+@media screen and (min-width: 600px) {
+     section .flex {
+        flex-direction: row;
+    }
 }
