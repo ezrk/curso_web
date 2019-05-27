@@ -31,3 +31,9 @@ console.log(datos) //muestra 1, 12, 42, 33, 43, 63
 console.log(persona) // nombre: 'Pepe', edad: 22, altura: 178
 
 // los arrays y los objetos son dinámicos
+
+
+///////////////////////////////////////////////////////////////////  27 MAYO
+///IMPORTANTE////
+//Las variables number, string, boolean, undefined son inmutables cuando usamos const >>>tipos primitivos
+// Los object y arrays son referenciados y mutables.
