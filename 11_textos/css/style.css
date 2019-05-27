@@ -6,6 +6,50 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "quicksand_bold";
+    src: url(../assets/quicksand-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "quicksand_regular";
+    src: url(../assets/quicksand-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: "source_sans_proregular"
+    font-family: "source_sans_proregular";
+}
+
+h1 {
+    font-family: "quicksand_bold"
+}
+
+h2, h3 {
+    font-family: "quicksand_regular"
+}
+
+/* Tamaño en em es con respecto al padre del elemento */
+.content-wrapper {
+    font-size: 1.1rem;
+}
+
+section.centrada{
+    font-size: 0.8em;
+    width: 83.8%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.centrada p {
+    font-size: 0.9rem;
+    padding: 1em;
+    border: 1px solid grey;
+}
+
+section.margenes {
+    
 }
