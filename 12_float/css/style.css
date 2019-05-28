@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+/*******FONT**********/
+
+@font-face {
+    font-family: "source_sans_proregular";
+    src: url(../assets/SourceSansPro-Regular.otf) format('otf');
+    src: url(../assets/sourcesanspro-regular-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "quicksand_bold";
+    src: url(../assets/quicksand-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "quicksand_regular";
+    src: url(../assets/quicksand-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "source_sans_proregular";
+}
+
+h1 {
+    font-family: "quicksand_bold";
+    font-size: 4rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 1rem 2rem; 
+    background: #EFBAD3;
+    background: -moz-linear-gradient(top, #EFBAD3 0%, #A254F2 100%);
+    background: -webkit-linear-gradient(top, #EFBAD3 0%, #A254F2 100%);
+    background: linear-gradient(to bottom, #EFBAD3 0%, #A254F2 100%);
+}
+
+h2, h3 {
+    font-family: "quicksand_regular"
+}
+
+/*******IMG**********/
+
+main {
+    margin: 5%;
+}
+
+.image_wrapper_left {
+    width: 50%;
+    float: left;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+}
+.image_wrapper_right {
+    width: 50%;
+    float: right;
+    padding-left: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+    
+}
+section.loros {
+    content: "";
+    display: block;
+    clear: both
+}
