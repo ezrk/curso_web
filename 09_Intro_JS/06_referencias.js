@@ -1,7 +1,7 @@
 'use strict'
  
 //VALORES PRIMITIVOS:
-//number, string, boolean
+//number, string, boolean, (undefined)
 
 let a = 2
 let b = a //asignación de valor, en este momento, si modificamos una variable ya no se mantiene la relación
@@ -16,7 +16,6 @@ console.log('Valor de b', b) //1
 
 
 // VALORES REFERENCIADOS:
-//
 
 let p1 = {
     nombre : 'Pepe' ,

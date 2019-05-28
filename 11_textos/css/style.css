@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: "source_sans_proregular";
     src: url(../assets/SourceSansPro-Regular.otf) format('otf');
@@ -25,7 +29,15 @@ body {
 }
 
 h1 {
-    font-family: "quicksand_bold"
+    font-family: "quicksand_bold";
+    font-size: 4rem;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 1rem 2rem; 
+    background: #EFBAD3;
+    background: -moz-linear-gradient(top, #EFBAD3 0%, #A254F2 100%);
+    background: -webkit-linear-gradient(top, #EFBAD3 0%, #A254F2 100%);
+    background: linear-gradient(to bottom, #EFBAD3 0%, #A254F2 100%);
 }
 
 h2, h3 {
@@ -50,6 +62,91 @@ section.centrada p {
     border: 1px solid grey;
 }
 
-section.margenes {
+/*********************************
+Espacios FLOAT
+**********************************/
+
+section.espacios {
+    margin: 2rem;
+    background-color: coral;
     
 }
+
+.espacios h2 {
+    padding: 1rem;
+}
+
+.espacios p {
+    padding: 1rem;
+    background-color: rgb(255, 250, 187);
+    width: 30%;
+    margin-left:2.5%;
+    float: left;
+    vertical-align: top;
+}
+
+
+@media screen and (max-width: 690px) {
+    .espacios p  {
+        float: left;
+        width: 100%;    
+   }
+
+   .espacios p:last-of-type{
+    margin-right: ;
+    }
+
+    .espacios::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+}
+
+/*********************************
+Flex
+**********************************/
+.flex { 
+    margin: 2rem;
+    background-color: coral;
+}
+
+.flex  p{
+    padding: 1rem;
+    background-color: rgb(255, 250, 187);
+}
+
+.flex h2 {
+    padding: 1rem;
+    display: inline-block;
+    text-shadow: 10px 10px 10px rgb(26, 25, 25);
+}
+/* Los margenes se ajustan al 100% en el caso de flex */
+
+
+@media screen and (min-width: 690px) {
+    .flexwrapper {
+        display: flex;
+        }
+
+        .flex  p{
+            margin-left: 2.5%;
+            box-shadow: 5px 5px 5px 5px rgb(43, 42, 42)
+        }
+        .flex p:last-of-type{
+            margin-right: 2.5%;
+        }
+}
+
+.ribbon {
+    width: 0px;
+    height: 60px;
+    border-left: 25px solid #d9534f;
+    border-right: 25px solid #d9534f;
+    border-bottom: 17.5px solid transparent;
+    display: block;
+    margin: 0 auto;
+}
+
+
