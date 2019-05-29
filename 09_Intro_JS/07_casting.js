@@ -86,6 +86,16 @@ function suma (a,b) {
     return 'La suma es ' + r
 }
 
+//comprobar si un numero es válido
+function isValidNumber(n) {
+    r = true
+    if ( isNaN(n) || typeof n == 'boolean'
+    || Array.isArray(n) ) {
+        r = false
+    }
+    return r
+}
+
 console.log(suma()) //no se puede sumar
 console.log(suma(undefined, undefined)) //no se puede sumar
 console.log(suma(5)) //no se puede sumar
