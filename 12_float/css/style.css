@@ -28,18 +28,24 @@
 
 body {
     font-family: "source_sans_proregular";
+    margin: 0;
+}
+
+header {
+    text-align: center;
 }
 
 h1 {
+    color: white;
     font-family: "quicksand_bold";
-    font-size: 4rem;
+    font-size: 2rem;
     border: 1px solid transparent;
     border-radius: 20px;
     padding: 1rem 2rem; 
     background: #EFBAD3;
-    background: -moz-linear-gradient(top, #EFBAD3 0%, #A254F2 100%);
-    background: -webkit-linear-gradient(top, #EFBAD3 0%, #A254F2 100%);
-    background: linear-gradient(to bottom, #EFBAD3 0%, #A254F2 100%);
+    
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h2, h3 {
@@ -55,22 +61,86 @@ main {
 .image_wrapper_left {
     width: 50%;
     float: left;
-    padding-right: 2rem;
+    margin-right: 2rem;
     padding-bottom: 0.5rem;
+    margin-bottom: 2rem; 
 }
 .image_wrapper_right {
     width: 50%;
     float: right;
     padding-left: 2rem;
     padding-bottom: 0.5rem;
+    margin-bottom: 2rem; 
 }
 
 img {
     max-width: 100%;
-    
+    /* Para evitar que la img se coloque en la linea de base*/
+    vertical-align: text-bottom;
+    /* o display block */
 }
-section.loros {
+section.loros::after {
     content: "";
     display: block;
     clear: both
 }
+
+footer {
+    background-color: #A254F2;
+    color: white;
+    line-height: 25rem;
+    text-align: center;
+}
+
+ul {
+    /*  Los listas dan problema ala hora de los margenes, usar inside  */
+    list-style-position: inside;
+}
+
+
+.advertising {
+    border-top: 20px solid rgb(113, 255, 136);
+    border-bottom: 20px solid rgb(113, 255, 136);
+    margin-right: 3rem;
+}
+
+/* tr:nth-child(2) {
+    float: left;
+} */
+
+.image_wrapper_left:hover table{
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+td {
+    border: 1px solid grey;
+    padding: 0.2rem;
+    padding-left: 1rem;
+}
+
+td:nth-of-type(2) {
+    float: left;
+}
+
+.title {
+ background-color: blue;
+ color: white;
+ line-height: 2rem;
+ padding-left: 2rem; 
+}
+
+.wiki {
+    border: 1px solid rgb(228, 228, 228);
+}
+
+header p {
+    padding-bottom: 1rem; 
+    /* display: none; */
+    visibility: hidden;
+    color: white;
+}
+header:hover p {
+    /* display: inline; */
+    visibility: initial;
+    }
