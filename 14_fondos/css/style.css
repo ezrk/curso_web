@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+header {
+    min-height: 100vh; /* importante para ocupar toda la pantalla*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(../assets/bg_noise.png); */
+    background-color: rgba(0, 250, 237, 0.397);
+    background-image: url(../assets/bg_header.jpg);
+    background-position: center;
+    /* background-size: contain; */ /* Ajusta a lo largo */
+    background-size: cover; /* Ajusta a lo ancho */
+    background-blend-mode: screen;
+}
+
+h1 {
+    color: white;
+    font-size: 8rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5rem;
+}
