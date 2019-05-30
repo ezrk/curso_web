@@ -1,0 +1,94 @@
+/* Section GAMA */
+
+div {
+    color: white;
+    width: 40rem;
+    height: 20rem;
+    font-size: 6rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding-top: 10%; 
+}
+
+.flex {
+    display: flex;
+}
+
+.gama div:nth-of-type(1) {
+    background-color: blueviolet; 
+}
+
+.gama div:nth-of-type(2) {
+    background-color: #EB10D5; 
+}
+
+.gama div:nth-of-type(3) {
+    background-color: #FF4962; 
+}
+
+.gama div:nth-of-type(4) {
+    background-color: #FF8C3D; 
+}
+
+.transp {
+    margin:1rem;
+    border: 1px solid blueviolet;
+    padding: 1rem;
+    width: 90%;
+    height: 30vh;
+    background-color: #FF8C3D;
+}
+
+.transp div{
+    background-color: #FF4962; 
+    height: 8.5rem;
+    width: 8.5rem;
+}
+
+.transp div:nth-of-type(2) {
+background-color: rgba(235, 16, 213, 0.308); 
+}
+
+.transp {
+    font-size: 3rem;
+}
+
+.opacity h2 {
+    font-size: 6rem;
+    color: rgb(137, 43, 226);
+    margin-top: 20rem;
+    opacity: 0.5;
+}
+
+/* Google no le gusta display none; mejor poner opacity 0 */
+
+.opacity h2:hover {
+    opacity: 1;
+}
+
+.fondo {
+    /* background-color: rgba(255, 73, 97, 0.233); */
+    background-image: url(../assets/bg_header.jpg);
+    opacity: 0.3;
+    padding: 2rem;
+}
+
+
+/* Opacity se hereda >> h2 tmb se queda opaco */
+.fondo h2 {
+    opacity: 1;
+    color:white;
+    font-size: 3rem;
+}
+
+
+.gradient {
+    background: #FF4962;
+    background: linear-gradient(
+        to left,
+        blueviolet,
+         #FF4962);
+    padding: 2rem;
+    color:white;
+    font-size: 3rem;
+}

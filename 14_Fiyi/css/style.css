@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*********** HEADER ************/
+
+.main-header {
+    /* background-image: url("../assets/bg_header.jpg"); */
+    background: linear-gradient( #000000a9, transparent), url("../assets/bg_header.jpg") no-repeat center; 
+    background-size: cover; 
+    background-position: center;
+    color: white;
+    height: 60rem;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Righteous', cursive;
+}
+
+.main-header nav{
+    margin-left: -1rem; 
+    text-align: center;
+}
+
+
+.main-header nav ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.main-header nav li{
+    display: inline-block;
+}
+
+/* El padding se pone en los <a> para que la superficie clickable sea más grande */
+.main-header a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+}
+
+.main-header h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+
+}
+.main-header p::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.main-header p::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: white;
+    width: 5rem;
+    margin-top: 2.5rem;
+    display: inline;
+    text-align: center;
+    margin-left: -5.5rem;
+
+    } 
+
+.main-header p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
