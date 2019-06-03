@@ -1,4 +1,6 @@
-/**
+/** ------>>>>>> COPIAR .JS PROFESOR!!!!!!
+ * 
+ * 
  * JSDoc
  * @description Programa que calcula y muestra 
  *              si un número es par o impar
@@ -56,7 +58,7 @@ function isEntero( n = 0) {
    * @description Función que muestra si un número es par o impar
    * @param {number}: n
    * @returns {void}
-   */
+ */
 
    function mostrar(n) {
        let mensajes = [
@@ -67,7 +69,7 @@ function isEntero( n = 0) {
        ]
        let i = Number(esPar(n)) // -2 -1, 0, 1
        if ( i< 0) { // código de error
-         i = -i + 1 // -1 -> 2 // -2 -> 3
+         i = -i + 1 // -1 -> 2 // -2 -> 3 //convertir posiciones negativas en positivas
        }
        console.log(mensajes[i])
    }
@@ -89,6 +91,30 @@ function isEntero( n = 0) {
         mostrar(x)
         }
    
-   probar()
+   //probar()
+
+
+   //función anónima
+   function () {}
+
+   function errores () {
+        const x = 67
+        let z = 45
+        //Controlar el error > trycatch
+        try {
+            x = 51 // es un error, se ejecuta un trow
+            throw 'probando error' //error provocado por mí
+            z = z + x
+            console.log('z vale ', z)
+        } catch (error) {
+            console.log('ooops... :(')
+            if(error.name) {
+                console.log(error.name, error.message)
+            } else {
+                console.log(error)
+            }
+   }
+
+   console.log(x)
 
    

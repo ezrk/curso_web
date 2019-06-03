@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    background-color: grey;
+    color: white;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 90%;
+    margin: 1rem auto;
+    min-height: 80vh;
+}
+
+p{
+    background-color: coral;
+    padding: 0.5rem 1rem;
+}
+
+.relative {
+    position: relative; /* Posición capa superior, no afecta el resto de los elementos */
+    top: 2rem;
+    left: 2rem;
+    background-color: rgb(255, 208, 0);
+}
+
+.absolute_wrapper {
+    position: relative; /* se mueve el absolute con respecto al wrapper, no al body */
+}
+.absolute {
+    position: absolute; /* Posición capa superior, Coge coordenadas respecto al primer contenedor o al body */
+    background-color: rgb(163, 82, 255);
+    top: 5rem;
+    left: 8rem;
+    width: 25%;
+}
