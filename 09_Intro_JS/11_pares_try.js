@@ -1,6 +1,4 @@
-/** ------>>>>>> COPIAR .JS PROFESOR!!!!!!
- * 
- * 
+/**
  * JSDoc
  * @description Programa que calcula y muestra 
  *              si un número es par o impar
@@ -36,18 +34,20 @@ function isEntero( n = 0) {
   * @description Función que calcula si un número es par
   *     Puede devolver: -2, -1, true, false
   * @param {number}: n
-  * @returns {*}
+  * @returns {boolean}
   * 
   */
   function esPar(n) {
     let r = true 
     if (!isValidNumber(n)) {
         // Excepción: n no es un número
-        return -2
+        //throw 1 // antes -2
+        throw new Error(`${n} no es un número`)
     } else if (!isEntero(n)) {
         // Excepción: n no es entero
-        return -1
-    } else if (n%2)  { // Modulo de la división por 2 (distinguir los números pares e impares)
+        // throw 0 // antes -1
+        throw new Error(`El número ${n} no es entero`)
+    } else if (n%2)  {
         r = false
     }
     return r
@@ -58,63 +58,53 @@ function isEntero( n = 0) {
    * @description Función que muestra si un número es par o impar
    * @param {number}: n
    * @returns {void}
- */
-
+   */
    function mostrar(n) {
+       let output = ''
        let mensajes = [
            `El número ${n} es impar`,
            `El número ${n} es par`,
-           `El número ${n} no es entero`,
+       ]
+       let excepciones = [
+            `El número ${n} no es entero`,
            `${n} no es un número`
        ]
-       let i = Number(esPar(n)) // -2 -1, 0, 1
-       if ( i< 0) { // código de error
-         i = -i + 1 // -1 -> 2 // -2 -> 3 //convertir posiciones negativas en positivas
+       try {
+           let i = Number(esPar(n))   //i: 0, 1
+           output = mensajes[i]
+       } catch (error) { // error: -2 -1
+            // i = -error + 1 // -1 -> 2 // -2 -> 3
+            // output = excepciones[error]
+            output = error
        }
-       console.log(mensajes[i])
+       console.log(output)
    }
 
-   function probar() 
-        {
-        let x
-        x = 1
-        x = 2
-        x = 345
-        x = 98
-        x = 0
-        x = -4
-        x = -5
-        x = 4.3
-        x = -56.7
-        x = 'pepe'
-        x = '56'
-        mostrar(x)
+  /*   
+    Gestión de errores
+    const x = 67
+    let z = 45
+    try {
+        x = 51 // => un throw
+        // throw 'Probando un error'
+        z = z + x
+        console.log('z vale', z)
+    } catch (e) {
+        console.log('Disculpa, se ha producido un error')
+        if(e.name) {
+            console.log(e.name, e.message)
+        } else {
+            console.log(e)
         }
+    }
+    console.log('x vale',x)
+ */
    
-   //probar()
 
+/*     esPar('pepe')
+    mostrar('pepe') */
+    
 
-   //función anónima
-   function () {}
-
-   function errores () {
-        const x = 67
-        let z = 45
-        //Controlar el error > trycatch
-        try {
-            x = 51 // es un error, se ejecuta un trow
-            throw 'probando error' //error provocado por mí
-            z = z + x
-            console.log('z vale ', z)
-        } catch (error) {
-            console.log('ooops... :(')
-            if(error.name) {
-                console.log(error.name, error.message)
-            } else {
-                console.log(error)
-            }
-   }
-
-   console.log(x)
+module.exports = esPar;
 
    
