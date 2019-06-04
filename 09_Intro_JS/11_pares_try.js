@@ -1,3 +1,7 @@
+
+///HAY FALLOS, COPIAR EL DEL PROFESOR (NO PERDER COMENTARIOS)
+
+
 /**
  * JSDoc
  * @description Programa que calcula y muestra 
@@ -75,7 +79,7 @@ function isEntero( n = 0) {
        } catch (error) { // error: -2 -1
             // i = -error + 1 // -1 -> 2 // -2 -> 3
             // output = excepciones[error]
-            output = error
+            output = error.message
        }
        console.log(output)
    }
@@ -105,6 +109,9 @@ function isEntero( n = 0) {
     mostrar('pepe') */
     
 
-module.exports = esPar;
+/* module.exports = esPar; */
+
+exports.esPar = esPar
+exports.mostrar = mostrar
 
    
