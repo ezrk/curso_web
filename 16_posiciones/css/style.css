@@ -9,15 +9,18 @@ body {
 header, footer {
     background-color: grey;
     color: white;
-    min-height: 10vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+/*     align-items: center; */
+}
+
+header {
+    min-height: 10vh;
 }
 
 main {
     width: 90%;
-    margin: 1rem auto;
+    margin: 1rem auto 1rem auto ;
     min-height: 80vh;
 }
 
@@ -37,9 +40,62 @@ p{
     position: relative; /* se mueve el absolute con respecto al wrapper, no al body */
 }
 .absolute {
-    position: absolute; /* Posición capa superior, Coge coordenadas respecto al primer contenedor o al body */
+    position: absolute; /* Posición capa superior, Coge coordenadas respecto al primer contenedor o al body, resto de los elementos ocupan su sitio */
     background-color: rgb(163, 82, 255);
     top: 5rem;
     left: 8rem;
     width: 25%;
 }
+
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.2rem;
+    overflow: hidden;
+    align-items: flex-start;
+}
+
+.fixed:hover {
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.overflow {
+    height: 40vh;
+    /*overflow: hidden;  ocultar lo q desborda */
+    overflow: scroll; /* Crea un scroll para la sección */
+}
+
+
+/* Scrollbar*/
+
+/* width */
+.overflow::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .overflow::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  .overflow::-webkit-scrollbar-thumb {
+    background: rgb(255, 226, 145); 
+  }
+  
+  /* Handle on hover */
+  .overflow::-webkit-scrollbar-thumb:hover {
+    background: rgb(109, 109, 109); 
+  }
+
+  /* FIN Scrollbar*/
