@@ -24,7 +24,7 @@ function isValidNumber(n) {
 /**
  * 
  * @param {number} n 
- * @returns {boolean}
+ * @returns {boolean | number}
  */
 function isEntero( n = 0) {
      return (parseInt(n) === parseFloat(n))
@@ -71,6 +71,12 @@ function isEntero( n = 0) {
        }
        console.log(mensajes[i])
    }
+
+
+   ///exportar funcion para test
+   exports.esPar = esPar
+   exports.isEntero = isEntero
+   exports.mostrar = mostrar
 
    function probar() 
         {
