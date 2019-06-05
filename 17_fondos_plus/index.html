@@ -7,26 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>fondos</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
+
 <body>
-    <header>
-        <nav>
+    <header id="inicio">
+        <nav class="menu_horizontal">
             <ul>
                 <li><a href="#">Synapsida</a></li>
                 <li><a href="#">Anapsida</a></li>
-                <li><a href="#">Diapsida</a> 
+                <li><a href="#">Diapsida</a>
                     <ul class="desplegable">
-                        <li><a href="#"></a> 1</li>
-                        <li><a href="#"></a>2</li>
-                        <li><a href="#"></a>3</li>
+                        <li><a href="#"></a>Item 1</li>
+                        <li><a href="#"></a>Item 2</li>
+                        <li><a href="#"></a>Item 3
+                            <ul class="desplegable">
+                                <li><a href="#"></a> 1</li>
+                                <li><a href="#"></a>2</li>
+                                <li><a href="#"></a>3</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
         </nav>
+        <nav class="burguer">
+            <a href="#nav_footer" class="fas fa-bars"></a>
+        </nav>
         <h1>Imágenes de fondo
             <span><img class="logo" src="./assets/logo_ez.png" alt=""></span>
         </h1>
-
     </header>
     <div class="content-wrapper">
         <section>
@@ -76,6 +87,26 @@
                 iste ducimus nisi dolores?</p>
         </section>
     </div>
+    <nav  id="nav_footer" class="nav_footer">
+        <ul>
+            <li><a href="#inicio"></a></li>
+            <li><a href="#">Synapsida</a></li>
+            <li><a href="#">Anapsida</a></li>
+            <li><a href="#">Diapsida</a>
+                <ul class="desplegable">
+                    <li><a href="#"></a>Item 1</li>
+                    <li><a href="#"></a>Item 2</li>
+                    <li><a href="#"></a>Item 3
+                        <ul class="desplegable">
+                            <li><a href="#"></a> 1</li>
+                            <li><a href="#"></a>2</li>
+                            <li><a href="#"></a>3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <footer>
         <address>EZ Tajamar 2019.</address>
     </footer>
