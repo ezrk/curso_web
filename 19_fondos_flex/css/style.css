@@ -1,0 +1,129 @@
+/* repasar */
+
+
+body{
+    margin: 0;
+}
+
+header {
+    position: relative;/* !!!! */
+    min-height: 100vh; /* importante para ocupar toda la pantalla*/
+/*     align-items: center;
+    justify-content: center; */
+    background-color: rgba(128, 245, 206, 0.74);
+    background-blend-mode: screen;
+
+    /* Dos elementos uno al lado del otro */
+    display: flex;
+    /* flex-wrap: wrap; */ /* !!!!!división horizontal o vertical!!!!! */
+flex-direction: column
+
+/* Comportamiento inicial */
+   /*  justify-content: flex-start
+    align-items: stretch; */
+}
+
+header::after {
+    display: block; /* !!!! */
+    content:'';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; /* !!!! */
+    opacity: 0.4; /* !!!! */
+    background-image: url(../assets/iguana.jpg);
+    background-position: center;
+    /* background-size: contain; */ /* Ajusta a lo largo */
+    background-size: cover; /* Ajusta a lo ancho */
+    
+     
+}
+
+div {
+    
+   /*  width: 100%; */
+
+   /* O */
+
+    /* Factor de crecimiento o de encojimiento de cada hijo*/
+   /*  flex: 0 1 auto;  *//* Valores por defecto */
+    
+}
+
+/* dividir espacio de dos divs */
+div.superior {
+    flex: 1 1 auto;
+    background-color: rgba(137, 43, 226, 0.459);
+    display: flex;
+}
+
+div.superior div {
+    flex: 1 1 auto;
+}
+
+div.inferior {
+    flex: 10 1 auto;
+    background-color: rgba(0, 255, 255, 0.301);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.borde {
+    border: 5px solid grey;
+}
+
+div.menu_wrapper {
+    flex: 10 1 auto;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+
+div.logo_wrapper {
+    flex: 1 5 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(243, 253, 104);
+    font-size: 8em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5rem;
+    z-index: 20; 
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+} 
+
+.logo_wrapper  {
+    /* display: block; */
+/*     position: absolute; */
+/*     top: 2rem;
+    left: 2rem;  */
+    width: 5rem;
+
+}
+
+.logo_wrapper  img {
+ width: 100px;
+ 
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.fas {
+    color: rgb(49, 49, 49);
+}

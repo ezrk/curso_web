@@ -1,16 +1,15 @@
-/* COPIAR CODIGO - no funciona*/
-
 body{
     margin: 0;
 }
+
 header {
     position: relative;/* !!!! */
     min-height: 100vh; /* importante para ocupar toda la pantalla*/
-    /* display: flex; 
-   /*  align-items: center;
-    justify-content: center; */
-
-   /*  background-blend-mode: screen; */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 245, 206, 0.74);
+    background-blend-mode: screen;
 }
 
 header::after {
@@ -27,19 +26,19 @@ header::after {
     background-position: center;
     /* background-size: contain; */ /* Ajusta a lo largo */
     background-size: cover; /* Ajusta a lo ancho */
-    color: grey
+    
+     
 }
 
  h1 {
     color: rgb(243, 253, 104);
-    font-size: 8rem;
+    font-size: 8em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 0.5rem;
     z-index: 20; 
     margin: 0;
     padding: 2rem;
     text-align: center;
-
 } 
 
 .content-wrapper {
@@ -51,61 +50,186 @@ header::after {
 .logo {
     display: block;
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 2rem;
+    left: 2rem;
     width: 5rem;
 }
 
 .logo img {
     min-width: 80px;
-    max-width: 100px;
+    max-width: 100%;
 }
-
 
 nav {
-    margin: 1rem;
-    float: right;
-    margin-left: -1rem; 
-    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1rem;
+}
+
+
+nav.menu_horizontal {
+    display: none;
+}
+
+nav.burguer, nav.menu_horizontal  {
     z-index: 30;
-}
-/* 
- nav::after {
-    content: "";
-    display: block;
-    clear: both;
-}  */
-
-nav ul{
-    list-style-type: none;
-    margin:0;
-    padding:0;
-
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
 }
 
-nav > ul > li {
-    position: relative;
-    display: inline;
-    float: left;
+nav.burguer {
+    width: 2%;
 }
 
-a {
+nav a {
     color: inherit;
     text-decoration: none;
-    display: block;
-    padding: 1rem;
-    margin:0.25rem;
-    text-align: center
 }
 
-li:hover{
-    color:  rgb(243, 253, 104);
+nav ul {
+    list-style: none;
 }
 
- .desplegable {
-    display: none;
-} 
-
-.desplegable:hover {
-    display: block;
+.fas {
+    color: rgb(49, 49, 49);
 }
+
+
+/* NAV FOOTER */
+.nav_footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: rgb(190, 190, 190);
+    margin: 1rem auto;
+    color:white;
+    padding: 1rem 0;
+}
+
+footer {
+    min-height: 5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    background-color: grey;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media only screen and (min-width: 650px) {
+
+   /*  body {background-color: yellow;} */
+
+    .nav_footer,
+    nav.burguer {
+        display: none;
+    }
+
+    nav.menu_horizontal{
+        display: block;
+    }
+
+    nav {
+        margin-left: -1rem; 
+        text-align: center;
+        /* 
+        top: 2rem;
+        right: 2rem;
+        z-index: 30;
+        position: absolute; */
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1rem;
+        
+    } 
+
+    nav ul { /* Cualquier ul dentro de nav */
+        padding: 0;
+        margin: 0;
+        }
+
+    nav li { /* Los li son contenedores, para poder fijar desde ellos posiciones absolutas */
+        position: relative;
+        list-style-type: none;
+        }
+
+    nav a { /* Cualquier a dentro de nav */
+        display: block;
+        margin: .25em;
+        padding: 1em;
+        border-radius: .5em;
+        text-align: center;
+        color: rgb(49, 49, 49);
+        text-decoration:none;
+
+    }
+
+    nav > ul > li { /* El primer nivel del menú */
+        float:left;
+        min-width: 7em;
+        }
+
+    nav > ul a:focus, nav > ul a:hover { /* Cualquier a dentro de nav */
+
+    }
+
+    nav > ul a:focus, nav > ul a:hover::after { /* Cualquier a dentro de nav */
+        position: absolute;
+        content: "";
+        height: 2px;
+        background-color: rgb(243, 253, 104);
+        width: 50%;
+        margin-left: -3.7rem;
+        top: 80%;
+    }
+    
+    /* =================== */
+    /* = submenús        = */
+    /* =================== */
+            
+    li ul { /* El segundo nivel del menú oculto*/
+        display: none;
+        color: rgb(49, 49, 49);
+
+    }
+    li:hover > ul { /* El segundo nivel del menú se muestra */
+        display: block;
+        position: absolute;
+        margin-left: 1.7rem;
+        
+    }
+
+    /* =============================== */
+    /* = submenús segundos	         = */
+    /* =============================== */
+
+
+    li ul li ul {
+        position: absolute;
+        top: 0em;
+        padding: 1em;
+    /*  left:7em; */
+        /* width: 7em; */
+    }
+}
+ 
+
+
+/* ============== */
+/* = Contenidos = */
+/* ============== */
+
+
+article{
+    float: left;
+    clear: left;
+    margin: 2em;
+}
+figure {
+    float: left;
+    width: 50%;
+}
+img {
+    width: 100%
+}
+

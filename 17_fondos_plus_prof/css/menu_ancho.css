@@ -26,6 +26,8 @@
 		border-radius: .5em;
 		text-align: center;
 	}
+
+
 	nav > ul a:focus,
 	nav > ul a:hover
 	{ /* Cualquier a dentro de nav */
@@ -45,6 +47,8 @@
 	 	display: block;
         position: absolute; /*Determina que el submenu empuje o no el contenido del sitio al desplegrase*/
 	}
+
+	
 
 /* =============================== */
 /* = submenús segundos	         = */
