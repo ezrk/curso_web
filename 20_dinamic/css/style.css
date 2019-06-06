@@ -1,0 +1,58 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div {
+    background-color: blueviolet;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    margin: 3rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* TRANSIT */
+
+div.transit {
+    /* Cualquier propiedad con valor numérico es transicionable. */
+    transition-property: all;
+    transition-duration: 6s;
+    /* transition-delay: 2s; */
+    transition-timing-function: cubic-bezier(ease-out);
+
+}
+
+p.boton:hover+div {
+    background-color:white;
+    color:blueviolet;
+    font-size: 5rem;
+}
+
+/* TRANSFORM */
+
+div.transform {
+    transition-property: all;
+    transition-duration: 6s;
+    transition-timing-function: cubic-bezier(ease-out);
+}
+
+p.btn_escalar:hover+div {
+  transform: scale(2);
+}
+
+p.btn_rotar:hover+div {
+    transform: rotate(180deg)
+  }
+
+  p.btn_inclinar:hover+div {
+    transform: skew(20deg)
+  }
+
+  p.btn_trasladar:hover+div {
+    transform: translate(2em)
+  }

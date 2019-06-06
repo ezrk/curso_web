@@ -1,9 +1,12 @@
-/* repasar */
-
+* {
+    box-sizing: border-box;
+}
 
 body{
     margin: 0;
 }
+
+/******** HEADER ******/
 
 header {
     position: relative;/* !!!! */
@@ -16,7 +19,7 @@ header {
     /* Dos elementos uno al lado del otro */
     display: flex;
     /* flex-wrap: wrap; */ /* !!!!!división horizontal o vertical!!!!! */
-flex-direction: column
+    flex-direction: column
 
 /* Comportamiento inicial */
    /*  justify-content: flex-start
@@ -55,65 +58,48 @@ div {
 /* dividir espacio de dos divs */
 div.superior {
     flex: 1 1 auto;
-    background-color: rgba(137, 43, 226, 0.459);
     display: flex;
-}
+    justify-content: space-between; /* distribuye los elementos en los extremos */
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    z-index: 50; 
+/*     height: 10vh; */
 
-div.superior div {
-    flex: 1 1 auto;
 }
 
 div.inferior {
     flex: 10 1 auto;
-    background-color: rgba(0, 255, 255, 0.301);
+    /* background-color: rgba(0, 255, 255, 0.301); */
     display: flex; 
     align-items: center;
     justify-content: center;
-    
+    z-index: 12; 
 }
-
+/* 
 .borde {
     border: 5px solid grey;
-}
+} */
 
-div.menu_wrapper {
-    flex: 10 1 auto;
-    align-items: flex-start;
-    align-items: center;
-    justify-content: center;
-}
 
-div.logo_wrapper {
-    flex: 1 5 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo{
+    width: 90px; 
 }
 
 h1 {
     color: rgb(243, 253, 104);
-    font-size: 8em;
+    
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 0.5rem;
-    z-index: 20; 
+    z-index: 22; 
     margin: 0;
     padding: 2rem;
     text-align: center;
+    width: fit-content; /* !!!! */
+    font-size: 0.2rem;
+    transform: scale(3);
+    transition: all 3s linear;
 } 
-
-.logo_wrapper  {
-    /* display: block; */
-/*     position: absolute; */
-/*     top: 2rem;
-    left: 2rem;  */
-    width: 5rem;
-
-}
-
-.logo_wrapper  img {
- width: 100px;
- 
-}
 
 nav a {
     color: inherit;
@@ -124,6 +110,165 @@ nav ul {
     list-style: none;
 }
 
-.fas {
+.burguer {
     color: rgb(49, 49, 49);
+    font-size: 2rem;
 }
+
+/* CONTENT */
+.content-wrapper {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+
+/* NAV FOOTER */
+.nav_footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    margin: 1rem auto;
+    color:white;
+    padding: 1rem 0;
+    background-color: rgb(190, 190, 190);
+    font-weight: 600;
+}
+
+.nav_footer>ul>li {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+footer {
+    min-height: 5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    background-color: grey;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5rem;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+nav.horizontal {
+    display: none;
+}
+
+/******** MEDIA QUERIES ******/
+
+@media screen and (min-width: 500px) {
+    .content-wrapper {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }    
+}
+
+@media screen and (min-width: 650px) {
+    
+    .content-wrapper {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    nav.nav_footer,
+    nav.burguer {
+        display: none;
+    }
+
+    nav.horizontal {
+        display: initial;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(49, 49, 49);
+    }
+
+    nav.horizontal>ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a { /* Cualquier a dentro de nav */
+		display: block;
+		padding: 0.3em 0.5em;
+		margin: 0.25em;
+        text-align: center;
+        transition: all 0.5s ease-out;
+    }
+    
+    nav > ul a:focus,
+	nav > ul a:hover{ /* Cualquier a dentro de nav */
+		color:  rgb(243, 253, 104);
+    }
+
+/*     li:hover ul {
+        position:absolute;
+        top:1rem;
+    } */
+    
+       
+    /* =================== */
+    /* = submenús        = */
+    /* =================== */
+    li>ul { /* El segundo nivel del menú oculto*/
+        display: none;
+        color: rgb(49, 49, 49);
+        top: 4em;
+    }
+    
+    li:hover > ul { /* El segundo nivel del menú se muestra */
+        display: initial;
+        position: absolute;
+        top: 4em;
+        padding-left:1em;
+ 
+    }
+
+    li ul li:hover ul {
+        display: initial;
+        position: absolute;
+        top: 4.6em;
+        padding-left:3.3em;
+ 
+    }
+
+
+
+
+    
+
+    @media screen and (min-width: 800px) {
+    
+        .content-wrapper {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section {
+            padding: 1rem;
+            width:50%;
+        }
+
+        nav a { 
+            padding: 0.3em 0.7em;
+        }
+
+        nav.horizontal>ul>li::after {
+
+        }
+
+        nav.horizontal>ul>li:not(last-of-type)::after {
+            content: '|';
+            color: rgb(49, 49, 49);
+            position: absolute;
+            top:3.2rem;
+
+            
+
+
+        }
