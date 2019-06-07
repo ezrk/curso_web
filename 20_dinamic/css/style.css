@@ -38,7 +38,7 @@ p.boton:hover+div {
 div.transform {
     transition-property: all;
     transition-duration: 6s;
-    transition-timing-function: cubic-bezier(ease-out);
+  /*   transition-timing-function: cubic-bezier(ease-out); */
 }
 
 p.btn_escalar:hover+div {
@@ -46,7 +46,8 @@ p.btn_escalar:hover+div {
 }
 
 p.btn_rotar:hover+div {
-    transform: rotate(180deg)
+    transform: rotate(180deg);
+    transform-origin: bottom; /* ! */
   }
 
   p.btn_inclinar:hover+div {
@@ -56,3 +57,40 @@ p.btn_rotar:hover+div {
   p.btn_trasladar:hover+div {
     transform: translate(2em)
   }
+
+  /* BOTONES */
+
+
+  /*  */
+
+  /* Hermano adjacente */
+.defer p:hover {
+  background-color: aquamarine;
+}
+
+.defer p:hover~div /* Todos los hermanos */ {
+
+}
+
+.defer p:before {
+  /* content: ""; */
+  content:open-quote;
+}
+
+.defer p:after {
+/*   content: ""; */
+  content:open-quote;
+}
+
+
+/*******************
+Transformaciones 3D
+********************/
+section.tresd {
+  perspective: 500px;
+}
+
+p.btn-tresd:hover+div {
+ transform: translateZ(1rem);
+ 
+}
