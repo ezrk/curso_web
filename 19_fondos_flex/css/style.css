@@ -68,6 +68,16 @@ div.superior {
 
 }
 
+/* EFECTO SCALE MENU HAMBURGUESA HOVER */
+div.superior nav.burguer:hover{
+    transform: scale(1.5);
+}
+.burguer {
+    transition: transform 0.5s;
+}
+
+/* ****************************************** */
+
 div.inferior {
     flex: 10 1 auto;
     /* background-color: rgba(0, 255, 255, 0.301); */
@@ -90,15 +100,15 @@ h1 {
     color: rgb(243, 253, 104);
     
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     z-index: 22; 
     margin: 0;
     padding: 2rem;
     text-align: center;
     width: fit-content; /* !!!! */
-    font-size: 0.2rem;
-    transform: scale(3);
-    transition: all 3s linear;
+    font-size: 0.1rem;
+    transform: scale(10);
+    transition: transform 4s;
 } 
 
 nav a {
@@ -121,6 +131,11 @@ nav ul {
     margin-right: 4rem;
 }
 
+div.superior nav.burguer:hover {
+    transform: translate(20em);
+    
+}
+
 
 /* NAV FOOTER */
 .nav_footer {
@@ -132,6 +147,17 @@ nav ul {
     padding: 1rem 0;
     background-color: rgb(190, 190, 190);
     font-weight: 600;
+    
+   
+   
+   
+    position: absolute;
+    top: 5rem;
+    left: -100vh;
+    width: 100vw;
+    bottom: 0;
+    transition: transform 1s;
+  
 }
 
 .nav_footer>ul>li {
