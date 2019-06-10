@@ -1,0 +1,25 @@
+section {
+    margin: 2rem;
+    header {
+    background-color: cadetblue;
+    color: white;
+    }
+}
+
+body {
+    margin: 0;
+    >header /* podría ser .main-header tmb */{
+        background-color: rgb(0, 114, 104);
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 { /* puede estar fuera o dentro de la anidación */
+        margin-top: 0;
+        margin-bottom: 0;
+        }
+    }
+}
+
+
+

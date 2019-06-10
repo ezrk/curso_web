@@ -11,42 +11,48 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    font-size: 4rem;
 }
 
-section.flex {
-    display: flex;
-    flex-wrap: wrap;/* Ajuste el contenido a la pantalla */
-    /* flex-direction: row-reverse; */ /* coloca al revés a la dcha */
-    /* flex-direction: column; */ /* lineas */
-    /* flex-direction: column-reverse; */ /* ordena de abajo hacia arriba */
-    flex-direction: row;
-    min-height: 60vh;
-    justify-content: flex-start; /* Comportamiento inicial */
-    justify-content: flex-end; /* Colocando los elementos al final */
-    justify-content: center; /* !!!! centra */
-    justify-content: space-between; /* Se reparten los elementos a lo ancho de la pantalla */
-    justify-content: space-around; /* Mismo que el anterior pero con mas margen */
+section.grid{
+    margin: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    /* grid-template-rows: 2fr 1fr 1fr; */
+   /*  grid-template-rows: 2fr repeat(3, 1fr); */
+    grid-template-rows: 2fr 1fr;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    grid-auto-rows: 2fr; /* Modifica el valor auto a 2fr en el lugar de 1 */
 
-    align-items: stretch;
-    align-items: flex-start;
-    align-items: flex-end;
-    align-items: center;
 
-    /* Afecta cuando existen varias lineas de contenido */
-    align-content: flex-start; /* Valor por defecto */
-    align-content: center; 
-    align-content: space-between;
-    align-content: space-around;
 }
 
-section.flex div{
+section.grid div{
     font-size: 4rem;
     padding: 1rem;
     background-color: darksalmon;
-    margin: 0.5rem;
 }
 
-section.flex div:nth-of-type(4){
+/* section.grid div:nth-of-type(4){
 font-size: 6rem;
 }
+ */
+
+ section.grid div:nth-of-type(2){
+/* grid-column-start: 2;
+grid-column-end: 3; */
+grid-column: 2 / 3;
+/* grid-row-start: 3;
+grid-row-end: 4; */
+/* grid-row: 3 / 4; */
+grid-row: 3 / span 1;
+
+}
+
+section.grid div:nth-of-type(9){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    }
