@@ -1,0 +1,26 @@
+@charset "UTF-8";
+section {
+  margin: 2rem;
+}
+section header {
+  background-color: cadetblue;
+  color: white;
+}
+
+body {
+  margin: 0;
+}
+body > header {
+  background-color: #007268;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > header h1 {
+  /* puede estar fuera o dentro de la anidación */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
