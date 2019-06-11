@@ -163,6 +163,19 @@ aside {
     grid-area: aside;
 }
 
+.publi {
+    width: 100%;
+    height: 35vh;
+    background-image: url("../assets/Havana-Club-7-años-580x330.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+.enano {
+    transform: scale(0);
+}
+
 /*************************
 MEDIAQUERIES
  ************************/
@@ -184,6 +197,15 @@ MEDIAQUERIES
          margin-right: calc(var(--margin-lateral) /2) ;
          margin-left: calc(var(--margin-lateral) /2) ;
      }
+
+        /* aside {
+            margin-top: var(--margin-vertical);
+        } */
+
+        .publi {
+            background-image: url("../assets/images.jpeg");
+            background-size: contain;
+        }
 }
 
 @media screen and (min-width: 800px) {
