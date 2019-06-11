@@ -1,23 +1,73 @@
-section {
+//no se compila en css
+//https://styde.net/lista-completa-de-funciones-nativas-de-sass/
+
+$color-back: cadetblue;
+$color-text: white;
+$margin-base: 1rem;
+
+//función con una serie de valores que puedes invocar donde lo necesites
+@mixin sin_mvert {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin colores_invertidos($oscuro: 20, $claro: 20) {
+    background-color: darken($color-back, $amount: $oscuro);
+    color: lighten($color-back, $amount: $claro);
+}
+
+section.intro {
+    min-height: 60vh;
     margin: 2rem;
     header {
-    background-color: cadetblue;
-    color: white;
+    background-color: $color-back;
+   /*  background-color: darken($color-back, $amount:10); */
+    color: $color-text;
+    @import './parrafo';
     }
 }
 
+//Agrupar conjunto de características comunes >> combinación de selectores
+.main {
+    
+    background-color: $color-back;
+    color: $color-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
 body {
-    margin: 0;
+    margin:($margin-base + $margin-base)/2 - $margin-base; //0 jajaja
+    display: grid;
+    grid-template-rows: 2fr auto 1 fr;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     >header /* podría ser .main-header tmb */{
-        background-color: rgb(0, 114, 104);
-        color: rgb(255, 255, 255);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend .main ; // aplicación de la combinacion de selectores
         h1 { /* puede estar fuera o dentro de la anidación */
-        margin-top: 0;
-        margin-bottom: 0;
+        @include sin_mvert();
+        // mixin margin-top: 0; margin-bottom: 0; 
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         }
+    }
+}
+
+.main-footer {
+    background-color: $color-back;
+    color: $color-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+section.samples {
+    margin: 2.6rem;
+    header{
+        @include colores_invertidos(20, 20); //ver linea 14
     }
 }
 
