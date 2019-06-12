@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <!-- Se coloca después de bootstrap -->
+    <!-- Se coloca después de bootstrap, nuestro tema -->
+    <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <header class="main_header">
+<body class="">
+    <header class="main_header text-letra bg-fondo pt-4 pb-4">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xs">
+                <div class="col-xs"> 
                     <h1>Uso de Bootstrap</h1>
                 </div>
             </div>
@@ -94,7 +95,7 @@
             </aside>
         </main>
     </div>
-    <footer class="main_footer">
+    <footer class="main_footer text-letra bg-fondo min-vh-10 d-flex align-items-center">
         <div class="container ">
             <div class="row justify-content-center ">
                 <div class="col-xs ">
@@ -103,6 +104,10 @@
             </div>
         </div>
     </footer>
+    <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+    <script src="../css/custom.css"></script> <!-- Mi version de bootstrap a medida -->
 </body>
 
 </html>

@@ -2,15 +2,15 @@
     --color-letra: white;
     --color-fondo: rgb(80, 80, 80);
     --font-title:'Righteous', cursive;
-    --font-main: 'Montserrat', sans-serif;
+    /* --font-main: 'Montserrat', sans-serif; */
     --color-gris-fondo: lightgray;
     --color-gris-borde: rgb(156, 156, 156);
 }
 
 .main_header {
-    font-family: var(--font-title);
-    background-color: var(--color-fondo);
-    color: var(--color-letra);
+    /* font-family: var(--font-title); */
+/*     background-color: var(--color-fondo);
+    color: var(--color-letra); */
     padding-top: 2rem;
     padding-bottom: 1rem;
 
@@ -18,14 +18,17 @@
 }
 
 body {
-    font-family: var(--font-main);
+    /* font-family: var(--font-main); */
 }
 
 .main_footer {
-    font-family: var(--font-title);
-    background-color: var(--color-fondo);
-    color: var(--color-letra);
+    /* font-family: var(--font-title); */
+/*     background-color: var(--color-fondo);
+    color: var(--color-letra); */
     padding-top: 2rem;
     padding-bottom: 1rem;
-    
+}
+
+.min-vh-10 {
+    min height: 20vh;
 }
