@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Se coloca después de bootstrap, nuestro tema -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body >
+    <header class="main_header text-letra bg-fondo pt-4 pb-4 ">
+
+        <div class="row margen-extra">
+            <div class="col-xs-1-12">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary " href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="./datos.html">Datos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="navId">
+                        <li class="nav-item">
+                            <a href="#tab1Id" class="nav-link active">Active</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#tab2Id">Action</a>
+                                <a class="dropdown-item" href="#tab3Id">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#tab4Id">Action</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#tab5Id" class="nav-link">Another link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+                        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+                        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+                        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+                        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+                    </div>
+
+                    <script>
+                        $('#navId a').click(e => {
+                            e.preventDefault();
+                            $(this).tab('show');
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="container">
+        <main class="row">
+            <section class="col">
+                <div class="jumbotron">
+                    <h1 class="display-3">Datos</h1>
+                    <p class="lead">Formulario</p>
+                    <!--                    <hr class="my-2">
+                    <p>More info</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+                    </p> -->
+                </div>
+
+                <div class="container">
+                    <form>
+                        <fieldset class="form-group row">
+                            <legend class="col-form-legend col-sm-1-12">Datos de usuario</legend>
+                            <div class="col-sm-1-12">
+                                <div class="form-group row">
+                                    <label for="inputName" class="col-sm-4 col-lg-2 col-form-label">Nombre</label>
+                                    <div class="col-sm-8 col-lg-4">
+                                        <input type="text" class="form-control" name="inputName" id="inputName"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputApellido" class="col-sm-4 col-lg-2 col-form-label">Apellido</label>
+                                    <div class="col-sm-8 col-lg-4">
+                                        <input type="text" class="form-control" name="inputName" id="inputName"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="passw" class="col-sm-4 col-lg-2 col-form-label">Introduce tu
+                                        password</label>
+                                    <div class="col-sm-8 col-lg-4">
+                                        <input type="password" class="form-control" name="passw" id="passw"
+                                            placeholder="Escribe tu password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-4 col-lg-2 col-form-label">E-mail</label>
+                                    <div class="col-sm-8 col-lg-4">
+                                        <input type="email" class="form-control" name="email" id="email"
+                                            aria-describedby="emailHelpId" placeholder="" value="@tajamar.es">
+                                    </div>
+                                    <!-- <small id="emailHelpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                                <div class="form-group row">
+                                    <label for="formacion" class="col-sm-4 col-lg-2 col-form-label">Formación</label>
+                                    <select multiple class="custom-select" name="formacion" id="formacion">
+                                        <option selected>Select one</option>
+                                        <option value="1">Graduado</option>
+                                        <option value="2">Licenciado</option>
+                                        <option value="3">Doctor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="birthDate" class="col-sm-4 col-lg-2 col-form-label">Fecha de
+                                        nacimiento</label>
+                                    <div class="col-sm-8 col-lg-4">
+                                        <input type="date" class="form-control" name="birthDate" id="birthDate"
+                                            placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="info" class="col-sm-4 col-lg-2 col-form-label">Dejanos tu
+                                        mensaje</label>
+                                    <textarea class="form-control" name="info" id="info" rows="5"></textarea>
+                                </div>
+
+                                <div class="input-group row">
+                                    <legend>Condiciones</legend>
+                                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+                                        omnis. Laborum totam nam voluptatem. Sed ipsam eum itaque sequi sint veniam
+                                        perspiciatis, cumque at cupiditate eaque mollitia officiis quidem accusantium.
+                                    </p>
+                                    <span class="input-group-addon">
+                                        <input type="checkbox" name="name" id="name" aria-label="">
+                                    </span>
+                                    <label for="isOk" class="col-sm-4 col-lg-2 form-check-label">Estoy de
+                                        acuerdo.</label>
+                                </div>
+
+                                <div class="form-group row">
+                                    <legend>Datos del curso</legend>
+                                    <label for="exampleFormControlSelect2"
+                                        class="col-sm-4 col-lg-2 col-form-label">Elige un valor</label>
+                                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                                        <optgroup label="Cursos Front-End">
+                                            <option value="HTML01">Curso HTML5</option>
+                                            <option value="CSS02">Curso CSS3</option>
+                                            <option value="JS03">Curso JavaScript</option>
+                                        </optgroup>
+                                        <optgroup label="Cursos Back-End">
+                                            <option value="Node04">Curso Node JS</option>
+                                            <option value="PHP05">Curso PHP</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="form-check row">
+                                    <legend>Ubicaciones</legend>
+                                    <label class="form-check-label col-sm-4 col-lg-2 col-form-label ">
+                                        <input type="radio" class="form-check-input" name="sede" id="madrid" value="checkedValue"
+                                            checked>
+                                        Madrid
+                                    </label>
+                                    <label class="form-check-label col-sm-4 col-lg-2 col-form-label ">
+                                        <input type="radio" class="form-check-input" name="sede" id="barcelona" value="checkedValue">
+                                        Barcelona
+                                    </label>
+                                </div>
+
+                                <div class="form-group row">
+                                    <legend class="col-12">Rango</legend>
+                                    <label for="exampleFormControlSelect2"
+                                        class="col-12 col-form-label">Elige un rango</label>
+                                    <input type="range" class="custom-range" id="customRange1">
+
+                                </div>
+
+
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="offset-sm-5 col-sm-7">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+            </section>
+
+        </main>
+    </div>
+    <footer class="main_footer text-letra bg-fondo min-vh-10 d-flex align-items-center">
+        <div class="container ">
+            <div class="row justify-content-center ">
+                <div class="col-xs ">
+                    <address>EZ 2019.</address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js">
+        <script src="../css/custom.css"></script> <!-- Mi version de bootstrap a medida -->
+    <script src="../node_modules/holderjs/holder.js"></script>
+</body>
+
+</html>

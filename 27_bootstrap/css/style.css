@@ -19,6 +19,8 @@
 
 body {
     /* font-family: var(--font-main); */
+    position: relative;
+    overflow: scroll;
 }
 
 .main_footer {
@@ -33,3 +35,6 @@ body {
     min height: 20vh;
 }
 
+.margen-extra {
+    margin-top: 10rem;
+}
