@@ -1,16 +1,28 @@
+-let titulo = 'hola Pug'
+-const charset = 'utf-8'
+-const empresa = 'Colegio <b>Tajamar</b>'
+
+doctype
 html(lang=language})
     head
-        meta(charset="UTF-8")
+        meta(charset=charset)
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Hola pug
+        style(rel="stylesheet", href="./css/style.css") 
     body
-        header
-            h1 holi pug
+        header.main-header#main-header
+            h1 = titulo
         section
             p. 
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Saepe aperiam ipsum eaque non error praesentium libero exercitationem perspiciatis nihil unde odio omnis corporis, 
             distinctio commodi maxime quae numquam quia voluptatum?
-        footer
+            p. 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Saepe aperiam ipsum eaque non error praesentium libero exercitationem perspiciatis nihil unde odio omnis corporis.
+            .info Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam fugit eaque veritatis velit dolores reiciendis, necessitatibus possimus quae vel itaque consectetur! Cum, minus. Asperiores accusantium a nesciunt repellat, consequatur sed!
+        footer(class="main-footer")
             address #{author}
+            small!=empresa 
+            //! para que no 
