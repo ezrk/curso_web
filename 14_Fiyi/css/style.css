@@ -1,6 +1,33 @@
+
+
+/******************
+Variables de CSS
+******************/
+/* Guía de estilos */
+:root{
+    --color-primary: #67BAAF;
+    --color-letra: white;
+    --color-fondo: rgb(80, 80, 80);
+    --font-title:'Righteous', cursive;
+    --font-main: 'Montserrat', sans-serif;
+    --size-title: calc(var(--size-small) *3);
+    --size-subtitle: calc(var(--size-small) *2);
+    /* --size-subtitle: 1.5rem; */
+    --size-base: calc(14rem/16);
+    --size-small: calc(12rem/16);
+    --margin-vertical: 1.5rem;
+    --margin-lateral: 2rem;
+    --size-title-section: 1.2rem;
+    --margin-parrafo: 1rem;
+    --color-gris-fondo: lightgray;
+    --color-gris-borde: rgb(156, 156, 156);
+}
+
+
+
 html, body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-main);
 }
 
 /*********** HEADER ************/
@@ -14,7 +41,7 @@ html, body {
     height: 60rem;
     text-align: center;
     padding: 1rem;
-    font-family: 'Righteous', cursive;
+    font-family: var(--font-title);
 }
 
 .main-header nav{
@@ -34,11 +61,16 @@ html, body {
 }
 
 /* El padding se pone en los <a> para que la superficie clickable sea más grande */
-.main-header a {
+.main-header nav a {
     color: inherit;
     text-decoration: none;
     display: block;
     padding: 1rem;
+}
+.main-header a:hover {
+    color: var(--color-primary);
+    transition: 250ms ease-in-out; 
+    transform: 150ms ease;
 }
 
 .main-header h1 {
@@ -46,6 +78,7 @@ html, body {
     font-size: 3rem;
     padding-top: 10rem;
     padding-bottom: 5rem;
+    font-family: 'Permanent Marker', cursive;
 
 }
 .main-header p::after {
@@ -57,7 +90,7 @@ html, body {
 .main-header p::after {
     position: absolute;
     content: "";
-    height: 2px;
+    height: 1px;
     background-color: white;
     width: 5rem;
     margin-top: 2.5rem;
@@ -72,3 +105,72 @@ html, body {
     font-size: 1.5rem;
 }
 
+/*********** BTN ************/
+
+.btn-call {
+   
+	background-color:transparent;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size: 1rem;
+	padding:16px 31px;
+    text-decoration:none;
+    font-family: var(--font-title);
+    margin-top: 4rem;
+    transition: 250ms ease-in-out; 
+    transform: 150ms ease;
+}
+
+a:link 
+{ 
+text-decoration:none; 
+} 
+
+.btn-call:hover {
+    background-color:white;
+    color: var(--color-primary);
+}
+.btn-call:active {
+	position:relative;
+	top:1px;
+}
+
+/*********** LIGHTBOX ************/
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox iframe {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 15%;
+}
+
+.lightbox:target{
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+    display: block;
+    position: absolute;
+}
