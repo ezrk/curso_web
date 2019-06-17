@@ -8,12 +8,12 @@ Variables de CSS
     --color-primary: #67BAAF;
     --color-letra: white;
     --color-fondo: rgb(80, 80, 80);
-    --font-title:'Righteous', cursive;
+    --font-title:'Poppins', sans-serif;
     --font-main: 'Montserrat', sans-serif;
     --size-title: calc(var(--size-small) *3);
-    --size-subtitle: calc(var(--size-small) *2);
+    /* --size-subtitle: calc(var(--size-small) *2); */
     /* --size-subtitle: 1.5rem; */
-    --size-base: calc(14rem/16);
+    --size-base: 1.1rem;
     --size-small: calc(12rem/16);
     --margin-vertical: 1.5rem;
     --margin-lateral: 2rem;
@@ -26,7 +26,14 @@ Variables de CSS
 html, body {
     margin: 0;
     font-family: var(--font-main);
+    font-size: var(--size-base);
     text-align: center;
+    line-height: 1.6rem;
+
+}
+
+p {
+    margin: 1rem;
 }
 
 /*********** HEADER ************/
@@ -39,14 +46,8 @@ html, body {
     color: white;
     height: 60rem;
     text-align: center;
-<<<<<<< HEAD
-   padding: 1rem;
-    font-family: 'Righteous', cursive;
-  position: relative;
-=======
     padding: 1rem;
     font-family: var(--font-title);
->>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 }
 
 .main-header nav{
@@ -85,10 +86,6 @@ html, body {
     padding-top: 10rem;
     padding-bottom: 5rem;
     font-family: 'Permanent Marker', cursive;
-<<<<<<< HEAD
-    
-=======
->>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 
 }
 .main-header p::after {
@@ -117,12 +114,8 @@ html, body {
 
 /*********** BTN ************/
 
-<<<<<<< HEAD
-.btn-calltoaction {
-=======
 .btn-call {
    
->>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 	background-color:transparent;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
@@ -131,19 +124,6 @@ html, body {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-<<<<<<< HEAD
-	padding:16px 31px;
-    text-decoration:none;
-    font-family: inherit;
-    margin-top:2rem;
-    font-size: 1rem;
-}
-.btn-calltoaction:hover {
-    background-color:white;
-    color: aquamarine;
-}
-.btn-calltoaction:active {
-=======
 	font-size: 1rem;
 	padding:16px 31px;
     text-decoration:none;
@@ -163,60 +143,13 @@ text-decoration:none;
     color: var(--color-primary);
 }
 .btn-call:active {
->>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 	position:relative;
 	top:1px;
 }
 
-<<<<<<< HEAD
-
-/*********** VIDEO ************/
-.responsive-container {
-
-   /*  position: relative;
-    overflow: hidden; */
-    /* padding-top: 56.25%; */
-}
-
-/* .resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-} */
-/* video, embed {
-    max-width: 100%;
-} */
-
-
-.index-video-wrapper {
-    height: 100%;
-    width: 100%;
-    /* background: url(../img/index-image.jpg) no-repeat center center;  */
-    background-size: cover; 
-    position: absolute;
-}
-video.cover {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -100;
-    right: 0;
-    bottom: 0; 
-    background-size: cover;
-    overflow: hidden;
-  /*   background: linear-gradient( #000000a9, transparent), url("../assets/bg_header.jpg") no-repeat center center; */
-}
-
-
-/***********lightbox ************/
-=======
 /*********** LIGHTBOX ************/
 
 /** LIGHTBOX MARKUP **/
->>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 
 .lightbox {
 	/** Default lightbox to hidden */
@@ -233,16 +166,6 @@ video.cover {
 	background: rgba(0,0,0,0.8);
 }
 
-<<<<<<< HEAD
-.lightbox video {
-	/** Pad the lightbox image */
-	max-width: 90%;
-	max-height: 80%;
-	margin-top: 2%;
-}
-
-.lightbox:target {
-=======
 .lightbox iframe {
 	/** Pad the lightbox image */
 	max-width: 90%;
@@ -251,53 +174,129 @@ video.cover {
 }
 
 .lightbox:target{
->>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 	/** Remove default browser outline */
 	outline: none;
 
 	/** Unhide lightbox **/
-<<<<<<< HEAD
-	display: block;
-}
-=======
     display: block;
     position: absolute;
 }
 
 /*********** SECTION #informacion-practica ***********/
 
+h2 {
+    font-family: var(--font-title);
+    font-size: var(--size-title);
+    /* background: var(--color-primary);
+    color: white; */
+    padding: 0.5rem;
+ text-decoration-line: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-style: 10px solid; 
+  line-height: 2.2rem;
+
+}
+
+/* .underline
+{
+    background-image: linear-gradient(var(--color-primary) 0%, var(--color-primary) 100%);
+    background-repeat: repeat-x;
+    background-position: 0 1em;
+    background-size: 5px;
+} */
+
 .content-wrapper{
-    background-color: antiquewhite;
-    
-    
+    width: 100%;
+}
+
+.section-wrapper {
+    width: 80%;
+    margin: 0 auto;  
 }
 
 section {
-   
+    
+    margin: var(--margin-lateral) var(--margin-vertical);
+    margin-top: calc(var(--margin-vertical)*3);
 }
 
 .flex {
+    
     display: flex;
-    justify-content: center;
-    align-content: center;
     flex-wrap: wrap;
+/*     justify-content: center;
+    align-content: space-between;
+    
     flex-direction: column;
-    width: 80%;
+     */
     margin: var(--margin-lateral) var(--margin-vertical);
     
 }
 
+.flex-dos{
+    width: 50%;
+}
+
+
+
+
+/*********** TABLA ***********/
+.tabla  {
+    border-collapse:collapse;
+    border-spacing:0;
+    font-family: var(--font-main);
+    margin: 0 auto;
+}
+
+.tabla th { 
+    font-size: var(--size-title-section);
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:3px;
+    overflow:hidden;
+    word-break:normal;
+    
+}
+
+.tabla td {
+    font-size: var(--font-main);
+    padding:10px 5px;
+    border-style:solid;
+    border-width:3px;
+    overflow:hidden;
+    word-break:normal;
+}
+
+.tabla .table-title {
+    font-weight:bold;
+    background-color:#67baaf;
+    color:#ffffff;
+    text-align:left;
+    vertical-align:top;
+}
+.tabla .t-content {
+    background-color:#67baaf;
+    color:#ffffff;
+    text-align:left;
+    vertical-align:top;
+}
 
 /*********** SHOW MORE/LESS ***********/
 .panel-wrapper {
     position: relative;
   }
 
-  .btn-mostrar, .btn-ocultar {
-      display: block;
-      text-align: center;
-      text-transform: uppercase;
-    
+  .btn {
+    display: block;
+    text-align: center;
+    text-transform: uppercase; 
+    font-weight: bold;
+    color: var(--color-primary);
+    left: 43%;
+    padding: 1em;
+    text-decoration: none;
+    width: 10%;
   }
 
   .mostrar, .ocultar {
@@ -309,19 +308,23 @@ section {
   
   .ocultar {display: none;}
   .mostrar:target {display: none;}
-  .mostrar:target ~ .hide {display: block;}
+  .mostrar:target ~ .ocultar {display: block;}
   .mostrar:target ~ .panel {
      max-height: 2000px; 
   }
   .mostrar:target ~ .fade {
     margin-top: 0;
   }
+
+  i.fas {
+padding: 0.5rem;
+  }
   
   .panel {
     position: relative;
     margin: 2em auto;
     width: 70%;
-    max-height: 100px;
+    max-height: 300px;
     overflow: hidden;
     transition: max-height .5s ease;
   }
@@ -332,80 +335,32 @@ section {
     position: relative;
   }
   
-  
-
 /*********** IMAGENES ************/
-  .img-contaniner{
+  .img-container{
+      width: 100%;
+      background-color: burlywood;
+  }
+
+  .cien  {
       width: 100%;
   }
 
-  img {
-      width: 100%;
+  .bigger {
+    width: 110%;
   }
+
+
 
 
 /*********** PARRALLAX************/
 
-.parrallax-wrapper {
-    /* The height needs to be set to a fixed value for the effect to work.
-     * 100vh is the full height of the viewport. */
-    height: 100vh;
-    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-    overflow-x: hidden;
-    /* Enable scrolling on the page. */
-    overflow-y: auto;
-    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-    perspective: 2px;
-  }
-  
-  .section {
-    /* Needed for children to be absolutely positioned relative to the parent. */
-    
-    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height: 100vh;
-    
-    /* For text formatting. */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
-  
-  .parallax::after {
-    /* Display and position the pseudo-element */
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
-    /* Move the pseudo-element back away from the camera,
-     * then scale it back up to fill the viewport.
-     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-    transform: translateZ(-1px) scale(1.5);
-    /* Force the background image to fill the whole element. */
-    background-size: 100%;
-    /* Keep the image from overlapping sibling elements. */ 
-    z-index: -1;
-  }
-  
-  /* The styling for the static div. */
-  .static {
-    background: rgb(0, 207, 173);
-  }
-  
-  .static h2,h3, p {
-      justify-content: space-between;
-      margin: 4rem;
-  }
-  
-  /* Sets the actual background images to adorable kitties. This part is crucial. */
- /*  .bg1::after {
-    background-image: url("../assets/bg_header.jpg");
-  } */
-  
-  .bg1::after {
-    background-image: url('../assets/fiyiisland.jpg');
-  }
->>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
+
+/*********** SECTION #que-ver ***********/
+.flex>header {
+    width: 100%;
+}
+.flex-item {
+    width:20%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
