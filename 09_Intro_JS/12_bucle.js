@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Bucles:
 
 let limite = 10
@@ -13,6 +14,8 @@ console.log(suma)
 
 
 =======
+=======
+>>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 let limite = 10
 
 let suma = 0
@@ -39,5 +42,9 @@ for (let i = 0; i < aDatos.length; i++) {
     }
     console.log(`Tengo ${i+1} ${item}`)
     
+<<<<<<< HEAD
+}
+>>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
+=======
 }
 >>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b

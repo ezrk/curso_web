@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main-header {
     background-color: beige;
     color: grey;
@@ -9,6 +10,8 @@
     color: grey;
 }
 =======
+=======
+>>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
 .main-header,
 .main-footer
 {
@@ -46,4 +49,7 @@ nav a {
     border-bottom: 1px solid rgba(169, 169, 169, 0.65)
 }
 
+<<<<<<< HEAD
+>>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
+=======
 >>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
