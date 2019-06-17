@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main-header {
     background-color: beige;
     color: grey;
@@ -7,3 +8,42 @@
     background-color: beige;
     color: grey;
 }
+=======
+.main-header,
+.main-footer
+{
+    background-color: brown;
+    color: bisque;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 1rem;
+}
+
+.form-group {
+    padding: 1rem;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.65)
+}
+
+>>>>>>> 3563a7daf8a13240623a8600fa0e456664dce93b
