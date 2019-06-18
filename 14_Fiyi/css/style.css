@@ -40,6 +40,8 @@ h3 {
   font-size: var(--size-title-section);
   font-weight: bold;
   text-align: center;
+  margin-top: calc(var(--margin-vertical)*2);
+  color: var(--color-primary);
 }
 
 /*********** HEADER ************/
@@ -372,9 +374,7 @@ padding: 0.5rem;
     float: left;
     margin-right: 2rem;
     margin-top: 3rem;
-    padding-bottom: 0.5rem;
     margin-bottom: 2rem; 
-    background-color: blueviolet;
 }
 
 .image_wrapper_left img, .image_wrapper_right img{
@@ -384,8 +384,8 @@ width: 100%;
 .image_wrapper_right {
   width: 50%;
   float: right;
+  margin-top: 5rem;
   padding-left: 2rem;
-  padding-bottom: 0.5rem;
   margin-bottom: 2rem; 
 }
 
