@@ -36,6 +36,12 @@ p {
     margin: 1rem;
 }
 
+h3 {
+  font-size: var(--size-title-section);
+  font-weight: bold;
+  text-align: center;
+}
+
 /*********** HEADER ************/
 
 .main-header {
@@ -83,7 +89,7 @@ p {
 .main-header h1 {
     text-align: center;
     font-size: 4rem;
-    padding-top: 10rem;
+    padding-top: 15rem;
     padding-bottom: 5rem;
     font-family: 'Permanent Marker', cursive;
 
@@ -100,7 +106,7 @@ p {
     height: 1px;
     background-color: white;
     width: 5rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     display: inline;
     text-align: center;
     margin-left: -5.5rem;
@@ -194,6 +200,7 @@ h2 {
   text-decoration-color: var(--color-primary);
   text-decoration-style: 10px solid; 
   line-height: 2.2rem;
+  text-align: center;
 
 }
 
@@ -209,15 +216,12 @@ h2 {
     width: 100%;
 }
 
-.section-wrapper {
-    width: 80%;
-    margin: 0 auto;  
-}
-
 section {
-    margin: var(--margin-lateral) var(--margin-vertical);
-    margin-top: calc(var(--margin-vertical)*3);
-    margin-bottom:  calc(var(--margin-vertical)*3);
+  width: 80%;
+  margin: 0 auto;  
+  margin-top: calc(var(--margin-vertical)*3);
+  margin-bottom:  calc(var(--margin-vertical)*3);
+  text-align: justify;
 }
 
 .flex {
@@ -323,22 +327,36 @@ padding: 0.5rem;
   .panel {
     position: relative;
     margin: 0.5em auto;
-    width: 70%;
-    max-height: 300px;
+    max-height: 250px;
     overflow: hidden;
     transition: max-height .5s ease;
+    text-align: justify;
   }
+  
   .fade {
     background: linear-gradient(to bottom, rgba($bg-color,0) 0%,rgba($bg-color,1) 75%);
     height: 100px;
     margin-top: -100px;
     position: relative;
   }
+
+
+  .wrapper {
+    width: 70%;
+    text-align: justify;
+    margin: 0.5em auto;
+  }
+
+  .weatherwidget-io {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: calc(var(--margin-vertical)*3);
+
+  }
   
 /*********** IMAGENES ************/
   .img-container{
       width: 100%;
-      background-color: burlywood;
   }
 
   .cien  {
@@ -349,6 +367,27 @@ padding: 0.5rem;
     width: 110%;
   }
 
+  .image_wrapper_left {
+    width: 50%;
+    float: left;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem; 
+    background-color: blueviolet;
+}
+
+.image_wrapper_left img, .image_wrapper_right img{
+width: 100%;
+}
+
+.image_wrapper_right {
+  width: 50%;
+  float: right;
+  padding-left: 2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem; 
+}
 
   .bg-fixed1{
     background-image: url(../assets/fiyiisland.jpg);
@@ -356,7 +395,7 @@ padding: 0.5rem;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 80vh;
 }
 
   .bg-fixed2{
