@@ -215,9 +215,9 @@ h2 {
 }
 
 section {
-    
     margin: var(--margin-lateral) var(--margin-vertical);
     margin-top: calc(var(--margin-vertical)*3);
+    margin-bottom:  calc(var(--margin-vertical)*3);
 }
 
 .flex {
@@ -293,15 +293,15 @@ section {
     text-transform: uppercase; 
     font-weight: bold;
     color: var(--color-primary);
-    left: 43%;
-    padding: 1em;
+    left: 42%;
+    padding: -2em;
     text-decoration: none;
-    width: 10%;
+    width: 15%;
   }
 
   .mostrar, .ocultar {
     position: absolute;
-    bottom: -1em;
+    bottom: -1.5em;
     z-index: 100;
     text-align: center;
   }
@@ -322,7 +322,7 @@ padding: 0.5rem;
   
   .panel {
     position: relative;
-    margin: 2em auto;
+    margin: 0.5em auto;
     width: 70%;
     max-height: 300px;
     overflow: hidden;
@@ -350,9 +350,34 @@ padding: 0.5rem;
   }
 
 
+  .bg-fixed1{
+    background-image: url(../assets/fiyiisland.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
 
+  .bg-fixed2{
+    background-image: url(../assets/kokoda.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
 
-/*********** PARRALLAX************/
+.img-title {
+  text-align: center;
+    font-size: 4rem;
+    padding-top: 25rem;
+    font-family: var(--font-title);
+    color: white;
+    line-height: initial;
+  
+}
+
 
 
 /*********** SECTION #que-ver ***********/
@@ -364,3 +389,117 @@ padding: 0.5rem;
     padding: 1rem;
     box-sizing: border-box;
 }
+
+.container{
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 97%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  
+  
+  text-align: center;
+   padding-left: 0.2em;
+  padding-right: 0.2em; 
+  padding-top: 0.2em; 
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content img{
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.content-title {
+  position: absolute;
+  left: 50px;
+  right:50px;
+  margin-top: 40%;
+  text-align: center;
+  background-color: var(--color-primary);
+  padding: 5px;
+  color: white;
+  font-family: var(--font-title);
+  font-size: calc(var(--size-title)*0.75);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-style: 10px solid; 
+ 
+}
+.content:hover .content-title{
+  opacity: 0;
+  transform: translate(0,-350px);
+    -webkit-transform: translate(0,-350px);
+    -o-transform: translate(0,-350px); 
+    -moz-transform: translate(0,-350px);
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content-details {
+  position: absolute;
+  font-family: var(--font-main);
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: var(--color-primary);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: var(--size-small);
+}
+
+/* .fadeIn-bottom{
+  top: 50%;
+} */
