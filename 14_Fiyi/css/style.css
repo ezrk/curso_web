@@ -1,27 +1,4 @@
-
-
-/******************
-Variables de CSS
-******************/
-/* Guía de estilos */
-:root{
-    --color-primary: #67BAAF;
-    --color-letra: white;
-    --color-fondo: rgb(80, 80, 80);
-    --font-title:'Poppins', sans-serif;
-    --font-main: 'Montserrat', sans-serif;
-    --size-title: calc(var(--size-small) *3);
-    /* --size-subtitle: calc(var(--size-small) *2); */
-    /* --size-subtitle: 1.5rem; */
-    --size-base: 1.1rem;
-    --size-small: calc(12rem/16);
-    --margin-vertical: 1.5rem;
-    --margin-lateral: 2rem;
-    --size-title-section: 1.2rem;
-    --margin-parrafo: 1rem;
-    --color-gris-fondo: lightgray;
-    --color-gris-borde: rgb(156, 156, 156);
-}
+@import url(variables.css);
 
 html, body {
     margin: 0;
@@ -65,7 +42,6 @@ h3 {
 
 
 .main-header nav ul{
-    
     list-style-type: none;
     margin:0;
     padding:0;
@@ -75,7 +51,6 @@ h3 {
     display: inline-block;
 }
 
-/* El padding se pone en los <a> para que la superficie clickable sea más grande */
 .main-header nav a {
     color: inherit;
     text-decoration: none;
@@ -120,7 +95,7 @@ h3 {
     font-size: 1.5rem;
 }
 
-/*********** BTN ************/
+/** BTN HEADER **/
 
 .btn-call {
    
@@ -155,15 +130,10 @@ text-decoration:none;
 	top:1px;
 }
 
-/*********** LIGHTBOX ************/
-
-/** LIGHTBOX MARKUP **/
+/** LIGHTBOX HEADER**/
 
 .lightbox {
-	/** Default lightbox to hidden */
 	display: none;
-
-	/** Position and style */
 	position: fixed;
 	z-index: 999;
 	width: 100%;
@@ -175,24 +145,18 @@ text-decoration:none;
 }
 
 .lightbox iframe {
-	/** Pad the lightbox image */
 	max-width: 90%;
 	max-height: 80%;
 	margin-top: 15%;
 }
 
-.lightbox:target{
-	/** Remove default browser outline */
-	outline: none;
-
-	/** Unhide lightbox **/
+.lightbox:target {
+	  outline: none;
     display: block;
     position: absolute;
 }
 
 .exit {
-  /**styling the exit button**/
-  
   position: fixed;
   top: 20px;
   right: 20px;
@@ -202,20 +166,24 @@ text-decoration:none;
   
 }
 
-/*********** SECTION #informacion-practica ***********/
+/*********** MAIN ************/
+.content-wrapper{
+  width: 100%;
+}
+
+
+/*********** SECTIONS ************/
 
 h2 {
     font-family: var(--font-title);
     font-size: var(--size-title);
-    /* background: var(--color-primary);
-    color: white; */
     padding: 0.5rem;
- text-decoration-line: underline;
-  text-decoration-color: var(--color-primary);
-  text-decoration-style: 10px solid; 
-  line-height: 2.2rem;
-  text-align: center;
-  padding-bottom: 2rem;
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-primary);
+    text-decoration-style: 10px solid; 
+    line-height: 2.2rem;
+    text-align: center;
+    padding-bottom: 2rem;
 
 }
 
@@ -225,10 +193,6 @@ h2 {
   text-decoration-style: 10px solid; 
 }
 
-.content-wrapper{
-    width: 100%;
-}
-
 section {
   width: 80%;
   margin: 0 auto;  
@@ -236,24 +200,15 @@ section {
   margin-bottom:  calc(var(--margin-vertical)*3);
   text-align: justify;
 }
-
 .flex {
-    
-    display: flex;
-    flex-wrap: wrap;
-/*     justify-content: center;
-    align-content: space-between;
-    
-    flex-direction: column;
-     */
-    margin: var(--margin-lateral) var(--margin-vertical);
-    
+  display: flex;
+  flex-wrap: wrap;
+ 
+
 }
 
 
-
-
-/*********** SHOW MORE/LESS ***********/
+/** SHOW MORE/LESS HISTORY&CULTURE**/
 .panel-wrapper {
     position: relative;
   }
@@ -287,8 +242,8 @@ section {
     margin-top: 0;
   }
 
-  i.fas {
-padding: 0.5rem;
+  i.fas { 
+  padding: 0.5rem;
   }
   
   .panel {
@@ -326,18 +281,7 @@ padding: 0.5rem;
       width: 100%;
       display: flex;
       justify-content: center;
-      align-items: 
-      
-  }
-
-  
-
-  .cien  {
-      width: 100%;
-  }
-
-  .bigger {
-    width: 110%;
+      align-items: center;  
   }
 
   .image_wrapper_left {
@@ -391,9 +335,7 @@ width: 100%;
     font-family: var(--font-title);
     color: white;
     line-height: initial;
-    vertical-align:middle;
-    
-  
+    vertical-align:middle;  
 }
 
 
@@ -425,7 +367,7 @@ width: 100%;
 .content .content-overlay {
   background: rgba(0,0,0,0.7);
   position: absolute;
-  height: 96%;
+  height: 97%;
   width: 100%;
   left: 0;
   top: 0;
@@ -435,8 +377,6 @@ width: 100%;
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
-  
-  
   text-align: center;
    padding-left: 0.2em;
   padding-right: 0.2em; 
@@ -449,10 +389,6 @@ width: 100%;
 
 .content img{
   width: 100%;
-}
-
-.relative {
-  position: relative;
 }
 
 .content-title {
@@ -518,11 +454,8 @@ width: 100%;
   line-height: initial;
 }
 
-/* .fadeIn-bottom{
-  top: 50%;
-} */
 
-/* SECTION INFO PRÁCTICA*/
+/****** SECTION INFO PRÁCTICA *****/
 .section-infopractica {
   background: rgba(103,186,175,0);
 background: -moz-linear-gradient(top, rgba(103,186,175,0) 3%, rgba(103,186,175,0.7) 30%, rgba(103,186,175,1) 65%, rgba(103,186,175,1) 100%);
@@ -542,7 +475,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
   margin-top: 4rem;
 }
 
-/*********** TABLA ***********/
+/** TABLA **/
+
 .tabla  {
   border-collapse:collapse;
   border-spacing:0;
@@ -559,21 +493,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
   border-width:3px;
   overflow:hidden;
   word-break:normal;
-  
 }
 
 .tabla td {
   font-size: var(--font-main);
   padding:10px 10px;
   border-style:solid;
-  /* border-width:1px; */
   overflow:hidden;
   word-break:normal;
 }
 
 .tabla .table-title {
   font-weight:bold;
-  
   color:#ffffff;
   text-align:left;
   vertical-align:top;
@@ -586,7 +517,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
 }
 
 
-/* PROVERBIOS */
+/** PROVERBIOS **/
 
 .div-proverbios {
   background-color: var(--color-primary);
@@ -596,12 +527,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .div-proverbios h2 {
   display: none;
- 
 }
 
 .div-proverbios blockquote {
@@ -611,10 +540,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
   padding: 1rem;
   text-align: center;
 }
+
  .div-proverbios blockquote:last-of-type {
    margin-bottom: 2rem;
  }
-
 
 .div-proverbios cite {
   font-style: italic;
@@ -635,8 +564,95 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
     display: inline;
     text-align: center;
     margin-left: 4rem;
-
 }
+
+
+/********* Aside ***********/
+
+aside.anuncio {
+  background-image: url(../assets/bg_advertising.jpg);
+  background-size: cover; 
+  background-position: center;
+  height: 50vh;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+   align-content: center; 
+   flex-direction: column;
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-top: 1.5rem;
+}
+
+.justify{
+  text-align: justify;
+}
+
+.flex-aside {  
+  display: flex;
+  padding-top: 2rem;
+   justify-content: center;
+   align-content: center;
+}
+
+.flex-item-50 {
+  width: 50%;
+  padding: 1rem;
+  padding-top: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+aside.anuncio pre {
+  text-align: center;
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  line-height: initial;
+}
+
+aside .code {
+  display: block;
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  
+}
+
+.btn-aside {
+	background-color:transparent;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	border:1px solid var(--color-primary);;
+	display:inline-block;
+	cursor:pointer;
+	color: var(--color-primary);
+	font-size: 1rem;
+	padding:16px 31px;
+    text-decoration:none;
+    font-family: var(--font-title);
+    
+    transition: 250ms ease-in-out; 
+    transform: 150ms ease;
+    margin-left:5em;
+    margin-right: 5em;
+    margin-top:1rem;
+}
+
+.btn-aside:hover {
+    background-color:var(--color-primary);
+    color: white;
+}
+.btn-aside:active {
+	position:relative;
+	top:1px;
+}
+
+/** BTN SUBIR **/
 
 .subir
 {
@@ -644,7 +660,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
   text-align: end;
   right: 1rem;
 }
-/* FOOTER */
+
+/************ FOOTER *************/
 
 .main_footer {
   background-color: var(--color-primary);
@@ -685,98 +702,12 @@ footer aside a {
 }
 
 
-/* Aside */
 
-aside.anuncio {
-  background-image: url(../assets/bg_advertising.jpg);
-  background-size: cover; 
-  background-position: center;
-  height: 50vh;
-  padding-top: 1rem;
-  display: flex;
-  justify-content: center;
-   align-content: center; 
-   flex-direction: column;
-   padding-left: 20px;
-   padding-right: 20px;
-   margin-top: 1.5rem;
-   
-}
 
-.justify{
-  text-align: justify;
-}
+@media (min-width: 800px) { 
 
-.flex-aside {  
-  display: flex;
-  padding-top: 2rem;
-/*     justify-content: center;
-  align-content: space-between;
-   */
 
-  
-   justify-content: center;
-   align-content: center;
-}
 
-.flex-item-50 {
-  width: 50%;
-  padding: 2rem;
-  padding-top: 0;
-  box-sizing: border-box;
-  text-align: center;
- 
 
- 
-}
-
-aside h4 {
-  text-align: center;
-  
-  font-family: var(--font-title);
-  color: var(--color-primary);
-  font-size: 1.8rem;
-  line-height: initial;
-}
-
-aside .code {
-  display: block;
-  background-color: var(--color-primary);
-  color: white;
-  text-align: center;
-  width: 40%;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  
-}
-
-.btn-aside {
-	background-color:transparent;
-	-moz-border-radius:25px;
-	-webkit-border-radius:25px;
-	border-radius:25px;
-	border:1px solid var(--color-primary);;
-	display:inline-block;
-	cursor:pointer;
-	color: var(--color-primary);
-	font-size: 1rem;
-	padding:16px 31px;
-    text-decoration:none;
-    font-family: var(--font-title);
     
-    transition: 250ms ease-in-out; 
-    transform: 150ms ease;
-    margin-left:5em;
-    margin-right: 5em;
-    margin-top:1rem;
-}
-
-.btn-aside:hover {
-    background-color:var(--color-primary);
-    color: white;
-}
-.btn-aside:active {
-	position:relative;
-	top:1px;
 }

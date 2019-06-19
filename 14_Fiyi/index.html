@@ -11,7 +11,12 @@ https://unsplash.com/search/photos/fiji
 https://www.fiji.travel/us
 
 https://www.fiji.travel/us/information/faq
+        
+    falta boton cerrar lightbox:
+    https://codepen.io/the_Northway/pen/RNBZbL
+    https://codepen.io/gschier/pen/HCoqh
  -->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -29,7 +34,9 @@ https://www.fiji.travel/us/information/faq
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./CSS/style.css">
+
 </head>
 
 <body id="body">
@@ -55,16 +62,9 @@ https://www.fiji.travel/us/information/faq
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             <a href="#_" class='exit'>
-                <!--this href takes out out of full screen. -->
                 &times;
-                <!--exit button-->
             </a>
         </div>
-        <!-- 
-    falta boton cerrar lightbox:
-    https://codepen.io/the_Northway/pen/RNBZbL
-    https://codepen.io/gschier/pen/HCoqh
- -->
     </header>
     <main class="content-wrapper">
         <div class="section-wrapper">
@@ -224,7 +224,7 @@ los sabores de Fiji</pre>
                 <header>
                     <h2>Clima</h2>
                 </header>
-                <div class="">
+                <div class>
                     <p>Ubicada en el corazón del Pacífico Sur, Fiji disfruta de un clima de isla tropical durante todo
                         el
                         año y
@@ -281,7 +281,8 @@ los sabores de Fiji</pre>
                     <cite>Proverbios fiyianos</cite>
                 </div>
             </div>
-            <sections id="que-ver" class="flex flex-ver">
+            
+            <section id="que-ver" class="flex">
                 <header>
                     <h2>Qué ver</h2>
                 </header>
@@ -471,7 +472,7 @@ los sabores de Fiji</pre>
                         </figure>
                     </a>
                 </div>
-            </sections>
+            </section>
             <section id="info-practica" class="section-infopractica">
                 <header>
                     <h2 class="">Información práctica</h2>
@@ -529,46 +530,19 @@ los sabores de Fiji</pre>
                         arrecifes de coral del mundo, encontrarás tu lugar.</p>
                     <aside class="flex-item-50 anuncio">
                         <div>
-                            <h4>
-                                <div>Reserva hoy </div>
-                                <div>tu alojamiento en Fiji</div>
-                                <div>en Booking.com </div>
-                                <div>y disfruta de </div>
-                                <div>-10% de descuento.</div>
-                            </h4>
+                            <pre>
+Reserva hoy 
+tu alojamiento en Fiji
+en Booking.com 
+y disfruta de 
+-10% de descuento.
+                                </pre>
                             <p class="code">Código: FIJI10</p>
                             <a class="btn-aside" href="https://www.booking.com" target="_blank"
                                 rel="noopener noreferrer">Reservar</a>
                         </div>
                     </aside>
-            </section>
-
-
-            <section id="contacto">
-                <header class="section-header">
-                    <h2>Contacto</h2>
-                    <h3>Solicita más información sobre Fiji</h3>
-                </header>
-                <form name="complete-post" action="https://jsonplaceholder.typicode.com/users" method="POST">
-                    <fieldset id="datos_personales">
-                        <label for="userName" class="form_label">Nombre</label>
-                        <input type="text" name="userName" id="userName" placeholder="Nombre y Apellidos"
-                            class="form_control" required>
-                        <label for="email" class="form_label">E-mail</label>
-                        <input type="email" name="email" id="email" class="form_control" placeholder="Escribe tu correo"
-                            required>
-                        <label for="info" class="form_label">Dejanos tu mensaje</label>
-                        <textarea name="info" id="info" rows="5" class="form_control"
-                            placeholder="Más información"></textarea>
-                    </fieldset>
-                    <fieldset id="newsletter">
-                        <legend>Newsletter</legend>
-                        <p>Quiero recibir información sobre destinos turísticos por correo electrónico.</p>
-                        <input type="checkbox" name="isOk" id="isOk" required>
-                        <label for="isOk">Me suscribo</label>
-                    </fieldset>
-                    <button type="submit">Enviar</button>
-                </form>
+                </div>
             </section>
             <div class="subir">
                 <a href="#body" id="subir" class="btn subir">Subir<i class="fas fa-angle-up "></i></a>
