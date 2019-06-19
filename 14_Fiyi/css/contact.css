@@ -1,0 +1,14 @@
+h1 {
+    display: none;
+}
+
+
+.contact-container{
+    width: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 42px 55px 45px 55px;
+    position: absolute; 
+    top: 20%;
+}

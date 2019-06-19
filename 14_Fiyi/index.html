@@ -32,15 +32,19 @@ https://www.fiji.travel/us/information/faq
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<body class="">
-    <header class="main-header ">
+<body id="body">
+    <header class="main-header">
         <!-- <img src="./assets/bg_header.jpg" alt=""> -->
         <nav class="nav">
             <ul>
-                <li><a href="./index.html#sections" rel="tag">Sobre Fiji</a></li>
-                <li><a href="./multimedia.html">Qué ver</a></li>
-                <li><a href="./datos.html#tablas">Dónde dormir</a></li>
-                <li><a href="./datos.html#formularios">Contacto</a></li>
+                <li><a href="#body" rel="tag">Home</a></li>
+                <li><a href="#sobre-fiji" rel="tag">Sobre Fiji</a></li>
+                <li><a href="#historia_cultura" rel="tag">Historia y cultura</a></li>
+                <li><a href="#clima" rel="tag">Clima</a></li>
+                <li><a href="#que-ver">Qué ver</a></li>
+                <li><a href="#info-practica">Información práctica</a></li>
+                <li><a href="#donde-dormir">Dónde dormir</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
             </ul>
         </nav>
         <h1>República de Fiji</h1>
@@ -50,6 +54,11 @@ https://www.fiji.travel/us/information/faq
             <iframe width="560" height="315" src="https://www.youtube.com/embed/POksBbkHv8w" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+            <a href="#_" class='exit'>
+                <!--this href takes out out of full screen. -->
+                &times;
+                <!--exit button-->
+            </a>
         </div>
         <!-- 
     falta boton cerrar lightbox:
@@ -59,7 +68,7 @@ https://www.fiji.travel/us/information/faq
     </header>
     <main class="content-wrapper">
         <div class="section-wrapper">
-            <section id="sobre-fiyi">
+            <section id="sobre-fiji">
                 <header>
                     <h2 class="underline">Sobre Fiji</h2>
                 </header>
@@ -92,428 +101,483 @@ https://www.fiji.travel/us/information/faq
                         <img src="./assets/fiji-map.png" alt="Mapa de Fiji">
                     </div>
                 </div>
-        </div>
-        </section>
-        <div class="bg-fixed1">
-            <pre class="img-title">
+            </section>
+            <div class="bg-fixed1">
+                <pre class="img-title">
 Las islas Fiji: 
 un paraíso terrenal
             </pre>
-        </div>
-        <section id="historia_cultura ">
-            <header>
-                <h2>Historia y cultura</h2>
-            </header>
-            <div class="panel-wrapper">
-                <a href="#mostrar" id="mostrar" class="btn mostrar">Leer más<i class="fas fa-angle-down"></i></a>
-                <a href="#ocultar" id="ocultar" class="btn ocultar">Leer menos<i class="fas fa-angle-up"></i></a>
-                <div class="panel">
-                    <div class="image_wrapper_left">
-                        <img src="./assets/historia.jpg" alt="">
+            </div>
+            <section id="historia_cultura">
+                <header>
+                    <h2>Historia y cultura</h2>
+                </header>
+                <div class="panel-wrapper">
+                    <a href="#mostrar" id="mostrar" class="btn mostrar">Leer más<i class="fas fa-angle-down"></i></a>
+                    <a href="#ocultar" id="ocultar" class="btn ocultar">Leer menos<i class="fas fa-angle-up"></i></a>
+                    <div class="panel">
+                        <div class="image_wrapper_left">
+                            <img src="./assets/historia.jpg" alt="">
+                        </div>
+                        <h3>Historia</h3>
+                        <p>Según la leyenda de Fiji, el gran jefe Lutunasobasoba llevó a su gente a través de los mares
+                            a la
+                            nueva tierra de Fiji. La mayoría de las autoridades están de acuerdo en que las personas
+                            llegaron al
+                            Pacífico desde el sudeste asiático a través de Indonesia. Aquí los melanesios y los
+                            polinesios
+                            se
+                            mezclaron para crear una sociedad altamente desarrollada mucho antes de la llegada de los
+                            europeos.
+                        </p>
+                        <p>Los descubrimientos europeos del grupo fiji fueron accidentales. El primero de estos
+                            descubrimientos
+                            fue realizado en 1643 por el explorador holandés Abel Tasman y los navegantes ingleses,
+                            incluido
+                            el
+                            capitán James Cook, quien navegó en 1774 e hizo nuevas exploraciones en el siglo XVIII.</p>
+                        <p>El mayor crédito por el descubrimiento y registro de las islas fue para el Capitán William
+                            Bligh
+                            que
+                            navegó a través de Fiji después del motín en el Bounty en 1789. Los primeros europeos en
+                            desembarcar
+                            y vivir entre los fiyianos eran marineros naufragados y convictos fugitivos de los
+                            asentamientos
+                            penales australianos. Los comerciantes y misioneros de sándalo llegaron a mediados del siglo
+                            XIX.
+                        </p>
+                        <p>El canibalismo practicado en Fiji en ese momento desapareció rápidamente a medida que los
+                            misioneros
+                            ganaban influencia. Cuando Ratu Seru Cakobau aceptó el cristianismo en 1854, el resto del
+                            país
+                            pronto lo siguió y la guerra tribal llegó a su fin.</p>
+                        <p>Desde 1879 hasta 1916, los indios vinieron como trabajadores contratados para trabajar en las
+                            plantaciones de azúcar. Después de la abolición del sistema de seguro, muchos se quedaron
+                            como
+                            agricultores y empresarios independientes. Hoy en día constituyen el 44 por ciento de la
+                            población.
+                        </p>
+                        <div class="image_wrapper_right">
+                            <img src="./assets/people.jpg" alt="">
+                        </div>
+                        <h3>Cultura</h3>
+                        <p>Los habitantes de Fiji moderno son de origen indígena de Fiji, así como de ascendencia india,
+                            china y
+                            europea. La cultura indígena ha dado forma a la nación y es una parte activa y viva de la
+                            vida
+                            cotidiana para la mayoría de las personas felices que viven aquí. Nuestra mezcla única de
+                            culturas
+                            se puede ver en todo Fiji y en prácticamente todos los aspectos de su estancia, desde la
+                            comida,
+                            los
+                            festivales, los rituales y las artes.
+                        </p>
+                        <p>Varias artesanías nos dan una identidad única que, junto con la etiqueta tradicional y la
+                            arquitectura local, cuenta la historia de nuestra cultura y su evolución en el tiempo. Los
+                            artefactos históricos y los documentos que representan esta historia se conservan y se
+                            muestran
+                            en
+                            museos y se protegen como Sitios de Patrimonio Nacional.</p>
+                        <p>Uno de esos sitios es la primera capital colonial de Fiji, Levuka. La ciudad simboliza un
+                            período
+                            de
+                            influencia en el desarrollo del país, que se considera tan importante para la región, esta
+                            pequeña y
+                            pintoresca ciudad portuaria y sus edificios estaban orgullosamente protegidos por la lista
+                            del
+                            Patrimonio Mundial de la UNESCO en 2013.
+                        </p>
+                        <p>El canibalismo practicado en Fiji en ese momento desapareció rápidamente a medida que los
+                            misioneros
+                            ganaban influencia. Cuando Ratu Seru Cakobau aceptó el cristianismo en 1854, el resto del
+                            país
+                            pronto lo siguió y la guerra tribal llegó a su fin.</p>
+                        <p>Muchas más estructuras culturales de Fiji han resistido la prueba del tiempo para seguir
+                            siendo
+                            un
+                            símbolo integral de los momentos importantes de la historia de Fiji. Beber kava, por
+                            ejemplo,
+                            sinónimo de vida en el Pacífico Sur, sigue siendo una parte muy importante de la vida en
+                            Fiji.
+                            Es
+                            probable que sea invitado a unirse a una ceremonia de kava durante su estadía. Después de
+                            los
+                            trámites, esta es una manera maravillosa de hacer nuevos amigos y aprender un poco más sobre
+                            su
+                            país.</p>
+                        <a href="http://www.passenger6a.es/un-bar-en-mitad-del-oceano/">passenger6a</a>
                     </div>
-                    <h3>Historia</h3>
-                    <p>Según la leyenda de Fiji, el gran jefe Lutunasobasoba llevó a su gente a través de los mares a la
-                        nueva tierra de Fiji. La mayoría de las autoridades están de acuerdo en que las personas
-                        llegaron al
-                        Pacífico desde el sudeste asiático a través de Indonesia. Aquí los melanesios y los polinesios
-                        se
-                        mezclaron para crear una sociedad altamente desarrollada mucho antes de la llegada de los
-                        europeos.
-                    </p>
-                    <p>Los descubrimientos europeos del grupo fiji fueron accidentales. El primero de estos
-                        descubrimientos
-                        fue realizado en 1643 por el explorador holandés Abel Tasman y los navegantes ingleses, incluido
-                        el
-                        capitán James Cook, quien navegó en 1774 e hizo nuevas exploraciones en el siglo XVIII.</p>
-                    <p>El mayor crédito por el descubrimiento y registro de las islas fue para el Capitán William Bligh
-                        que
-                        navegó a través de Fiji después del motín en el Bounty en 1789. Los primeros europeos en
-                        desembarcar
-                        y vivir entre los fiyianos eran marineros naufragados y convictos fugitivos de los asentamientos
-                        penales australianos. Los comerciantes y misioneros de sándalo llegaron a mediados del siglo
-                        XIX.
-                    </p>
-                    <p>El canibalismo practicado en Fiji en ese momento desapareció rápidamente a medida que los
-                        misioneros
-                        ganaban influencia. Cuando Ratu Seru Cakobau aceptó el cristianismo en 1854, el resto del país
-                        pronto lo siguió y la guerra tribal llegó a su fin.</p>
-                    <p>Desde 1879 hasta 1916, los indios vinieron como trabajadores contratados para trabajar en las
-                        plantaciones de azúcar. Después de la abolición del sistema de seguro, muchos se quedaron como
-                        agricultores y empresarios independientes. Hoy en día constituyen el 44 por ciento de la
-                        población.
-                    </p>
-                    <div class="image_wrapper_right">
-                        <img src="./assets/people.jpg" alt="">
-                    </div>
-                    <h3>Cultura</h3>
-                    <p>Los habitantes de Fiji moderno son de origen indígena de Fiji, así como de ascendencia india,
-                        china y
-                        europea. La cultura indígena ha dado forma a la nación y es una parte activa y viva de la vida
-                        cotidiana para la mayoría de las personas felices que viven aquí. Nuestra mezcla única de
-                        culturas
-                        se puede ver en todo Fiji y en prácticamente todos los aspectos de su estancia, desde la comida,
-                        los
-                        festivales, los rituales y las artes.
-                    </p>
-                    <p>Varias artesanías nos dan una identidad única que, junto con la etiqueta tradicional y la
-                        arquitectura local, cuenta la historia de nuestra cultura y su evolución en el tiempo. Los
-                        artefactos históricos y los documentos que representan esta historia se conservan y se muestran
-                        en
-                        museos y se protegen como Sitios de Patrimonio Nacional.</p>
-                    <p>Uno de esos sitios es la primera capital colonial de Fiji, Levuka. La ciudad simboliza un período
-                        de
-                        influencia en el desarrollo del país, que se considera tan importante para la región, esta
-                        pequeña y
-                        pintoresca ciudad portuaria y sus edificios estaban orgullosamente protegidos por la lista del
-                        Patrimonio Mundial de la UNESCO en 2013.
-                    </p>
-                    <p>El canibalismo practicado en Fiji en ese momento desapareció rápidamente a medida que los
-                        misioneros
-                        ganaban influencia. Cuando Ratu Seru Cakobau aceptó el cristianismo en 1854, el resto del país
-                        pronto lo siguió y la guerra tribal llegó a su fin.</p>
-                    <p>Muchas más estructuras culturales de Fiji han resistido la prueba del tiempo para seguir siendo
-                        un
-                        símbolo integral de los momentos importantes de la historia de Fiji. Beber kava, por ejemplo,
-                        sinónimo de vida en el Pacífico Sur, sigue siendo una parte muy importante de la vida en Fiji.
-                        Es
-                        probable que sea invitado a unirse a una ceremonia de kava durante su estadía. Después de los
-                        trámites, esta es una manera maravillosa de hacer nuevos amigos y aprender un poco más sobre su
-                        país.</p>
-                    <a href="http://www.passenger6a.es/un-bar-en-mitad-del-oceano/">passenger6a</a>
+                    <div class="fade"></div>
                 </div>
-                <div class="fade"></div>
-            </div>
-            </div>
-        </section>
-        <div class="img-container" id="sabores">
-            <a href="https://www.tasteatlas.com/fiji" target="_blank" rel="noopener noreferrer">
-                <div class="bg-fixed2">
-                    <pre class="img-title">
+
+            </section>
+            <div class="img-container" id="sabores">
+                <a href="https://www.tasteatlas.com/fiji" target="_blank" rel="noopener noreferrer">
+                    <div class="bg-fixed2">
+                        <pre class="img-title">
 Descubre 
 los sabores de Fiji</pre>
-                </div>
-            </a>
-        </div>
-        <section id="clima" class="section-wrapper">
-            <header>
-                <h2>Clima</h2>
-            </header>
-            <div class="">
-                <p>Ubicada en el corazón del Pacífico Sur, Fiji disfruta de un clima de isla tropical durante todo el
-                    año y
-                    la mayoría de los meses se levantan alrededor de 30 ° C (86 ° F). Un viento suave a menudo sopla
-                    desde
-                    el sureste para mantener frescos y cómodos a los visitantes más activos en nuestras costas.</p>
-                <p>Las altas cadenas montañosas en medio de las islas más grandes significan que algunas partes de Fiji
-                    reciben un poco más de lluvia que otras. Notará estas zonas 'secas' y 'húmedas' por el repentino
-                    cambio
-                    de picos rocosos cubiertos de hierba a montañas cubiertas de jungla mientras vuela sobre las islas
-                    más
-                    grandes.</p>
-                <p>Con agradables temperaturas de agua durante todo el año (27 ° C / 81 ° F), se pueden practicar
-                    actividades en el océano como natación, snorkeling y buceo en todas las estaciones. Los buzos
-                    disfrutan
-                    de una mayor visibilidad alrededor de los arrecifes de coral durante los meses de invierno de Fiji
-                    de
-                    mayo a octubre.</p>
-                <h3>Cuándo visitar Fiji</h3>
-                <p>¡Todo el año es realmente perfecto!</p>
-                <p>La época más popular para visitar Fiji es entre fines de marzo y principios de diciembre, con días
-                    soleados y un clima tropical cálido que ofrece infinitas opciones para descansar en playas de arena
-                    blanca, bucear bajo las olas y explorar el interior.</p>
-                <p>La humedad cae durante los meses de "invierno" de Fiji, por lo que las actividades externas son más
-                    agradables. La temporada turística de Fiji suele ser máxima en junio y julio.</p>
-                <p>Las temperaturas suben durante los meses de verano, de noviembre a abril, y los breves aguaceros son
-                    el
-                    respiro perfecto del calor.</p>
-                <p>Las islas más pequeñas típicamente reciben menos lluvia que las islas principales.</p>
-            </div>
-            <a class="weatherwidget-io" href="https://forecast7.com/es/n17d71178d07/fiji/" data-label_1="FIJI"
-                data-label_2="WEATHER" data-theme="original">FIJI WEATHER</a>
-            <script>
-                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-            </script>
-        </section>
-
-        <section id="proverbios" class="section-proverbios">
-            <header>
-                <h2>Proverbios</h2>
-            </header>
-            <div class="wrapper">
-                <blockquote>Escucha la sabiduría de los desdentados.</blockquote>
-                <blockquote>La vida es así: a veces sol, a veces lluvia.</blockquote>
-                <blockquote>La flor blanca ha florecido; Es hora de dormir afuera.
-                </blockquote>
-                <cite>Proverbios fiyianos</cite>
-            </div>
-        </section>
-        <sections id="que-ver" class="flex flex-ver">
-            <header>
-                <h2>Qué ver</h2>
-            </header>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">SUVA</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>SUVA</h3>
-                            <p>La cálida Suva ofrece una combinación multicultural del Fiyi colonial y contemporáneo.
-                                Bonitos
-                                edificios y monumentos antiguos pueblan el animado puerto. El centro alberga modernos
-                                establecimientos...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">NAVALA</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>NAVALA</h3>
-                            <p>n un valle del altiplano de Nausori, la impactante localidad de Navala es el mejor lugar
-                                de Fiyi
-                                para descubrir la auténtica y ancestral vida indígena, el último bastión de arquitectura
-                                tradicional...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">CUEVA DE SAWA-I-LAU</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>CUEVA DE SAWA-I-LAU</h3>
-                            <p>Solitaria isla calcárea entre las volcánicas Yasawas, Sawa-i-Lau encierra un misterio en
-                                sus
-                                oquedades: relieves, pinturas e inscripciones de edad y significado desconocidos. Se
-                                accede
-                                con...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">TIERRAS ALTAS DE NAMOSI</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>TIERRAS ALTAS DE NAMOSI</h3>
-                            <p>La geología se aprecia en las espectaculares tierras altas de Namosi. Escarpados cañones
-                                pueblan
-                                el
-                                río Wainikoroiluva y las espectaculares cortinas rocosas forman el decorado de la más
-                                espectacular...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">SURF EN CLOUDBREAK</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>SURF EN CLOUDBREAK</h3>
-                            <p>Fiyi es uno de los mejores lugares que existen para hacer un hang ten, con olas perfectas
-                                y
-                                tremendos
-                                tubos que atraen a surfistas del mundo entero. Sus olas más famosas se consiguen en la
-                                colosal...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">TOBOGÁN DE WAITAVALA</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>TOBOGÁN DE WAITAVALA</h3>
-                            <p>Cardenales, chichones y gritos de “¡Es lo más divertido del mundo!” están a la orden del
-                                día en
-                                esta
-                                cascada natural de toboganes de agua en la isla Taveuni. Hay que empezar observando a
-                                los
-                                chavales...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">LEVUKA COLONIAL</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>LEVUKA COLONIAL</h3>
-                            <p>El Salvaje Oeste se encuentra con los mares del sur en Levuka, la antigua capital
-                                colonial de
-                                Fiyi y
-                                su único lugar Patrimonio Mundial de la Unesco. Es fácil imaginar a los marineros
-                                armando
-                                tumultos...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">SENDERISMO EN TAVEUNI</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>SENDERISMO EN TAVEUNI</h3>
-                            <p>Exuberante, increíblemente verde y húmeda, la “isla jardín” de Fiyi es el paraíso de los
-                                senderistas,
-                                donde incluso el paseo más corto permite avistar aves endémicas raras, árboles
-                                gigantescos y....</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">ISLAS MAMANUCA Y YASAWA</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>ISLAS MAMANUCA Y YASAWA</h3>
-                            <p>Un sol ardiente, cristalinas aguas color turquesa y excelentes servicios son la norma en
-                                las
-                                islas
-                                Mamanuca y Yasawa, frente a la costa oeste de Fiyi. Cerca de Viti Levu, las Mamanuca
-                                ofrecen
-                                todo...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="flex-item container">
-                <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
-                    <figure class="content">
-                        <div class="content-overlay"></div>
-                        <h3 class="content-title">FIYI SUBMARINA</h3>
-                        <img src="./assets/suva_.jpg" alt="">
-                        <figcaption class="content-details fadeIn-bottom">
-                            <h3>FIYI SUBMARINA</h3>
-                            <p>Hasta los buceadores más experimentados quedan asombrados ante la claridad del agua, que
-                                puede
-                                superar los 30 m, y unos servicios de primera aseguran el entretenimiento durante todo
-                                el día.
-                                Desde...</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-        </sections>
-        <section id="info-practica" class="section-infopractica">
-            <header>
-                <h2 class="">Información práctica</h2>
-            </header>
-            <div class="wrapper">
-                <table class="tabla panel">
-
-                    <tr>
-                        <td class="t-content"><i class="fas fa-map-marker-alt"></i> Área</td>
-                        <td class="t-content">18.274km2</td>
-                    </tr>
-                    <tr>
-                        <td class="t-content"><i class="fas fa-male"></i> Población</td>
-                        <td class="t-content">909.3894 hab. (2015)</td>
-                    </tr>
-                    <tr>
-                        <td class="t-content"><i class="fas fa-university"></i> Capital</td>
-                        <td class="t-content">Suva</td>
-                    </tr>
-                    <tr>
-                        <td class="t-content"><i class="fas fa-language"></i> Idioma oficial</td>
-                        <td class="t-content">Inglés, fiyiano e indostánico</td>
-                    </tr>
-                    <tr>
-                        <td class="t-content"><i class="fas fa-flag"></i> Gobierno</td>
-                        <td class="t-content">República desde 1987.</td>
-                    </tr>
-                    <tr>
-                        <td class="t-content"><i class="fas fa-money-bill-alt"></i> Moneda</td>
-                        <td class="t-content">Dólar fiyiano</td>
-                    </tr>
-                    <tr>
-                        <td class="t-content"><i class="fas fa-clock"></i> Huso Horario</td>
-                        <td class="t-content">UTC +12</td>
-                    </tr>
-                    <tr>
-                        <td class="t-content"><i class="fas fa-phone-volume"></i> Prefijo</td>
-                        <td class="t-content">+679</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-        <section id="donde-dormir">
-            <header>
-                <h2>Dónde dormir</h2>
-            </header>
-            <div class="flex-aside">
-                <p class="flex-item-50">Con más de 1.750.000 alojamientos e innumerables ofertas que se actualizan a diario, podrás
-                    reservar el hotel, la villa, el apartamento o incluso el riad ideal para disfrutar al máximo tu
-                    estancia.</p>
-                <aside class="flex-item-50 anuncio">
-                    <div class="flex">
-                        <h4>Reserva hoy tu alojamiento de Fiji en booking.com y disfruta de -10%</h4>
-                        <a class="btn-aside" href="https://www.booking.com" target="_blank"
-                                rel="noopener noreferrer">Reservar</a> 
                     </div>
-                </aside>
-        </section>
+                </a>
+            </div>
+            <section id="clima" class="section-wrapper">
+                <header>
+                    <h2>Clima</h2>
+                </header>
+                <div class="">
+                    <p>Ubicada en el corazón del Pacífico Sur, Fiji disfruta de un clima de isla tropical durante todo
+                        el
+                        año y
+                        la mayoría de los meses se levantan alrededor de 30 ° C (86 ° F). Un viento suave a menudo sopla
+                        desde
+                        el sureste para mantener frescos y cómodos a los visitantes más activos en nuestras costas.</p>
+                    <p>Las altas cadenas montañosas en medio de las islas más grandes significan que algunas partes de
+                        Fiji
+                        reciben un poco más de lluvia que otras. Notará estas zonas 'secas' y 'húmedas' por el repentino
+                        cambio
+                        de picos rocosos cubiertos de hierba a montañas cubiertas de jungla mientras vuela sobre las
+                        islas
+                        más
+                        grandes.</p>
+                    <p>Con agradables temperaturas de agua durante todo el año (27 ° C / 81 ° F), se pueden practicar
+                        actividades en el océano como natación, snorkeling y buceo en todas las estaciones. Los buzos
+                        disfrutan
+                        de una mayor visibilidad alrededor de los arrecifes de coral durante los meses de invierno de
+                        Fiji
+                        de
+                        mayo a octubre.</p>
+                    <h3>Cuándo visitar Fiji</h3>
+                    <p>¡Todo el año es realmente perfecto!</p>
+                    <p>La época más popular para visitar Fiji es entre fines de marzo y principios de diciembre, con
+                        días
+                        soleados y un clima tropical cálido que ofrece infinitas opciones para descansar en playas de
+                        arena
+                        blanca, bucear bajo las olas y explorar el interior.</p>
+                    <p>La humedad cae durante los meses de "invierno" de Fiji, por lo que las actividades externas son
+                        más
+                        agradables. La temporada turística de Fiji suele ser máxima en junio y julio.</p>
+                    <p>Las temperaturas suben durante los meses de verano, de noviembre a abril, y los breves aguaceros
+                        son
+                        el
+                        respiro perfecto del calor.</p>
+                    <p>Las islas más pequeñas típicamente reciben menos lluvia que las islas principales.</p>
+                </div>
+                <a class="weatherwidget-io" href="https://forecast7.com/es/n17d71178d07/fiji/" data-label_1="FIJI"
+                    data-label_2="WEATHER" data-theme="original">FIJI WEATHER</a>
+                <script>
+                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                </script>
+            </section>
+
+            <div id="proverbios" class="div-proverbios">
+                <header>
+                    <h2>Proverbios</h2>
+                </header>
+                <div class="wrapper">
+                    <blockquote>Escucha la sabiduría de los desdentados.</blockquote>
+                    <blockquote>La vida es así: a veces sol, a veces lluvia.</blockquote>
+                    <blockquote>La flor blanca ha florecido; Es hora de dormir afuera.
+                    </blockquote>
+                    <cite>Proverbios fiyianos</cite>
+                </div>
+            </div>
+            <sections id="que-ver" class="flex flex-ver">
+                <header>
+                    <h2>Qué ver</h2>
+                </header>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">SUVA</h3>
+                            <img src="./assets/suva_.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>SUVA</h3>
+                                <p>La cálida Suva ofrece una combinación multicultural del Fiyi colonial y
+                                    contemporáneo.
+                                    Bonitos
+                                    edificios y monumentos antiguos pueblan el animado puerto. El centro alberga
+                                    modernos
+                                    establecimientos...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">NAVALA</h3>
+                            <img src="./assets/navala.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>NAVALA</h3>
+                                <p>En un valle del altiplano de Nausori, la impactante localidad de Navala es el mejor
+                                    lugar
+                                    de Fiyi
+                                    para descubrir la auténtica y ancestral vida indígena, el último bastión de
+                                    arquitectura
+                                    tradicional...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">CUEVA DE SAWA-I-LAU</h3>
+                            <img src="./assets/cueva_sawa.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>CUEVA SAWA-I-LAU</h3>
+                                <p>Solitaria isla calcárea entre las volcánicas Yasawas, Sawa-i-Lau encierra un misterio
+                                    en
+                                    sus
+                                    oquedades: relieves, pinturas e inscripciones de edad y significado desconocidos. Se
+                                    accede
+                                    con...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">TIERRAS ALTAS DE NAMOSI</h3>
+                            <img src="./assets/namosi.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>TIERRAS ALTAS DE NAMOSI</h3>
+                                <p>La geología se aprecia en las espectaculares tierras altas de Namosi. Escarpados
+                                    cañones
+                                    pueblan
+                                    el
+                                    río Wainikoroiluva y las espectaculares cortinas rocosas forman el decorado de la
+                                    más
+                                    espectacular...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">SURF EN CLOUDBREAK</h3>
+                            <img src="./assets/cloudbreak.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>SURF EN CLOUDBREAK</h3>
+                                <p>Fiyi es uno de los mejores lugares que existen para hacer un hang ten, con olas
+                                    perfectas
+                                    y
+                                    tremendos
+                                    tubos que atraen a surfistas del mundo entero. Sus olas más famosas se consiguen en
+                                    la
+                                    colosal...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">TOBOGÁN DE WAITAVALA</h3>
+                            <img src="./assets/waitavala.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>TOBOGÁN DE WAITAVALA</h3>
+                                <p>Cardenales, chichones y gritos de “¡Es lo más divertido del mundo!” están a la orden
+                                    del
+                                    día en
+                                    esta
+                                    cascada natural de toboganes de agua en la isla Taveuni. Hay que empezar observando
+                                    a
+                                    los
+                                    chavales...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">LEVUKA COLONIAL</h3>
+                            <img src="./assets/levuka.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>LEVUKA COLONIAL</h3>
+                                <p>El Salvaje Oeste se encuentra con los mares del sur en Levuka, la antigua capital
+                                    colonial de
+                                    Fiyi y
+                                    su único lugar Patrimonio Mundial de la Unesco. Es fácil imaginar a los marineros
+                                    armando
+                                    tumultos...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">SENDERISMO EN TAVEUNI</h3>
+                            <img src="./assets/taveuni.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>SENDERISMO EN TAVEUNI</h3>
+                                <p>Exuberante, increíblemente verde y húmeda, la “isla jardín” de Fiyi es el paraíso de
+                                    los
+                                    senderistas,
+                                    donde incluso el paseo más corto permite avistar aves endémicas raras, árboles
+                                    gigantescos y....</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">ISLAS MAMANUCA Y YASAWA</h3>
+                            <img src="./assets/MAMANUCA_YASAWA.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>ISLAS MAMANUCA Y YASAWA</h3>
+                                <p>Un sol ardiente, cristalinas aguas color turquesa y excelentes servicios son la norma
+                                    en
+                                    las
+                                    islas
+                                    Mamanuca y Yasawa, frente a la costa oeste de Fiyi. Cerca de Viti Levu, las Mamanuca
+                                    ofrecen
+                                    todo...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="flex-item container">
+                    <a href="https://www.fiji.travel/us/destinations/suva" target="_blank" rel="noopener noreferrer">
+                        <figure class="content">
+                            <div class="content-overlay"></div>
+                            <h3 class="content-title">FIYI SUBMARINA</h3>
+                            <img src="./assets/fiji_diving.jpg" alt="">
+                            <figcaption class="content-details fadeIn-bottom">
+                                <h3>FIYI SUBMARINA</h3>
+                                <p>Hasta los buceadores más experimentados quedan asombrados ante la claridad del agua,
+                                    que
+                                    puede
+                                    superar los 30 m, y unos servicios de primera aseguran el entretenimiento durante
+                                    todo
+                                    el día.
+                                    Desde...</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </sections>
+            <section id="info-practica" class="section-infopractica">
+                <header>
+                    <h2 class="">Información práctica</h2>
+                </header>
+                <div class="wrapper">
+                    <table class="tabla panel">
+
+                        <tr>
+                            <td class="t-content"><i class="fas fa-map-marker-alt"></i> Área</td>
+                            <td class="t-content">18.274km2</td>
+                        </tr>
+                        <tr>
+                            <td class="t-content"><i class="fas fa-male"></i> Población</td>
+                            <td class="t-content">909.3894 hab. (2015)</td>
+                        </tr>
+                        <tr>
+                            <td class="t-content"><i class="fas fa-university"></i> Capital</td>
+                            <td class="t-content">Suva</td>
+                        </tr>
+                        <tr>
+                            <td class="t-content"><i class="fas fa-language"></i> Idioma oficial</td>
+                            <td class="t-content">Inglés, fiyiano e indostánico</td>
+                        </tr>
+                        <tr>
+                            <td class="t-content"><i class="fas fa-flag"></i> Gobierno</td>
+                            <td class="t-content">República desde 1987.</td>
+                        </tr>
+                        <tr>
+                            <td class="t-content"><i class="fas fa-money-bill-alt"></i> Moneda</td>
+                            <td class="t-content">Dólar fiyiano</td>
+                        </tr>
+                        <tr>
+                            <td class="t-content"><i class="fas fa-clock"></i> Huso Horario</td>
+                            <td class="t-content">UTC +12</td>
+                        </tr>
+                        <tr>
+                            <td class="t-content"><i class="fas fa-phone-volume"></i> Prefijo</td>
+                            <td class="t-content">+679</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section id="donde-dormir">
+                <header>
+                    <h2>Dónde dormir</h2>
+                </header>
+                <div class="flex-aside">
+                    <p class="flex-item-50 justify">Todo tipo de viajeros visitan Fiji, y hay un lugar donde alojarse
+                        para todos. Las islas disponen de resorts de cinco estrellas que ofrecen restaurantes e
+                        instalaciones de clase mundial. Los mochileros y aventureros pueden contar con una gran variedad
+                        de albergues asequibles y resorts isleños que ofrecen tours ecológicos, o simplemente un
+                        ambiente de fiesta divertido. ¡Incluso puedes probar alojarte en la casa de una familia y así
+                        descubrir más sobre el verdadero Fiji! Ya sea que estés de luna de miel, una familia en busca de
+                        una escapada amigable para los niños, o un buceador duro que quiera ver algunos de los mejores
+                        arrecifes de coral del mundo, encontrarás tu lugar.</p>
+                    <aside class="flex-item-50 anuncio">
+                        <div>
+                            <h4>
+                                <div>Reserva hoy </div>
+                                <div>tu alojamiento en Fiji</div>
+                                <div>en Booking.com </div>
+                                <div>y disfruta de </div>
+                                <div>-10% de descuento.</div>
+                            </h4>
+                            <p class="code">Código: FIJI10</p>
+                            <a class="btn-aside" href="https://www.booking.com" target="_blank"
+                                rel="noopener noreferrer">Reservar</a>
+                        </div>
+                    </aside>
+            </section>
 
 
-        <section id="contacto">
-            <header class="section-header">
-                <h2>Contacto</h2>
-                <h3>Solicita más información sobre Fiji</h3>
-            </header>
-            <form name="complete-post" action="https://jsonplaceholder.typicode.com/users" method="POST">
-                <fieldset id="datos_personales">
-                    <label for="userName" class="form_label">Nombre</label>
-                    <input type="text" name="userName" id="userName" placeholder="Nombre y Apellidos"
-                        class="form_control" required>
-                    <label for="email" class="form_label">E-mail</label>
-                    <input type="email" name="email" id="email" class="form_control" placeholder="Escribe tu correo"
-                        required>
-                    <label for="info" class="form_label">Dejanos tu mensaje</label>
-                    <textarea name="info" id="info" rows="5" class="form_control"
-                        placeholder="Más información"></textarea>
-                </fieldset>
-                <fieldset id="newsletter">
-                    <legend>Newsletter</legend>
-                    <p>Quiero recibir información sobre destinos turísticos por correo electrónico.</p>
-                    <input type="checkbox" name="isOk" id="isOk" required>
-                    <label for="isOk">Me suscribo</label>
-                </fieldset>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-
+            <section id="contacto">
+                <header class="section-header">
+                    <h2>Contacto</h2>
+                    <h3>Solicita más información sobre Fiji</h3>
+                </header>
+                <form name="complete-post" action="https://jsonplaceholder.typicode.com/users" method="POST">
+                    <fieldset id="datos_personales">
+                        <label for="userName" class="form_label">Nombre</label>
+                        <input type="text" name="userName" id="userName" placeholder="Nombre y Apellidos"
+                            class="form_control" required>
+                        <label for="email" class="form_label">E-mail</label>
+                        <input type="email" name="email" id="email" class="form_control" placeholder="Escribe tu correo"
+                            required>
+                        <label for="info" class="form_label">Dejanos tu mensaje</label>
+                        <textarea name="info" id="info" rows="5" class="form_control"
+                            placeholder="Más información"></textarea>
+                    </fieldset>
+                    <fieldset id="newsletter">
+                        <legend>Newsletter</legend>
+                        <p>Quiero recibir información sobre destinos turísticos por correo electrónico.</p>
+                        <input type="checkbox" name="isOk" id="isOk" required>
+                        <label for="isOk">Me suscribo</label>
+                    </fieldset>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+            <div class="subir">
+                <a href="#body" id="subir" class="btn subir">Subir<i class="fas fa-angle-up "></i></a>
+            </div>
         </div>
     </main>
     <footer class="main_footer">
-        <address>Designed by <a data-propiedad="correo" href="mailto://evelin.zarka@tajamar365.com">EZ©</a>
+        <address>
+            <a data-propiedad="correo" href="mailto://evelin.zarka@tajamar365.com">Evelin Zarka©</a>
         </address>
         <small>Tajamar</small>
         <aside>

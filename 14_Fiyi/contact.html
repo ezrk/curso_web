@@ -1,0 +1,95 @@
+<!-- https://colorlib.com/etc/cf/ContactFrom_v4/index.html -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Curso de HTML">
+    <meta name="keywords" content="HTML, CSS, Web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>República de Fiyi</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/contact.css">
+</head>
+
+<body id="body">
+    <header class="main-header">
+        <nav class="nav">
+            <ul>
+                <li><a href="./index.html#body" rel="tag">Home</a></li>
+                <li><a href="./index.html#sobre-fiji" rel="tag">Sobre Fiji</a></li>
+                <li><a href="./index.html#historia_cultura" rel="tag">Historia y cultura</a></li>
+                <li><a href="./index.html#clima" rel="tag">Clima</a></li>
+                <li><a href="./index.html#que-ver">Qué ver</a></li>
+                <li><a href="./index.html#info-practica">Información práctica</a></li>
+                <li><a href="./index.html#donde-dormir">Dónde dormir</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>República de Fiji</h1>
+    </header>
+    <main class="content-wrapper">
+        <div class="section-wrapper">
+            <section id="contacto" class="contact-container">
+                <header>
+                    <h2>Contacto</h2>
+                    <h3>Solicita más información sobre Fiji</h3>
+                </header>
+                <form name="complete-post" action="https://jsonplaceholder.typicode.com/users" method="POST">
+                    <fieldset id="datos_personales">
+                        <label for="userName" class="form_label">Nombre</label>
+                        <input type="text" name="userName" id="userName" placeholder="Nombre y Apellidos"
+                            class="form_control" required>
+                        <label for="email" class="form_label">E-mail</label>
+                        <input type="email" name="email" id="email" class="form_control" placeholder="Escribe tu correo"
+                            required>
+                        <label for="info" class="form_label">Dejanos tu mensaje</label>
+                        <textarea name="info" id="info" rows="5" class="form_control"
+                            placeholder="Más información"></textarea>
+                    </fieldset>
+                    <fieldset id="newsletter">
+                        <legend>Newsletter</legend>
+                        <p>Quiero recibir información sobre destinos turísticos por correo electrónico.</p>
+                        <input type="checkbox" name="isOk" id="isOk" required>
+                        <label for="isOk">Me suscribo</label>
+                    </fieldset>
+                    <button type="submit">Enviar</button>
+                </form>
+
+            </section>
+        </div>
+    </main>
+    <footer class="main_footer">
+        <address>
+            <a data-propiedad="correo" href="mailto://evelin.zarka@tajamar365.com">Evelin Zarka©</a>
+        </address>
+        <small>Tajamar</small>
+        <aside>
+            <ul>
+                <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/" title="Instagram" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/?lang=en" title="Twitter" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://github.com/ezrk" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
+        </aside>
+    </footer>
+
+</body>
+
+</html>
