@@ -66,10 +66,10 @@ h3 {
 .main-header h1 {
     text-align: center;
     font-size: 4rem;
-    padding-top: 15rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
     font-family: 'Permanent Marker', cursive;
-
+    line-height: initial;
 }
 .main-header p::after {
     content: "";
@@ -91,7 +91,7 @@ h3 {
     } 
 
 .main-header p {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 1.5rem;
 }
 
@@ -200,11 +200,10 @@ section {
   margin-bottom:  calc(var(--margin-vertical)*3);
   text-align: justify;
 }
+
 .flex {
   display: flex;
   flex-wrap: wrap;
- 
-
 }
 
 
@@ -278,10 +277,13 @@ section {
   
 /*********** IMAGENES ************/
   .image-container{
-      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;  
+  }
+
+  .image-container img {
+    width: 70%;
   }
 
   .image_wrapper_left {
@@ -570,38 +572,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67baaf', end
 /********* Aside ***********/
 
 aside.anuncio {
+  width: 70%;
   background-image: url(../assets/bg_advertising.jpg);
   background-size: cover; 
   background-position: center;
   height: 50vh;
+  margin-top: 2rem;
   padding-top: 1rem;
-  display: flex;
-  justify-content: center;
-   align-content: center; 
-   flex-direction: column;
-   padding-left: 20px;
-   padding-right: 20px;
-   margin-top: 1.5rem;
+
 }
 
 .justify{
   text-align: justify;
 }
 
-.flex-aside {  
-  display: flex;
-  padding-top: 2rem;
-   justify-content: center;
-   align-content: center;
-}
 
-.flex-item-50 {
-  width: 50%;
-  padding: 1rem;
-  padding-top: 0;
-  box-sizing: border-box;
-  text-align: center;
-}
 
 aside.anuncio pre {
   text-align: center;
@@ -704,10 +689,98 @@ footer aside a {
 
 
 
-@media (min-width: 800px) { 
+@media (max-width: 800px) { 
 
-
-
-
-    
+/*********** HEADER ************/
+  .main-header h1 {
+    font-size: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
+
+/*********** IMAGENES ************/
+.img-title {
+    font-size: 2rem;
+}
+
+.image_wrapper_right , .image_wrapper_left {
+  width: 100%;
+} 
+
+/** SHOW MORE/LESS HISTORY&CULTURE**/
+.panel-wrapper {
+  position: relative;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  text-transform: uppercase; 
+  font-weight: bold;
+  color: var(--color-primary);
+  left: 42%;
+  padding: -2em;
+  text-decoration: none;
+  width: 15%;
+}
+
+.mostrar, .ocultar {
+  position: absolute;
+  bottom: -1.5em;
+  z-index: 100;
+  text-align: center;
+}
+
+.ocultar {display: none;}
+.mostrar:target {display: none;}
+.mostrar:target ~ .ocultar {display: block;}
+.mostrar:target ~ .panel {
+   max-height: 6000px; 
+}
+.mostrar:target ~ .fade {
+  margin-top: 0;
+}
+
+i.fas { 
+padding: 0.5rem;
+}
+
+.panel {
+  position: relative;
+  margin: 0.5em auto;
+  max-height: 600px;
+  overflow: hidden;
+  transition: max-height .5s ease;
+  text-align: justify;
+}
+
+.fade {
+  background: linear-gradient(to bottom, rgba($bg-color,0) 0%,rgba($bg-color,1) 75%);
+  height: 180px;
+  margin-top: -100px;
+  position: relative;
+}
+
+/* PROVERBIOS */
+.div-proverbios blockquote {
+  font-size: 1.5rem;
+  font-family: var(--font-title);
+  line-height: 2.2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* QUÉ VER */
+
+.flex-item {
+  width:100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* TABLA */
+
+
+
+
+
