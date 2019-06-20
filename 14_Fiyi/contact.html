@@ -36,20 +36,39 @@
                 <li><a href="./contact.html">Contacto</a></li>
             </ul>
         </nav>
+        <div class="mob-nav-container">
+            <input type="checkbox" id="check" class="mobile-check" />
+            <label for="check" class="label-for-check click"><i class="fas fa-bars"></i></label>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="./index.html#body" rel="tag">Home</a></li>
+                    <li><a href="./index.html#sobre-fiji" rel="tag">Sobre Fiji</a></li>
+                    <li><a href="./index.html#historia_cultura" rel="tag">Historia y cultura</a></li>
+                    <li><a href="./index.html#clima" rel="tag">Clima</a></li>
+                    <li><a href="./index.html#que-ver">Qué ver</a></li>
+                    <li><a href="./index.html#info-practica">Información práctica</a></li>
+                    <li><a href="./index.html#donde-dormir">Dónde dormir</a></li>
+                    <li><a href="./contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
         <h1>República de Fiji</h1>
+        <h2 class="h2-contact">Contacto</h2>
+        <p>Solicita más información sobre Fiji</p>
+        <div><a class="down" href="#form">&#9013;</a> </div>
     </header>
     <main class="content-wrapper">
         <div class="section-wrapper">
             <section id="contacto" class="contact-container">
-                <header>
-                    <h2>Contacto</h2>
-                    <h3>Solicita más información sobre Fiji</h3>
+                <header id="form" >
+                    <h2>Formulario de contacto</h2>
                 </header>
                 <form name="complete-post" action="https://jsonplaceholder.typicode.com/users" method="POST">
                     <fieldset id="datos_personales">
                         <label for="userName" class="form_label">Nombre</label>
                         <input type="text" name="userName" id="userName" placeholder="Nombre y Apellidos"
                             class="form_control" required>
+                            <span class="border-bottom"></span>
                         <label for="email" class="form_label">E-mail</label>
                         <input type="email" name="email" id="email" class="form_control" placeholder="Escribe tu correo"
                             required>
@@ -59,11 +78,10 @@
                     </fieldset>
                     <fieldset id="newsletter">
                         <legend>Newsletter</legend>
-                        <p>Quiero recibir información sobre destinos turísticos por correo electrónico.</p>
-                        <input type="checkbox" name="isOk" id="isOk" required>
-                        <label for="isOk">Me suscribo</label>
+                        <input class="checkbox" type="checkbox" name="isOk" id="isOk" required>
+                        <label class="suscription-text" for="isOk">Me suscribo. Quiero recibir información sobre destinos turísticos por correo electrónico.</label>
                     </fieldset>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" class="btn-submit">Enviar</button>
                 </form>
 
             </section>

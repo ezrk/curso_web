@@ -766,8 +766,6 @@ header label {
 }
 .mobile-nav ul li {
   display: inline;
-  background: #281248;
-  border-bottom: 1px solid #32175a;
 }
 .mobile-nav ul li a {
   width: 100%;

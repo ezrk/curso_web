@@ -4,7 +4,6 @@
     --font-title:'Poppins', sans-serif;
     --font-main: 'Montserrat', sans-serif;
     --size-title: calc(var(--size-small) *3);
-    --size-base: 1.1rem;
     --size-small: calc(12rem/16);
     --size-title-section: 1.2rem;
     --margin-vertical: 1.5rem;

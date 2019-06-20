@@ -4,21 +4,142 @@ h1 {
     display: none;
 }
 
+.h2-contact{
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+}
 
 .contact-container{
-    width: 500px;
+    width: 70%;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
-    overflow: hidden;
     padding: 42px 55px 45px 55px;
-    position: absolute; 
     top: 20%;
 }
 
-@media (min-width: 800px) { 
+.main-header p::after {
+    display: none;
+}
+
+.down {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+/** BTN HEADER **/
+
+form {
+    margin:8% auto 0 auto;
+	padding:30px;
+	width:50%;
+	height:auto;
+	overflow:hidden;
+}
+
+.contact-container header {
+    margin-bottom: 2rem;
+}
+
+label.form_label {
+    display: inline-block;
+    text-align: initial;
+    font-weight: bold;
+    
+}
+
+input {
+    margin:15px 0;
+	padding:15px 10px;
+	width:100%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+    display:inline-block;
+    font-size: 1rem;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 37px;
+}
+
+textarea {
+    width: 100%;
+    margin:15px 0;
+	padding:15px 10px;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+    min-height: 10vh;
+    font-size: 1rem;
+    font-family: var(--font-main);
+}
+
+.checkbox {
+    display: block;
+    width: 32px;
+    float: left;
+}
+.suscription-text {
+    display: inline;
+}
+
+.btn-submit {
+	background-color:transparent;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid var(--color-primary);
+	display:inline-block;
+	cursor:pointer;
+	color:var(--color-primary);
+	font-size: 1rem;
+	padding:16px 31px;
+    text-decoration:none;
+    font-family: var(--font-title);
+    margin-top: 4rem;
+    transition: 250ms ease-in-out; 
+    transform: 150ms ease;
+}
+
+a:link 
+{ 
+text-decoration:none; 
+} 
+
+.btn-submit:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+.btn-submit:active {
+	position:relative;
+	top:1px;
+}
 
 
 
+@media (max-width: 800px) { 
+    .contact-container{
+        width: 70%;
+    }  
+    
+    form {
+        margin: auto 0 auto;
+        width:100%;
+        height:auto;
+        overflow:hidden;
+        padding-left: 0;
+    }
 
+    textarea {
+        min-height: 15vh;
+    }
 
  }
