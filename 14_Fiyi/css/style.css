@@ -35,6 +35,10 @@ h3 {
     font-family: var(--font-title);
 }
 
+.mob-nav-container{
+display: none;
+}
+
 .main-header nav{
     margin-left: -1rem; 
     text-align: center;
@@ -579,14 +583,14 @@ aside.anuncio {
   height: 50vh;
   margin-top: 2rem;
   padding-top: 1rem;
+  display: block;
+  margin: 0 auto;
 
 }
 
 .justify{
   text-align: justify;
 }
-
-
 
 aside.anuncio pre {
   text-align: center;
@@ -613,19 +617,19 @@ aside .code {
 	-webkit-border-radius:25px;
 	border-radius:25px;
 	border:1px solid var(--color-primary);;
-	display:inline-block;
+	display:block;
 	cursor:pointer;
 	color: var(--color-primary);
 	font-size: 1rem;
 	padding:16px 31px;
     text-decoration:none;
     font-family: var(--font-title);
-    
     transition: 250ms ease-in-out; 
     transform: 150ms ease;
-    margin-left:5em;
-    margin-right: 5em;
     margin-top:1rem;
+    width: 20%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .btn-aside:hover {
@@ -691,12 +695,95 @@ footer aside a {
 
 @media (max-width: 800px) { 
 
+
+
+
 /*********** HEADER ************/
   .main-header h1 {
     font-size: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
+
+
+/*********** NAV ************/
+.nav {
+  display:none;
+}
+
+.mob-nav-container {
+  display: initial;
+}
+
+
+header input {
+  display: none;
+}
+
+i.fa-bars{
+width: 100%;
+} 
+
+header label {
+  top: 0;
+  left: 0;
+  width: 32px;
+  color: #fff;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.mobile-check:checked ~ label {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.mobile-check:checked ~ .mobile-nav {
+  height: 520px;
+}
+.mobile-nav {
+  height: 0px;
+  margin-top: 0px;
+  overflow: hidden;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.mobile-nav ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+.mobile-nav ul li {
+  display: inline;
+  background: #281248;
+  border-bottom: 1px solid #32175a;
+}
+.mobile-nav ul li a {
+  width: 100%;
+  display: block;
+  padding: 18px 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.mobile-nav ul li a:hover {
+  text-decoration-line: underline;
+    text-decoration-color: var(--color-primary);
+    text-decoration-style: 10px solid; 
+  color: white;
+}
+
 
 /*********** IMAGENES ************/
 .img-title {
@@ -780,7 +867,47 @@ padding: 0.5rem;
 
 /* TABLA */
 
+/* ASIDE */
 
+aside.anuncio {
+  width: 100%;
+}
+
+aside.anuncio pre {
+  font-size: 1.1rem;
+  margin-bottom: -1rem;
+}
+
+.btn-aside {
+	background-color:transparent;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	border:1px solid var(--color-primary);;
+	display:block;
+	cursor:pointer;
+	color: var(--color-primary);
+	font-size: 0.8rem;
+	padding:16px 31px;
+    text-decoration:none;
+    font-family: var(--font-title);
+    transition: 250ms ease-in-out; 
+    transform: 150ms ease;
+   
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+
+/** BTN SUBIR **/
+
+.subir
+{
+  width: 100%;
+  text-align: center;
+}
 
 
 
