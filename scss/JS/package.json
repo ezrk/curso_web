@@ -1,13 +1,13 @@
 {
   "name": "JS",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Ejercico de JS: Módulo 2",
+  "main": "app.js",
   "scripts": {
-    "test": "jasmine",
+    "test": "jasmine"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alejandro Cerezo",
   "license": "ISC",
   "devDependencies": {
     "jasmine": "^3.4.0"
