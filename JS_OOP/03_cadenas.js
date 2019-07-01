@@ -35,7 +35,7 @@ let x = cadena.split(' ')
 console.log(x)
 
 //Expresiones regulares//
-cadena.slice(inicio, final) //el ppio y el final del string
+/* cadena.slice(inicio, final) //el ppio y el final del string
 cadena.substring(inicio, final) 
 cadena.substr(inicio, desplazamiento) //ppio y la longitud
 
@@ -49,4 +49,11 @@ cadena.lastIndexOf(clave) //contanto desde atrás
 cadena.charAt(posicion) //pasamos una posicion y y te devuelve el caracter que hay en esta posicion = cadena[position]
 cadena.charCodeAt //devuelve el codigo del caracter en unicode
 
-String.fromCharCode(num)
+String.fromCharCode(num) */
+
+let numero = 23.97875546343
+console.log(numero)
+console.log(numero.toString())
+console.log(numero.toString(2))
+console.log(numero.toPrecision(4))
+console.log(numero.toExponential())
