@@ -9,44 +9,18 @@ function convertirCaracter(cadenaLetras) {
     var cadenaEspacios = cadena.split("");
 }
 
-
 function isPalindromo(cadenaLetras){
     const cadena = ''
     if(cadenaLetras.toUpperCase() == cadena.toUpperCase()) {
-            return [true, i]
+            return [true]
         }   
     }
-    return [false, -1]
+    return [false]
  }
 }
 
-cadenaLetras
+console.log()
 
-
-
-
-if(letras[i] == letrasReves[i]) {
-    // Todo bien
-  }
-  else {
-    // Alguna letra es distinta, por lo que ya no es un palindromo
-    iguales = false;
-  }
-
-
-
-
-var n=z.split("");
-var m=z.split("").reverse();
-for (var i=0;i<n.length;i++){
-if(n[i]==m[i]){
-alert("Esto es un palíndromo")
-return (true);
-}
-else{
-alert("Esto no es un palíndromo")
-return(false);
-}
 
 
 
