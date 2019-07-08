@@ -8,42 +8,54 @@
 
 //funcion constructora: varios artículos consta1 = new Articulo()
 
+/** Function (class) Producto
+ * @property {string} nombre 
+ * @property {string} codigo 
+ * @property {string} descripcion 
+ * @property {number} precio 
+ * @property {number} iva
+ * @method {object} calcularIVA
+ * @method {void} mostrarP
+ */
 
-function Producto(nombre, categoria, descripcion, unidades, precio, iva) {
+function Producto(nombre, codigo, descripcion, precio) {
     this.nombre = nombre
-    this.categoria = categoria
-    this.descripcion = ''
-    this.cantidad = cantidad
+    this.codigo = codigo
+    this.descripcion = descripcion
     this.precio = precio
-    this.iva = iva
-    //this.profesion = ''
-    this.mostrarP = function(otro = 'amig@') {
-        let msg = `Hola ${otro} soy ${this.nombre}`
-        console.log(msg)
     }
-   /*  this.serContratado = function(puesto) {
-        this.profesion = puesto
-    } */
+
+Producto.prototype.iva = 0.21
+Producto.prototype.calcularIVA = function (descuento = 0) {
+    const precio = this.precio - (this.precio * descuento)
+    return { 
+        iva: this.precio * this.iva,
+        total: this.precio + (this.precio * this.iva)
+    }
 }
 
+Producto.prototype.mostrarP = function() {
+    const importe = this.calcularIVA()
+    const cadena = `
+    Descripción: ${this.descripcion} 
+    Código: ${this.codigo} 
+    Precio: ${this.precio.toFixed(2)} 
+    IVA: ${iva.toFixed(2)} 
+    Precio total:  ${importe.total}
+    `
+    console.log(cadena)
+}
 
-const p2 = new Producto('Lavadora LG', 'Lavado', '', 100, 489, 21)
-const p3 = new Producto('Batidora Bosch', 'Cocina','', 150, 60.99, 21)
+const p1 = new Producto('Lavadora LG', '000123', '', 489)
+const p2 = new Producto('Batidora Bosch', '000456','', 60.99)
 
-
-p1.descripcion = 'Lavadora carga frontal - LG F4J7TY1W, Carga de 8 kg, 1400 rpm, Clase A+++(-40%), Blanco'
+p1.descripcion = 'Lavadora carga frontal - LG F4J7TY1W, Carga de 8 kg, 1400 rpm, Clase A+++(-40%), Blanco' //instancia 
 p2.descripcion = 'Batidora de mano - Bosch MaxoMixx MSM89160, 1000W, Turbo, Selector 12 velocidades, Silencioso'
+p2.iva =  0.16
 
-
-producto.calcularImporte = function() {
-    const importe = {} 
-    importe.base = 
-        this.items
-        .map( Producto => producto.precio * producto.cantidad)
-        .reduce( (total, item) => total + item ) 
-    importe.iva = importe.base * this.iva
-    importe.total = importe.base + importe.iva
-    return importe
-}
-
+p1.mostrarP()
 console.log(p1)
+
+
+p2.mostrarP()
+console.log(p2)
