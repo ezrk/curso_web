@@ -1,6 +1,13 @@
-const {fechaEsp, fijarLongitudCadena} = require('./15_helpers.js')
+//const {fechaEsp, fijarLongitudCadena} = require('./15_helpers.js')
 
-function templateFactura (empresa, cliente, items, numFactura, tipoIVA , formaPago, fecha = new Date()) {
+function templateFactura (  empresa = {}, 
+    cliente = {}, 
+    items = [{}], 
+    numFactura = '', 
+    tipoIVA = '', 
+    formaPago = '', 
+    fecha = new Date()
+    ) {
 this.empresa = empresa
 this.cliente = cliente
 this.items = items
@@ -9,19 +16,18 @@ this.tipoIVA = tipoIVA
 this.formaPago = formaPago
 } 
 
-function Empresa( nombre, direccion, telefono, nif ){
+function Empresa ( nombre, direccion, telefono, nif) {
     this.nombre = nombre
     this.direccion = direccion
     this.telefono = telefono
     this.nif = nif
     }
 
-function Cliente( nombre, direccion, telefono, nif ){
-        this.nombre = nombre
-        this.direccion = direccion
-        this.telefono = telefono
-        this.nif = nif
-        }
+function Item (descripcion = '', precioU = 0, cantidad = 0) {
+    this.descripcion = descripcion
+    this.precioU = precioU
+    this.cantidad = cantidad
+}
 
 function Direccion( calle, numero , ciudad){
     this.calle = calle
@@ -30,69 +36,8 @@ function Direccion( calle, numero , ciudad){
 
 }
 
-const empresa = new Empresa(Vodafone, new Direccion('C/ Pescao', 7, 'Sevilla'), 91267575, 'B120385K' )
-const cliente1 = new Cliente1(TranSiberiano, new Direccion('C/ Siberia', 8, 'Madrid'), 91267666, 'B145385Q' )
-
-const f1 = new templateFactura ( empresa, cliente1, items,...   )
-
-
-console.log(f1)
-
-/* HASTA AQUÍ */
-/* -------------------------------------------------------------------------- */
-templateFactura.prototype
-
-const templateFactura = {
-    empresa: {
-        nombre: '',
-        direccion: '',
-        telefono: '',
-        nif: '',
-    },
-    cliente: {
-        nombre: '',
-        direccion: '',
-        telefono: '',
-        nif: '',
-    },
-    items : [
-        {descripcion: '', precioU: 0, cantidad: 0} 
-    ],
-    numFactura: '',
-    tipoIVA: '',
-    formaPago: '',
-    fecha: new Date()
-    }
-
-templateFactura.calcularImporte = function() {}
-templateFactura.mostrarImporte = function() {}
-
-
-const factura = {
-    empresa: {
-        nombre: 'Ediciones Tuatalug',
-        direccion: 'c/ Pez 1, Madrid',
-        telefono: '625875921',
-        nif: 'T-34761234',
-    },
-    cliente: {
-        nombre: 'Librería Boracai',
-        direccion: 'c/ Carranza 5, Cádiz',
-        telefono: '625493421',
-        nif: 'F-76521743',
-    },
-    items : [
-        {descripcion: 'Angular 8.0', precioU: 30, cantidad: 10},   
-        {descripcion: 'JS para torpes', precioU: 32, cantidad: 12},   
-        {descripcion: 'Typescrip Avanzado', precioU: 45, cantidad: 8},   
-        {descripcion: 'Introducción a las aplicaciones Web', precioU: 37, cantidad: 11}],
-    numFactura: '000000012',
-    tipoIVA: 0.04,
-    formaPago: 'Contado',
-    fecha: new Date()
-    }
-
-factura.calcularImporte = function() {
+//PROTOTIPADO
+Factura.prototype.calcularImporte = function () {
     const importe = {} 
     importe.base = 
         this.items
@@ -103,11 +48,11 @@ factura.calcularImporte = function() {
     return importe
 }
 
-factura.listarItems = function() {
+Factura.prototype.listarItems = function () {
     let items = ``
     this.items.forEach(
         item => {
-            let desc = fijarLongitudCadena(item.descripcion, 30)
+            let desc = fijarLongitudCadena(item.descripcion, 30) //rellena espacios con el numero proporcionado
             let pv = item.precioU
                 .toLocaleString('es', {style: 'currency', currency: 'EUR'})
             let cant = item.cantidad
@@ -119,7 +64,11 @@ factura.listarItems = function() {
     return items
 }
 
-factura.prepararFactura = function() {
+Direccion.prototype.ToString() = function() {
+    return `${this.calle} ${this.numero} ${this.ciudad}`
+}
+
+Factura.prototype.prepararFactura = function() {
     const importe = this.calcularImporte()
     const factura =
 `
@@ -149,9 +98,20 @@ factura.prepararFactura = function() {
     return factura
 }
 
-factura.render = function () {
+//Factura.prototype.mostrarImporte = function () {}
+Factura.prototype.render = function () {
     console.log(this.prepararFactura())
 }
 
+const empresa = new Empresa('Vodafone', new Direccion('C/ Pescao', '7', 'Sevilla'), '91267575', 'B120385K' )
+const cliente = new Empresa('TranSiberiano', new Direccion('C/ Siberia', '8', 'Madrid'), '91267666', 'B145385Q' )
 
-factura.render()
+const items = [ new Item('Rey León', 24, 100),
+                new Item('Aladin', 26, 101),
+                new Item('Dumbo', 22, 102),   ]
+
+const f1 = new templateFactura ( empresa, cliente, items, '000000012', 0.04, 'Contado', fecha )
+
+
+console.log(f1)
+
