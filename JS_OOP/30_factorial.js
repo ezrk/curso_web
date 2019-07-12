@@ -20,7 +20,6 @@ function factorial (n) {
 console.log(factorial(6))
 
 
-
 //4
 function mostrarError (n) {   
     let r = true
