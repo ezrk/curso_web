@@ -42,19 +42,3 @@ export function app() {
     }
 }
 
-
-//////////////////////////////// AJAX /////////////////////////////////////
-
-const usersURL = 'https://jsonplaceholder.typicode.com/users/'
-const http = new XMLHttpRequest()
-http.addEventListener('readystatechange', leerDatos)
-http.open('get' , usersURL) //establecer conexión
-http.send()
-
-//Función del evento AJAX
-function leerDatos(ev) {
-    if (http.readyState == 4 && http.status == 200) {
-        console.log(http.responseText )
-    }
-}
-
