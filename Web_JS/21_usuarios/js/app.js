@@ -2,6 +2,7 @@ import { USERS} from './api.js'
 export function app() {
     console.log('Cargada app')
     let aUsers =[]
+    getDatos()
 
     // Nodos del DOM
     let btnBuscar = document.querySelector('#btn-buscar')
