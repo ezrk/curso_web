@@ -1,107 +1,150 @@
-import { USERS} from './api.js'
+import { USERS } from './api.js'
+
 export function app() {
     console.log('Cargada app')
-    let aUsers =[]
+    let aUsers = []
+    let userActual = {} 
     getDatos()
 
     // Nodos del DOM
-    let btnBuscar = document.querySelector('#btn-buscar')
-    let inClave = document.querySelector('#in-clave')   
-    let ulLibros = document.querySelector('#ul-libros')
-    let pError = document.querySelector('#p-error')
-    
- 
-    // Asociación de manejadores de eventos
-    //btnGuardar.onclick = onClickGuardar
-    btnBuscar.addEventListener('click', onClickBuscar2017)
-    inClave.addEventListener('change', onClickBuscar2017)
+    let aInputs = document.querySelectorAll('input')
+    let btnAdd = document.querySelector('#btn-add')
+    let tbUsuarios = document.querySelector('#tb-usuarios')
+    let aBtnEditar = [] // Toman valor tras renderizar la tabla
+    let aBtnBorrar = [] // Toman valor tras renderizar la tabla
+    let dlgBorrar = document.querySelector('#dlg-borrar') 
+    let dlgEditar = document.querySelector('#dlg-editar') 
 
-    // Funciones manejadoras de eventos
-
-    function onClickBuscar(ev) {
-        console.log('onClickBuscar')
-        if (!inClave.value) {
-            return
-        }
-        let url = LBGOOGLE + '/' + inClave.value
-        inClave.value = '' 
-        fetch(url)
-        .then(response => {
-            if(response.status == 200) {
-                return response.json()
-            } 
-            throw(new Error(response.status))
-        })
-        .then( (data) => {
-            data = data.items
-            data = data.map(item => { return {title: item.volumeInfo.title,
-                                              authors: item.volumeInfo.authors  } 
-            }) 
-            console.log(data)
-            renderData(data)
-        })
-        .catch( (error) => {
-            renderError(error) 
-        }) 
+    let nodosBorrar = {
+        nombre: document.querySelector('#out-nombre-editar'),
+        edad: document.querySelector('#out-edad-editar'),
+        confirmar: document.querySelector('#btn-borrar'),
+        cancelar:document.querySelector('#btn-cancel-borrar')
+    }
+    let nodosEditar = {
+        nombre: document.querySelector('#in-nombre-editar'),
+        edad: document.querySelector('#in-edad-editar'),
+        confirmar: document.querySelector('#btn-update'),
+        cancelar:document.querySelector('#btn-cancel-update')
     }
 
-    //OTRAS FUNCIONES
+    // Asociación de manejadores de eventos
+    btnAdd.addEventListener('click', onClickAdd)
+    nodosBorrar.confirmar.addEventListener('click', onDlgBorrar)
+    nodosBorrar.cancelar.addEventListener('click', onDlgBorrar)
+    nodosEditar.confirmar.addEventListener('click', onDlgEditar)
+    nodosEditar.cancelar.addEventListener('click', onDlgEditar)
+
+    // Funciones manejadoras de eventos
+    function onClickAdd() {
+        let oUser = {
+            nombre: aInputs[0].value,
+            edad: aInputs[1].value
+        }
+        console.log(oUser)
+        let cabecera = new Headers({
+            'Content-Type':  'application/json'
+        })
+        fetch(USERS, {
+            method: 'POST',
+            headers: cabecera, 
+            body: JSON.stringify(oUser) })
+        .then (response => response.json())
+        .then (data => {
+            if(data.id > 0) {
+                getDatos()
+            }
+        })
+    }
+
+    function openModal(ev) {
+        let id
+        if (ev.target.tagName == 'TD') {
+            id = ev.target.dataset.id
+        } else { // ev.target.tagName == 'I'
+            id = ev.target.parentElement.dataset.id
+        }
+        userActual = aUsers.find(item => item.id == id)
+        if (ev.target.classList.contains('btn-editar') || 
+            ev.target.parentElement.classList.contains('btn-editar') ) {
+            setEditarModal()
+        } else {
+            setBorrarModal()
+        }
+    }
+
+    function setEditarModal() {
+        nodosEditar.nombre.value = userActual.nombre
+        nodosEditar.edad.value = userActual.edad
+        dlgEditar.showModal()
+    }
+
+    function setBorrarModal() {
+        nodosBorrar.nombre.value = userActual.nombre
+        nodosBorrar.edad.value = userActual.edad
+        dlgBorrar.showModal()
+    }
+
+    function onDlgBorrar(ev) {
+        if(ev.target.id == 'btn-borrar') {
+            // Borrar
+        }
+        dlgBorrar.close()
+    }
+
+    function onDlgEditar(ev) {
+        if(ev.target.id == 'btn-update') {
+            // Actualizar
+        }
+        dlgEditar.close()
+    }
+
+    // Otras funciones
+
     function getDatos() {
         fetch(USERS)
         .then( response => response.json())
         .then( data => {
             aUsers = data
             renderData()
-        }) 
+        })
     }
 
-    // ES2017
-
-    async function onClickBuscar2017() {
-        console.log('onClickBuscar2017')
-        if (!inClave.value) {
-            return
-        }
-        let url = LBGOOGLE + '/' + inClave.value 
-        try {
-            let response = await fetch(url)
-            if(response.status == 200) {
-                let data = await response.json()
-                data = data.items
-                data = data.map(item => { return {title: item.volumeInfo.title,
-                                              authors: item.volumeInfo.authors  } 
-                }) 
-                console.log(data)
-                renderData(data)
-            } else {
-                throw(new Error(response.status))
-            }    
-        } catch (error) {
-            renderError(error)
-        }
-    }
-
-    function renderData(data) {
-        let html = '
-        `
+    function renderData() {
+        let html = `
         <tr>
-            <th>ID </th>
-            <th class="title">Nombre</th> |
-            <th class="autor">Edad</th>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th></th>
+            <th></th>
         </tr>`
-        '
         aUsers.forEach(item => html += `
         <tr>
             <td>${item.id}</td>
-            <td>${item.nombre}</td> |
+            <td>${item.nombre}</td>
             <td>${item.edad}</td>
+            <td class='boton btn-editar' data-id="${item.id}">
+                <i class="fas fa-edit"></i></td>
+            <td class='boton btn-borrar' data-id="${item.id}">
+                <i class="fas fa-trash-alt"></i></td>
         </tr>` );
-        ulLibros.innerHTML = html
-
+        tbUsuarios.innerHTML = html
+        actualizarBotones()
     } 
+
+    function actualizarBotones () {
+        // Nodos del DOM
+        aBtnEditar = document.querySelectorAll('.btn-editar')
+        aBtnBorrar = document.querySelectorAll('.btn-borrar')
+        // Asociación de manejadores de eventos
+        aBtnBorrar.forEach(item => 
+            item.addEventListener('click', openModal))
+        aBtnEditar.forEach(item => 
+                item.addEventListener('click', openModal))
+    }
 
     function renderError(error) {
         pError.innerHTML = 'error de conexión: ' + error
     }
-    
 }
