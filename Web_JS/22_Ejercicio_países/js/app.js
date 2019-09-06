@@ -36,7 +36,6 @@ function showCountry() {
     console.log(flag)
     console.log(capital)
     console.log(population)
-
 }
 
 fetch.
