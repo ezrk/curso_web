@@ -17,17 +17,19 @@
     <main>
         <form id="formulario" >
             <label>Selecciona continente:</label>
-            <select name="continent" id="continent"></select>
+            <select name="continent" id="continent">
+                <option id="eu" value="">Europa</option>
+                <option id="am" value="">América</option>
+                <option id="as" value="">Asia</option>
+                <option id="au" value="">Australia</option>
+            </select>
+            
             <label>Selecciona país:</label>
-            <select name="country" id="country"></select>
+            <select name="country" id="country"> </select> 
         </form>
-        <div>
-            <ul>
-                <li>Bandera: <span id="flag"></span></li>
-                <li>Capital: <span id="capital"></span></li>
-                <li>Población:<span id="population"></span></li>
-            </ul>
-        </div>       
+     <div id="showData" >
+            
+        </div>    
     </main>
   
     <footer>

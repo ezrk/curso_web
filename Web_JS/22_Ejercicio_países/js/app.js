@@ -1,190 +1,54 @@
-import { allworld } from './api.js'
-import { continent} from './api.js'
-
-
-// Nodos del DOM
-let continent = document.querySelector('#continent') 
-let country = document.querySelector('#country') 
-let flag = document.querySelector('#flag') 
-let capital = document.querySelector('#capital') 
-let population = document.querySelector('#population') 
-
-// Asociación de manejadores de eventos
-continent.addEventListener('change', showContinent)
-country.addEventListener('change', showCountry)
-
-// Funciones manejadoras de eventos
-function showContinent(ev) {
-    infoCountry(ev.target.value)
-    fetch(allworld)
-    .then( response => response.json())
-    .then( data => {
-        getContinent(data)
-    })
-}
-
-function getContinent() {
-console.log()
-}
-
-function getDatos() {
-    
-}
-
-function showCountry() {
-    infoCountry(ev.target.value)
-    console.log(flag)
-    console.log(capital)
-    console.log(population)
-}
-
-fetch.
+import { allworld, filter } from './api.js'
 
 export function app() {
     console.log('Cargada app')
-    let aUsers = []
-    let userActual = {} 
-    getDatos()
+    let allCountries = []
+    let thecountry = {}
 
     // Nodos del DOM
-    let aInputs = document.querySelectorAll('input')
-    let btnAdd = document.querySelector('#btn-add')
-    let tbUsuarios = document.querySelector('#tb-usuarios')
-    let aBtnEditar = [] // Toman valor tras renderizar la tabla
-    let aBtnBorrar = [] // Toman valor tras renderizar la tabla
-    let dlgBorrar = document.querySelector('#dlg-borrar') 
-    let dlgEditar = document.querySelector('#dlg-editar') 
-
-    let nodosBorrar = {
-        nombre: document.querySelector('#out-nombre-editar'),
-        edad: document.querySelector('#out-edad-editar'),
-        confirmar: document.querySelector('#btn-borrar'),
-        cancelar:document.querySelector('#btn-cancel-borrar')
-    }
-    let nodosEditar = {
-        nombre: document.querySelector('#in-nombre-editar'),
-        edad: document.querySelector('#in-edad-editar'),
-        confirmar: document.querySelector('#btn-update'),
-        cancelar:document.querySelector('#btn-cancel-update')
-    }
+    let continent = document.querySelector('#continent')
+    let country = document.querySelector('#country')
+    let showData = document.querySelector('#showData')
 
     // Asociación de manejadores de eventos
-    btnAdd.addEventListener('click', onClickAdd)
-    nodosBorrar.confirmar.addEventListener('click', onDlgBorrar)
-    nodosBorrar.cancelar.addEventListener('click', onDlgBorrar)
-    nodosEditar.confirmar.addEventListener('click', onDlgEditar)
-    nodosEditar.cancelar.addEventListener('click', onDlgEditar)
+    continent.addEventListener('change', showContinent)
+    country.addEventListener('change', showCountry)
 
     // Funciones manejadoras de eventos
-    function onClickAdd() {
-        let oUser = {
-            nombre: aInputs[0].value,
-            edad: aInputs[1].value
-        }
-        console.log(oUser)
-        let cabecera = new Headers({
-            'Content-Type':  'application/json'
-        })
-        fetch(USERS, {
-            method: 'POST',
-            headers: cabecera, 
-            body: JSON.stringify(oUser) })
-        .then (response => response.json())
-        .then (data => {
-            if(data.id > 0) {
-                getDatos()
-            }
-        })
-    }
-
-    function openModal(ev) {
-        let id
-        if (ev.target.tagName == 'TD') {
-            id = ev.target.dataset.id
-        } else { // ev.target.tagName == 'I'
-            id = ev.target.parentElement.dataset.id
-        }
-        userActual = aUsers.find(item => item.id == id)
-        if (ev.target.classList.contains('btn-editar') || 
-            ev.target.parentElement.classList.contains('btn-editar') ) {
-            setEditarModal()
+    function showContinent(ev) {
+        console.dir(ev.target.value)
+        console.log()
+        if (ev.target.value) {
+            let url = allworld + ev.target.value + filter
+            fetch(url).then(response => response.json()).then(data => {
+                allCountries = data
+                console.log(allCountries)
+                getCountry()
+            })
         } else {
-            setBorrarModal()
+            showData.innerHTML = ""
         }
-    }
 
-    function setEditarModal() {
-        nodosEditar.nombre.value = userActual.nombre
-        nodosEditar.edad.value = userActual.edad
-        dlgEditar.showModal()
-    }
 
-    function setBorrarModal() {
-        nodosBorrar.nombre.value = userActual.nombre
-        nodosBorrar.edad.value = userActual.edad
-        dlgBorrar.showModal()
-    }
-
-    function onDlgBorrar(ev) {
-        if(ev.target.id == 'btn-borrar') {
-            // Borrar
+        function getCountry() {
+            country.innerHTML = `<option value="" id="${country.name}">${country.name}</option>`
         }
-        dlgBorrar.close()
-    }
 
-    function onDlgEditar(ev) {
-        if(ev.target.id == 'btn-update') {
-            // Actualizar
-        }
-        dlgEditar.close()
-    }
-
-    // Otras funciones
-
-    function getDatos() {
-        fetch(USERS)
-        .then( response => response.json())
-        .then( data => {
-            aUsers = data
+        function showCountry(ev) {
+            thecountry = allCountries.find(item => item.name == ev.target.value)
+            console.dir(thecountry)
             renderData()
-        })
-    }
+        }
 
-    function renderData() {
-        let html = `
-        <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th></th>
-            <th></th>
-        </tr>`
-        aUsers.forEach(item => html += `
-        <tr>
-            <td>${item.id}</td>
-            <td>${item.nombre}</td>
-            <td>${item.edad}</td>
-            <td class='boton btn-editar' data-id="${item.id}">
-                <i class="fas fa-edit"></i></td>
-            <td class='boton btn-borrar' data-id="${item.id}">
-                <i class="fas fa-trash-alt"></i></td>
-        </tr>` );
-        tbUsuarios.innerHTML = html
-        actualizarBotones()
-    } 
-
-    function actualizarBotones () {
-        // Nodos del DOM
-        aBtnEditar = document.querySelectorAll('.btn-editar')
-        aBtnBorrar = document.querySelectorAll('.btn-borrar')
-        // Asociación de manejadores de eventos
-        aBtnBorrar.forEach(item => 
-            item.addEventListener('click', openModal))
-        aBtnEditar.forEach(item => 
-                item.addEventListener('click', openModal))
+        function renderData() {
+            showData.innerHTML =
+                ` 
+                <p>${thecountry.name}</p>
+                <img src="${thecountry.flag}" alt="${thecountry.name}">      
+                <ul>
+                    <li><span>Capital: </span> ${thecountry.capital}</li>
+                    <li><span>Population: </span> ${thecountry.population}</li>
+                </ul>
+                `
+        }
     }
-
-    function renderError(error) {
-        pError.innerHTML = 'error de conexión: ' + error
-    }
-}
