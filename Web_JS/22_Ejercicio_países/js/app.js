@@ -47,7 +47,7 @@ export function app() {
                 <img src="${thecountry.flag}" alt="${thecountry.name}">      
                 <ul>
                     <li><span>Capital: </span> ${thecountry.capital}</li>
-                    <li><span>Population: </span> ${thecountry.population}</li>
+                    <li><span>Población: </span> ${thecountry.population}</li>
                 </ul>
                 `
         }
