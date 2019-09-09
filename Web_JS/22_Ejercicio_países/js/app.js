@@ -32,7 +32,10 @@ export function app() {
         function showCountry(ev) {
             thecountry = allCountries.find(item => item.name == ev.target.value)
             console.log(thecountry)
-            country.innerHTML = `${thecountry.name}`
+            allCountries.forEach(country => { 
+                console.log(country.innerHTML += `${thecountry.name}`)
+            });
+            /* country.innerHTML += `${thecountry.name}` */
             renderData()
         }
 
