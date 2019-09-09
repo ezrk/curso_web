@@ -15,31 +15,30 @@ export function app() {
     country.addEventListener('change', showCountry)
 
     // Funciones manejadoras de eventos
+    //Según continente seleccionado guardar la lista de países en allCountries
     function showContinent(ev) {
         console.dir(ev.target.value)
         console.log()
         if (ev.target.value) {
             let url = allworld + ev.target.value + filter
-            fetch(url).then(response => response.json()).then(data => {
-                allCountries = data
-                console.log(allCountries)
-                getCountry()
-            })
-        } else {
-            showData.innerHTML = ""
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    allCountries = data
+                    console.log(allCountries)
+                })
+            showCountry()
         }
 
-
-        function getCountry() {
-            country.innerHTML = `<option value="" id="${country.name}">${country.name}</option>`
-        }
-
+        //De la lista de países (allCountries) guardar el país seleccionado)
         function showCountry(ev) {
             thecountry = allCountries.find(item => item.name == ev.target.value)
             console.dir(thecountry)
+            country.innerHTML = `${thecountry.name}`
             renderData()
         }
 
+        //Mostrar el país seleccionado y la información correspondiente
         function renderData() {
             showData.innerHTML =
                 ` 
