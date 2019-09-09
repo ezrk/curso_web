@@ -17,8 +17,6 @@ export function app() {
     // Funciones manejadoras de eventos
     //Según continente seleccionado guardar la lista de países en allCountries
     function showContinent(ev) {
-        console.dir(ev.target.value)
-        console.log()
         if (ev.target.value) {
             let url = allworld + ev.target.value + filter
             fetch(url)
@@ -33,7 +31,7 @@ export function app() {
         //De la lista de países (allCountries) guardar el país seleccionado)
         function showCountry(ev) {
             thecountry = allCountries.find(item => item.name == ev.target.value)
-            console.dir(thecountry)
+            console.log(thecountry)
             country.innerHTML = `${thecountry.name}`
             renderData()
         }
