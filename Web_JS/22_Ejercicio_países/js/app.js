@@ -24,31 +24,32 @@ export function app() {
                 .then(data => {
                     allCountries = data
                     console.log(allCountries)
+                    showCountry()
                 })
-            showCountry()
-        }
-
-        //De la lista de países (allCountries) guardar el país seleccionado)
-        function showCountry(ev) {
-            thecountry = allCountries.find(item => item.name == ev.target.value)
-            console.log(thecountry)
-            allCountries.forEach(country => { 
-                console.log(country.innerHTML += `${thecountry.name}`)
-            });
-            /* country.innerHTML += `${thecountry.name}` */
-            renderData()
-        }
-
-        //Mostrar el país seleccionado y la información correspondiente
-        function renderData() {
-            showData.innerHTML =
-                ` 
-                <p>${thecountry.name}</p>
-                <img src="${thecountry.flag}" alt="${thecountry.name}">      
-                <ul>
-                    <li><span>Capital: </span> ${thecountry.capital}</li>
-                    <li><span>Población: </span> ${thecountry.population}</li>
-                </ul>
-                `
         }
     }
+}
+
+//De la lista de países (allCountries) guardar el país seleccionado)
+function showCountry(ev) {
+    thecountry = allCountries.find(item => item.name == ev.target.value)
+    console.log(thecountry)
+  /*   allCountries.forEach(country => {
+        console.log(country.innerHTML += `${thecountry.name}`) */
+        renderData()
+    }
+
+function listaPaíses() {
+    allCountries.forEach(country => {
+        console.log(country.innerHTML += `${thecountry.name}`)
+}
+
+//Mostrar el país seleccionado y la información correspondiente
+function renderData() {
+    showData.innerHTML =
+        `<p>${thecountry.name}</p>
+        <img src="${thecountry.flag}" alt="${thecountry.name}">      
+        <ul>
+            <li><span>Capital: </span> ${thecountry.capital}</li>
+            <li><span>Población: </span> ${thecountry.population}</li>
+        </ul>`}
