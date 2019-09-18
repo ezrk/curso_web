@@ -6,16 +6,23 @@
   "scripts": {
     "start": "npm -v",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass sass/:css/ --watch --no-source-map",
+    "sass:w": "sass sass/:css/ --watch --no-source-map",
     "http": "http-server",
-    "pug": "pug -w -P -p ./pug/partials -O ./pug/options.json ./pug/templates -o ./"
+    "pug:w": "pug -w -P -p ./pug/partials -O ./pug/options.json ./pug/templates -o ./",
+    "pug:sass": "paralellshell \"npm run pug:w\" \"npm run sass:w\" ",
+    "parallel": "paralellshell \"echo 1\" ",
+    "ugly": ""
   },
   "keywords": [],
   "author": "EZ",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+   
+  },
   "devDependencies": {
+    "pug": "^2.0.3",
     "sass": "^1.22.12",
-    "pug": "^2.0.3"
+    "parallelshell": "^3.0.1",
+    "uglify-js": "^3.6.0"
   }
 }
